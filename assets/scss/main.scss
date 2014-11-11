@@ -1,0 +1,36 @@
+@import 'vendor/normalize';
+@import 'vendor/print';
+@import 'basic/iefix';
+@import 'basic/vars';
+
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font: 100% Helvetica, sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+}
