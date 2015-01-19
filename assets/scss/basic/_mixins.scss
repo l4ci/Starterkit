@@ -1,0 +1,26 @@
+/**
+ * MIXINS
+ */
+
+
+/**
+ * Breakpoint Helper
+ * @param  int $size    px,em,rem
+ * @param  string $type:min min/max
+ */
+@mixin bp($size,$type:min) {
+     @if $type == max {
+        @media (max-width: $size) { @content; }
+     } @else {
+        @media (min-width: $size) { @content; }
+     }
+}
+
+/**
+ * Font Size Mixin
+ * rem font size with px fallback
+ */
+@mixin fs($size:16){
+    font-size: $size+px;
+    font-size: ( $size / 16 ) + rem;
+}

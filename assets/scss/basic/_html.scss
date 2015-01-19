@@ -7,3 +7,24 @@
 @-ms-viewport       { width: device-width; }
 @-o-viewport        { width: device-width; }
 @viewport           { width: device-width; }
+
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font: 100% Helvetica, sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+a{
+    text-decoration: none;
+}
