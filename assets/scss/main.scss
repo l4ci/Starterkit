@@ -1,15 +1,25 @@
-/**
- * Main.scss File
- * @author
- * @year
- * @project
- */
+@charset "UTF-8";
+
+/*
+|--------------------------------------------------------------------------
+| MAIN SCSS FILE
+|--------------------------------------------------------------------------
+|
+| @author
+| @year
+| @project
+|
+*/
 
 @import 'vendor/normalize';
 @import 'vendor/print';
 
-@import 'basic/vars';
-@import 'basic/mixins';
+@import 'config/vars';
+@import 'config/mixins';
+
 @import 'basic/html';
+@import 'basic/typo';
 
 @import 'layout/nav';
+@import 'layout/header';
+@import 'layout/footer';

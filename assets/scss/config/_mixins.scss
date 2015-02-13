@@ -1,6 +1,8 @@
-/**
- * MIXINS
- */
+/*
+|--------------------------------------------------------------------------
+| MIXINS & FUNCTIONS
+|--------------------------------------------------------------------------
+*/
 
 
 /**
@@ -8,7 +10,7 @@
  * @param  int $size    px,em,rem
  * @param  string $type:min min/max
  */
-@mixin bp($size,$type:min) {
+@mixin bp($size,$type:min){
      @if $type == max {
         @media (max-width: $size) { @content; }
      } @else {

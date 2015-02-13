@@ -2,7 +2,7 @@
 # The humans responsible & technology colophon
 
 # TEAM
-    Volker Otto -- Web Architect -- @hellovolker
+    Volker Otto <hello@volkerotto.net> -- @hellovolker
 
 
 # TECHNOLOGY COLOPHON
