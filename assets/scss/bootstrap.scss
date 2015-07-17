@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| MAIN SCSS FILE
+| BOOTSTRAP SCSS FILE
 |--------------------------------------------------------------------------
 |
 | @author
@@ -12,14 +12,18 @@
 */
 
 @import 'vendor/normalize';
+@import 'vendor/h5pb';
 @import 'vendor/print';
 
 @import 'config/vars';
 @import 'config/mixins';
 
 @import 'basic/html';
+@import 'basic/grid';
 @import 'basic/typo';
+@import 'basic/forms';
 
-@import 'layout/nav';
 @import 'layout/header';
+@import 'layout/nav';
+@import 'layout/main';
 @import 'layout/footer';

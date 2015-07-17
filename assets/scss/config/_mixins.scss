@@ -6,23 +6,93 @@
 
 
 /**
- * Breakpoint Helper
- * @param  int $size    px,em,rem
- * @param  string $type:min min/max
+ * BREAKPOINT MIXIN
+ *
+ * Using the brekpoint list defined in `_vars.scss
+ *
+ * Usage:
+ * `@include bp(small)` => @media (min-width: small)
+ * `@include bp(small,max)` => @media (max-width: small)
+ * `@include bp(small,medium)` => @media (min-width: small) and (max-width: medium)
  */
-@mixin bp($size,$type:min){
-     @if $type == max {
-        @media (max-width: $size) { @content; }
-     } @else {
-        @media (min-width: $size) { @content; }
-     }
+@mixin bp($bp,$type:min) {
+    $value: map-get($breakpoints, $bp);
+
+    @if $value != null {
+        @if $type == min {
+            @media (min-width: $value) {
+              @content;
+            }
+        } @else if $type == max {
+            @media (max-width: $value) {
+              @content;
+            }
+        } @else {
+            // Get $type as second max. breakpoint
+            $value2: map-get($breakpoints, $type);
+            @if $value2 != null {
+                @media (min-width: $value) and (max-width: ) {
+                  @content;
+                }
+            }@else {
+                @warn "Unfortunately, no value could be retrieved from `#{$type}`. "
+                    + "Please make sure it is defined in `$breakpoints` map.";
+            }
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$bp}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+    }
 }
 
 /**
- * Font Size Mixin
- * rem font size with px fallback
+ * Helper Function for rem Fallback Mixin
  */
-@mixin fs($size:16){
-    font-size: $size+px;
-    font-size: ( $size / 16 ) + rem;
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+/**
+ * REM FALLBACK MIXIN
+ * Source: <https://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/>
+ *
+ * Usage:
+ * `@include rem(margin, 10, 20, 30, 40);` =>
+ * `body {
+ *   margin: 160px 320px 480px 640px;
+ *   margin: 10rem 20rem 30rem 40rem;
+ * }`
+ */
+@mixin rem($property, $values...) {
+    $max: length($values);
+    $pxValues: '';
+    $remValues: '';
+
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $pxValues: #{$pxValues + $value*16}px;
+
+        @if $i < $max {
+            $pxValues: #{$pxValues + " "};
+        }
+    }
+
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $remValues: #{$remValues + $value}rem;
+
+        @if $i < $max {
+            $remValues: #{$remValues + " "};
+        }
+    }
+
+    #{$property}: $pxValues;
+    #{$property}: $remValues;
+}
+
+/**
+ * font-size REM Fallback Helper Mixin
+ */
+@mixin font-size($size){
+    @include rem('font-size', $size);
 }

@@ -5,18 +5,29 @@
 */
 
 /**
+ * FONT-FAMILY
+ */
+@import url(//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:400,700,300);
+$font-primary: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-secondary: 'Roboto Slab', 'Times New Roman', Georgia, serif;
+
+
+/**
  * COLORS
  */
 $black : #333;
 $white : #fff;
 
-$primary: #B4D455;
-$secondary: #B4D455;
+$primary: rebeccapurple;
+$secondary: cornflowerblue;
+
 
 /**
  * BREAKPOINTS
  */
-$bp-s : 48em;   //  768px
-$bp-m : 62em;   //  991px
-$bp-l : 75em;   // 1200px
-
+$breakpoints: (
+  'sm': 35.5em,
+  'md': 48em,
+  'lg': 64em,
+  'xl': 80em
+);

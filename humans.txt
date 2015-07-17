@@ -2,7 +2,7 @@
 # The humans responsible & technology colophon
 
 # TEAM
-    Volker Otto <hello@volkerotto.net> -- @hellovolker
+    NAME - <name@email.de> -- @twitter
 
 
 # TECHNOLOGY COLOPHON

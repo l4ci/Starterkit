@@ -8,21 +8,30 @@
 @-o-viewport        { width: device-width; }
 @viewport           { width: device-width; }
 
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
 
 html{
     box-sizing: border-box;
     font-size: 100%;
-    line-height: 1.4;
+    line-height: normal;
 }
 
 *,*:before,*:after{
     box-sizing: inherit;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 body{
-    font: 100% Helvetica, sans-serif;
-    background: #fff;
-    color: #333;
+    position: relative;
+    min-height: 100%;
+    font-family: $font-secondary;
+    background: $white;
+    color: $black;
 }
 
 a{
