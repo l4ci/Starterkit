@@ -31,7 +31,7 @@
             // Get $type as second max. breakpoint
             $value2: map-get($breakpoints, $type);
             @if $value2 != null {
-                @media (min-width: $value) and (max-width: ) {
+                @media (min-width: $value) and (max-width: $value2) {
                   @content;
                 }
             }@else {
