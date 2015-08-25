@@ -1,12 +1,11 @@
 # Frontend Developer Starterkit
 Quick-start frontend developer boilerplate. Folder structure, useful sass mixins, and much more.
 
+# Clone this repo
+`git clone https://github.com/l4ci/Starterkit.git www`
 
 # Grunt
-To use *.sass files you need to have grunt installed.
-
-**Install grunt globaly**
-`sudo npm install -g grunt-cli`
+To compile and minify `.sass` files you need to have [Grunt](http://gruntjs.com/) installed.
 
 **Project specific grunt install**
 
