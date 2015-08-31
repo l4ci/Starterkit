@@ -13,7 +13,7 @@ To compile and minify `.sass` files you need to have [Grunt](http://gruntjs.com/
 `npm install grunt --save-dev`
 
 2. Install grunt plugins
-`npm install grunt-contrib-watch grunt-contrib-sass grunt-browser-sync --save-dev`
+`npm install grunt-contrib-watch grunt-contrib-sass grunt-browser-sync grunt-postcss pixrem autoprefixer-core cssnano postcss-focus --save-dev`
 
 3. Run grunt
 `grunt watch`
