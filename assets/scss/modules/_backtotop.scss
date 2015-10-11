@@ -1,0 +1,23 @@
+.backToTop{
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    display: inline-block;
+    text-align: center;
+    background: rgba($black,.2);
+
+    &:hover{
+        background: rgba($black,.3);
+    }
+
+    &:before{
+        display: inline-block;
+        width: 2.2em;
+        height: 2.2em;
+        font-family: $font-icon;
+        content:'\f106';
+        color: $white;
+        text-align: center;
+        line-height: 2.2em;
+    }
+}

@@ -1,0 +1,44 @@
+/**
+ * BUTTONS
+ */
+.btn{
+    display: inline-block;
+    padding: .25em .5em;
+    background: $grey;
+    color: $black;
+    transition: background $timing-short;
+    border-bottom: .125em solid rgba(black,.1);
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus,
+    &.btn--active{
+        background: darken($grey,10%);
+    }
+
+    /**
+     * BUTTON SIZES
+     */
+    &.btn--block{
+        display: block;
+    }
+    &.btn--small{
+        @include font-size(.875rem);
+    }
+    &.btn--large{
+        @include font-size(2rem);
+    }
+
+    /**
+     * BUTTON VARIANTS
+     */
+    &.btn--primary{
+        background: $primary;
+        color: $white;
+    }
+    &.btn--secondary{
+        background: $primary;
+        color: $black;
+    }
+}

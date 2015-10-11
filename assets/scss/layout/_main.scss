@@ -4,3 +4,24 @@
 .main{
 
 }
+
+.section{
+    position: relative;
+    display: block;
+
+    @include rem('padding',2rem 0);
+    @include bp(md) {
+        @include rem('padding',4rem 0);
+    }
+    @include bp(lg) {
+        @include rem('padding',5rem 0);
+    }
+
+    &.section--nopadding{
+        padding: 0;
+    }
+
+    &.section--alt{
+        background: rgba($grey,.2);
+    }
+}

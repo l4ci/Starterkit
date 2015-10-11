@@ -1,11 +1,6 @@
 /**
  * FORMS, INPUT ELEMENTS
  */
-input,
-textarea,
-select{
-
-}
 
 /**
  * PLACEHOLDER
@@ -23,4 +18,53 @@ select{
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
     color: $black;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+.input,
+textarea,.textarea{
+    display: block;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    padding: .5em 1em;
+    background: #fff;
+    color: $black;
+    border: .125em solid $grey;
+    border-radius: $border-radius;
+    transition: all $timing-short;
+    font-family: $font-heading;
+    @include font-size(.875rem);
+
+    &::-webkit-input-placeholder {
+        color: rgba($black,.5);
+    }
+    &:-moz-placeholder {
+        color: rgba($black,.5);
+        opacity:  1;
+    }
+    &::-moz-placeholder {
+        color: rgba($black,.5);
+        opacity:  1;
+    }
+    &:-ms-input-placeholder {
+        color: rgba($black,.5);
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus{
+        outline: none;
+        border-color: $primary;
+        color: $primary;
+    }
+
+    &.input--inline{
+        display: inline-block;
+        width: auto;
+    }
 }

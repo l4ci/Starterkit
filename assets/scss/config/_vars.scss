@@ -4,28 +4,40 @@
 |--------------------------------------------------------------------------
 */
 
+@import url(//fonts.googleapis.com/css?family=Montserrat:400,700|Playfair+Display:400,700);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
 /**
  * FONT-FAMILY
  */
-@import url(//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:400,700,300);
 $font-primary: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-secondary: 'Roboto Slab', 'Times New Roman', Georgia, serif;
-
+$font-secondary: 'Playfair Display', 'Times New Roman', Georgia, serif;
+$font-icon: 'FontAwesome';
 
 /**
  * COLORS
  */
-$black : #333;
-$white : #fff;
+$black: #333;
+$white: #fff;
+$grey: #999;
+$red: #b23236;
 
 $primary: rebeccapurple;
 $secondary: cornflowerblue;
 
+/**
+ * TIMING/EASING VARS
+ */
+$timing-short: .5s ease;
+$timing-long: 2s ease;
+
+$border-radius: 3px;
 
 /**
  * BREAKPOINTS
  */
 $breakpoints: (
+  'xs': 20em,
   'sm': 35.5em,
   'md': 48em,
   'lg': 64em,

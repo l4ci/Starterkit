@@ -8,12 +8,12 @@
 /**
  * BREAKPOINT MIXIN
  *
- * Using the brekpoint list defined in `_vars.scss
+ * Using the breakpoint list defined in `_vars.scss`
  *
  * Usage:
- * `@include bp(small)` => @media (min-width: small)
- * `@include bp(small,max)` => @media (max-width: small)
- * `@include bp(small,medium)` => @media (min-width: small) and (max-width: medium)
+ * `@include bp(xs)` => @media (min-width: xs)
+ * `@include bp(xs,max)` => @media (max-width: xs)
+ * `@include bp(xs,md)` => @media (min-width: xs) and (max-width: md)
  */
 @mixin bp($bp,$type:min) {
     $value: map-get($breakpoints, $bp);

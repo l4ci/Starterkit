@@ -9,9 +9,72 @@
     }
 
     li { display: inline-block; }
-
     a {
         display: block;
         text-decoration: none;
     }
+
+    // DROPDOWN MENU
+    li.hasDrop{
+        position: relative;
+        padding-right: 1em;
+
+        &:after{
+            position: absolute;
+            top: 50%;
+            right: .5em;
+            transform: translateY(-50%);
+            display: inline-block;
+            content:'\f0d7';
+            font-family: $font-icon;
+            color: $black;
+            pointer-events: none;
+        }
+
+        &:hover{
+            ul{
+                display: block;
+            }
+        }
+        ul{
+            display: none;
+            position: absolute;
+            top: 2.75em;
+            left: 0;
+            z-index: 1;
+            background: $white;
+
+            li{
+                display: block;
+                border-bottom: .0625em solid $grey;
+
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+/**
+ * PRIMARY NAVIGATION
+ */
+.nav-primary{
+    li{
+        display: block;
+        @include bp(md) {
+            display: inline-block;
+        }
+    }
+}
+
+/**
+ * FOOTER NAVIGATION
+ */
+.nav-footer{
+
+}
+.nav-copyright{
+    text-align: center;
+    @include font-size(.875rem);
 }
