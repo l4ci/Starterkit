@@ -1,6 +1,13 @@
 /**
  * MAIN
  */
+
+/**
+ * @todo Checkout the LOBOTOMIZED OWL
+ * http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+ */
+
+
 .main{
 
 }
@@ -9,12 +16,12 @@
     position: relative;
     display: block;
 
-    @include rem('padding',2rem 0);
+    @include rem('padding',2rem, 0);
     @include bp(md) {
-        @include rem('padding',4rem 0);
+        @include rem('padding',4rem, 0);
     }
     @include bp(lg) {
-        @include rem('padding',5rem 0);
+        @include rem('padding',5rem, 0);
     }
 
     &.section--nopadding{

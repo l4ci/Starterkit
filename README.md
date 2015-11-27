@@ -4,23 +4,21 @@ Quick-start frontend developer boilerplate. Folder structure, useful sass mixins
 # Clone this repo
 `git clone https://github.com/l4ci/Starterkit.git www`
 
-# Grunt
-To compile and minify `.sass` files you need to have [Grunt](http://gruntjs.com/) installed.
+# Gulp
+To compile and minify `.scss` files you need to have [Gulp](http://gulpjs.com/) installed.
 
-**Project specific grunt install**
+**Project specific gulp install**
 
-1. Install local grunt
-`npm install grunt --save-dev`
+1. Install local gulp
+`npm install gulp`
 
-2. Install grunt plugins
-`npm install grunt-contrib-watch grunt-contrib-sass grunt-browser-sync grunt-postcss pixrem autoprefixer-core cssnano postcss-focus --save-dev`
+2. Install gulp plugins
+`npm install gulp-autoprefixer gulp-changed gulp-concat gulp-cache del vinyl-ftp gulp-imagemin gulp-jshint gulp-livereload gulp-minify-css gulp-notify gulp-rename gulp-ruby-sass gulp-uglify gulp-util del --save-dev`
 
-3. Run grunt
-`grunt watch`
-
+3. Run gulp
+`gulp watch`
 
 # Resources:
-[GruntJS](http://gruntjs.com/)
+[Gulpjs](http://gulpjs.com/)
 [NodeJS](http://nodejs.org/)
 [SASS](http://sass-lang.com/)
-[BrowserSync](http://browsersync.io/)

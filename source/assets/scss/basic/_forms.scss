@@ -36,7 +36,7 @@ textarea,.textarea{
     border: .125em solid $grey;
     border-radius: $border-radius;
     transition: all $timing-short;
-    font-family: $font-heading;
+    font-family: $font-primary;
     @include font-size(.875rem);
 
     &::-webkit-input-placeholder {
