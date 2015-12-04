@@ -1,6 +1,6 @@
 /*!
  * gulp
- * $ npm install gulp-autoprefixer gulp-changed gulp-concat gulp-cache del vinyl-ftp gulp-imagemin gulp-livereload gulp-minify-css gulp-notify gulp-rename gulp-ruby-sass gulp-uglify gulp-util del --save-dev
+ * $ npm install gulp-autoprefixer gulp-changed gulp-concat gulp-cache del vinyl-ftp gulp-imagemin gulp-livereload gulp-minify-css gulp-notify gulp-rename gulp-ruby-sass gulp-sourcemaps gulp-uglify gulp-util del --save-dev
 */
 
 var gulp = require('gulp');
@@ -18,17 +18,18 @@ var autoprefixer = require('gulp-autoprefixer'),
     notify       = require('gulp-notify'),
     rename       = require('gulp-rename'),
     sass         = require('gulp-ruby-sass'),
+    sourcemaps   = require('gulp-sourcemaps'),
     uglify       = require('gulp-uglify'),
     util         = require('gulp-util');
 
 
-// Set Folders
-var SRC     = 'source/',
-    BUILD   = 'public/',
-    SRCASSETS   = SRC+'assets/',
-    BUILDASSETS = BUILD+'assets/';
+// FOLDERS
+var SRC         = 'src/',
+    BUILD       = 'build/',
+    SRCASSETS   = SRC   + 'assets/',
+    BUILDASSETS = BUILD + 'assets/';
 
-// FTP
+// FTP-SETTINGS
 var FTP_HOST = 'ftp.website.tld',
     FTP_PORT = 21,
     FTP_USER = 'user',
@@ -36,39 +37,39 @@ var FTP_HOST = 'ftp.website.tld',
     FTP_DIR  = '/public_html';
 
 
-// Styles
+// STYLES
 gulp.task('styles', function() {
   return sass(SRCASSETS+'scss/bootstrap.scss', { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
-    .pipe(gulp.dest(BUILDASSETS+'css'))
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(rename({ basename: "main", suffix: '.min' }))
     .pipe(minifycss())
     .pipe(gulp.dest(BUILDASSETS+'css'));
 });
 
-// Scripts
+// SCRIPTS
 gulp.task('scripts', function() {
-  return gulp.src(SRCASSETS + 'js/**/*.js')
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest(BUILDASSETS+'js'))
+  return gulp.src([SRCASSETS + 'js/_/*.js' , SRCASSETS + 'js/main.js', SRCASSETS + 'js/plugins/*.js', SRCASSETS + 'js/**/*.js'])
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.js'))
+    .pipe(sourcemaps.write())
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
     .pipe(gulp.dest(BUILDASSETS+'js'));
 });
 
-// Images
+// IMAGES
 gulp.task('images', function() {
   return gulp.src(SRCASSETS + 'img/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest(BUILDASSETS+'img'));
 });
 
-// Default task
+// DEFAULT TASK
 gulp.task('default', function() {
   gulp.start('styles', 'scripts', 'images');
 });
 
-// FTP Deploy
+// FTP DEPLOY
 gulp.task('deploy', function () {
 
     var conn = ftp.create( {
@@ -87,7 +88,7 @@ gulp.task('deploy', function () {
         .pipe( conn.dest( FTP_DIR ) );
 } );
 
-// Watch
+// WATCH
 gulp.task('watch', function() {
 
   gulp.watch(SRCASSETS + 'scss/**/*.scss', ['styles']);
@@ -96,4 +97,12 @@ gulp.task('watch', function() {
 
   livereload.listen();
   gulp.watch([SRC+'**']).on('change', livereload.changed);
+});
+
+// COPY
+gulp.task('copy', function () {
+    gulp.src([
+        SRC + '*.+(php|html|txt)'
+    ],{'base' : SRC})
+    .pipe(gulp.dest( BUILD ));
 });
