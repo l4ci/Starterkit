@@ -1,45 +1,25 @@
-<!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@@include('./inc/head.html', {
+    "lang" : "en",
+    "meta" : {
+        "title" : "Starterkit Title",
+        "description" : "Meta Description"
+    },
+    "bodyclass" : "index"
+})
 
-    <title></title>
-    <meta name="description" content="">
+@@include(markdown('./inc/example.md'))
 
-    <link href="assets/css/main.min.css" rel="stylesheet">
+<!-- Some EMMET Shortcuts to get you started -->
 
-    <link rel="dns-prefetch" href="//ajax.googleapis.com">
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
+header.header>a.logo
 
-    <!-- USE MODERNIZR <http://modernizr.com/> -->
+nav.nav.nav-primary>ul>(li>a)*3
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+main.main>.section>.grid-container
 
-    header.header>a.logo
+footer.footer>.grid-container>
 
-    nav.nav.nav-primary>ul>(li>a)*3
-
-    main.main>.section>.grid-container
-
-    footer.footer>.grid-container>
-
-    .copyright>.grid-container
+.copyright>.grid-container
 
 
-    <a class="backToTop" href="#"><i class="fa fa-chevron-top"></i></a>
-
-    <!-- JS -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
-    <script src="assets/js/app.min.js"></script>
-
-  </body>
-</html>
+@@include('./inc/foot.html')

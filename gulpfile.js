@@ -1,6 +1,6 @@
 /*!
  * gulp
- * $ npm install gulp-autoprefixer gulp-changed gulp-concat gulp-cache del vinyl-ftp gulp-imagemin gulp-livereload gulp-minify-css gulp-notify gulp-rename gulp-ruby-sass gulp-sourcemaps gulp-uglify gulp-util del --save-dev
+ * $ npm install gulp-autoprefixer gulp-changed gulp-concat gulp-cache del gulp-file-include vinyl-ftp gulp-imagemin gulp-livereload markdown gulp-minify-css gulp-notify gulp-rename gulp-ruby-sass gulp-sourcemaps gulp-uglify gulp-util del --save-dev
 */
 
 var gulp = require('gulp');
@@ -11,9 +11,11 @@ var autoprefixer = require('gulp-autoprefixer'),
     concat       = require('gulp-concat'),
     cache        = require('gulp-cache'),
     del          = require('del'),
+    fileinclude  = require('gulp-file-include'),
     ftp          = require('vinyl-ftp'),
     imagemin     = require('gulp-imagemin'),
     livereload   = require('gulp-livereload'),
+    markdown     = require('markdown'),
     minifycss    = require('gulp-minify-css'),
     notify       = require('gulp-notify'),
     rename       = require('gulp-rename'),
@@ -64,9 +66,24 @@ gulp.task('images', function() {
     .pipe(gulp.dest(BUILDASSETS+'img'));
 });
 
+// FILE INCLUDES
+gulp.task('fileinclude', function() {
+
+    // HTML Files
+    return gulp.src( [ SRC + '*.+(html)'],{'base' : SRC} )
+    .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file',
+        filters: {
+            markdown: markdown.parse
+        }
+    }))
+    .pipe( gulp.dest(BUILD) );
+});
+
 // DEFAULT TASK
 gulp.task('default', function() {
-  gulp.start('styles', 'scripts', 'images');
+  gulp.start('styles', 'scripts', 'images', 'fileinclude', 'copy');
 });
 
 // FTP DEPLOY
@@ -95,14 +112,22 @@ gulp.task('watch', function() {
   gulp.watch(SRCASSETS + 'js/**/*.js', ['scripts']);
   gulp.watch(SRCASSETS + 'img/**/*', ['images']);
 
+  gulp.watch(SRC + '**/*.+(html|md|markdown)', ['fileinclude']);
+
+  gulp.watch(SRC + '**', ['copy']);
+
   livereload.listen();
-  gulp.watch([SRC+'**']).on('change', livereload.changed);
+  gulp.watch([SRC + '**']).on('change', livereload.changed);
 });
 
 // COPY
-gulp.task('copy', function () {
-    gulp.src([
-        SRC + '*.+(php|html|txt)'
-    ],{'base' : SRC})
-    .pipe(gulp.dest( BUILD ));
-});
+// @todo: Only copy whats not already inside a build chain
+// gulp.task('copy', function () {
+//     gulp.src([
+//         SRC + '**',                              // Include all
+//         '!' + SRCASSETS,                         // Exclude assets folder
+//         '!' + SRC + 'inc/**',                    // Exclude include files
+//         '!' + SRC + '**/*.+(html|md|markdown)',  // Exclude html/Markdown files
+//     ],{'base' : SRC})
+//     .pipe(gulp.dest( BUILD ));
+// });
