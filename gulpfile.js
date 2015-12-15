@@ -41,12 +41,13 @@ var FTP_HOST = 'ftp.website.tld',
 
 // STYLES
 gulp.task('styles', function() {
-  return sass(SRCASSETS+'scss/bootstrap.scss', { style: 'expanded' })
+  return sass(SRCASSETS + 'scss/bootstrap.scss', { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
     .pipe(rename({ basename: "main", suffix: '.min' }))
     .pipe(minifycss())
     .pipe(gulp.dest(BUILDASSETS+'css'));
 });
+
 
 // SCRIPTS
 gulp.task('scripts', function() {
@@ -59,12 +60,14 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(BUILDASSETS+'js'));
 });
 
+
 // IMAGES
 gulp.task('images', function() {
   return gulp.src(SRCASSETS + 'img/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest(BUILDASSETS+'img'));
 });
+
 
 // FILE INCLUDES
 gulp.task('fileinclude', function() {
@@ -105,6 +108,7 @@ gulp.task('deploy', function () {
         .pipe( conn.dest( FTP_DIR ) );
 } );
 
+
 // WATCH
 gulp.task('watch', function() {
 
@@ -119,6 +123,7 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch([SRC + '**']).on('change', livereload.changed);
 });
+
 
 // COPY
 // @todo: Only copy whats not already inside a build chain
