@@ -84,9 +84,9 @@ gulp.task('fileinclude', function() {
     .pipe( gulp.dest(BUILD) );
 });
 
-// DEFAULT TASK
+// DEFAULT TASK - starts the WATCH task
 gulp.task('default', function() {
-  gulp.start('styles', 'scripts', 'images', 'fileinclude', 'copy');
+  gulp.start('watch');
 });
 
 // FTP DEPLOY
