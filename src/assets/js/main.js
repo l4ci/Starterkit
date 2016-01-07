@@ -25,8 +25,8 @@ $(function() {
         checkBackToTop();
     }
 
-    $(window).scroll(windowScroll());
-    $(window).resize(windowResize());
+    $(window).scroll(windowScroll);
+    $(window).resize(windowResize);
 
 
     /**
