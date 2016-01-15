@@ -1,9 +1,9 @@
-jQuery.noConflict();
-
 /**
  * Main File starts here
+ * @todo
+ *     - fix the way plugins are minified and called
  */
-$(function() {
+(function($) {
     var html = $('html'),
         body = $('body'),
         scrollTop = $(this).scrollTop();
@@ -38,4 +38,4 @@ $(function() {
         console.log('Starterkit — ready!');
     }
     init();
-});
+})(jQuery);
