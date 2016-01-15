@@ -1,7 +1,15 @@
-/*!
- * gulp
- * $ npm install gulp-autoprefixer gulp-changed gulp-concat gulp-cache del gulp-file-include vinyl-ftp gulp-imagemin gulp-livereload markdown gulp-minify-css gulp-notify gulp-rename gulp-ruby-sass gulp-sourcemaps gulp-uglify gulp-util del --save-dev
+/* * * * *
+ * GULP
+ * *
+ * 1) Install local gulp: `npm install gulp`
+ * 2) Install gulp plugins: `npm install gulp-autoprefixer gulp-changed gulp-concat gulp-cache del gulp-file-include vinyl-ftp gulp-imagemin gulp-livereload markdown gulp-minify-css gulp-notify gulp-rename gulp-ruby-sass gulp-sourcemaps gulp-uglify gulp-util del --save-dev`
 */
+
+/**
+ * @todo
+ *     - replace cssminify with cssnano
+ *     - finish copy task
+ */
 
 var gulp = require('gulp');
 
@@ -51,7 +59,7 @@ gulp.task('styles', function() {
 
 // SCRIPTS
 gulp.task('scripts', function() {
-  return gulp.src([SRCASSETS + 'js/_/*.js' , SRCASSETS + 'js/main.js', SRCASSETS + 'js/plugins/*.js', SRCASSETS + 'js/**/*.js'])
+  return gulp.src([SRCASSETS + 'js/_/*.js' , SRCASSETS + 'js/plugins/*.js', SRCASSETS + 'js/**/*.js' ,SRCASSETS + 'js/main.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
     .pipe(sourcemaps.write())
@@ -118,7 +126,7 @@ gulp.task('watch', function() {
 
   gulp.watch(SRC + '**/*.+(html|md|markdown)', ['fileinclude']);
 
-  gulp.watch(SRC + '**', ['copy']);
+  //gulp.watch(SRC + '**', ['copy']);
 
   livereload.listen();
   gulp.watch([SRC + '**']).on('change', livereload.changed);
