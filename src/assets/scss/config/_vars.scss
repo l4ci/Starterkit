@@ -20,10 +20,14 @@ $font-icon: 'FontAwesome';
 $black: #333;
 $white: #fff;
 $grey: #999;
-$red: #b23236;
 
-$primary: rebeccapurple;
-$secondary: cornflowerblue;
+$red: #b23236;
+$blue: #2f77d1;
+$green: #0a8754;
+$orange: #FFC144;
+
+$primary: $blue;
+$secondary: $orange;
 
 /**
  * TIMING/EASING VARS
@@ -48,3 +52,4 @@ $breakpoints: (
  * GRID
  */
 $grid-padding: 10px;
+$grid-vertical: 5px;

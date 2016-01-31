@@ -2,25 +2,6 @@
  * FORMS, INPUT ELEMENTS
  */
 
-/**
- * PLACEHOLDER
- */
-::-webkit-input-placeholder { /* WebKit browsers */
-    color: $black;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: $black;
-    opacity:  1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: $black;
-    opacity:  1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color: $black;
-}
-
-
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -39,21 +20,6 @@ textarea,.textarea{
     font-family: $font-primary;
     @include font-size(.875rem);
 
-    &::-webkit-input-placeholder {
-        color: rgba($black,.5);
-    }
-    &:-moz-placeholder {
-        color: rgba($black,.5);
-        opacity:  1;
-    }
-    &::-moz-placeholder {
-        color: rgba($black,.5);
-        opacity:  1;
-    }
-    &:-ms-input-placeholder {
-        color: rgba($black,.5);
-    }
-
     &:hover,
     &:active,
     &:focus,
@@ -67,4 +33,33 @@ textarea,.textarea{
         display: inline-block;
         width: auto;
     }
+}
+
+
+label, .label{
+    display: block;
+    @include font-size(.875rem);
+
+    // Inline description for the label
+    span.desc{
+        display: inline-block;
+        margin-left: $grid-vertical;
+    }
+
+    // Required asterik
+    span.req{
+        font-weight: bold;
+        color: $red;
+        text-transform: none;
+        font-size: 1.1em;
+    }
+}
+
+// Description that go along with the label
+.desc{
+    display: block;
+    margin-top: $grid-vertical;
+    @include font-size(.75rem);
+    @include rem('line-height', 1.25rem);
+    color: rgba($black,.5);
 }

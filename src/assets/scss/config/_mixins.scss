@@ -96,3 +96,8 @@
 @mixin font-size($size){
     @include rem('font-size', $size);
 }
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}

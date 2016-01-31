@@ -1,11 +1,20 @@
 /**
  * BUTTONS
  */
-.btn{
+button,.btn,
+input[type="reset"],
+input[type="submit"],
+input[type="file"]{
     display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
     padding: .25em .5em;
     background: $grey;
     color: $black;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
     transition: background $timing-short;
     border-bottom: .125em solid rgba(black,.1);
 

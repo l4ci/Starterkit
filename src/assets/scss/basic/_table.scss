@@ -1,0 +1,10 @@
+table,.table{
+
+    th,.th,
+    td,.td{
+        text-align: left;
+        vertical-align: top;
+        border-bottom: 1px solid rgba($black,.05);
+        padding: 10px;
+    }
+}

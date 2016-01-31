@@ -1,0 +1,19 @@
+.alert{
+    display: block;
+    position: relative;
+    padding: 1em;
+    border-radius: $border-radius;
+    margin-bottom: ($grid-vertical * 2);
+
+    color: $blue;
+    background: rgba($blue,.15);
+
+    &.alert--danger{
+        color: $red;
+        background: rgba($red,.15);
+    }
+    &.alert--success{
+        color: $green;
+        background: rgba($green,.15);
+    }
+}
