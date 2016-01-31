@@ -20,9 +20,15 @@
 
 @import 'basic/html';
 @import 'basic/grid';
-@import 'basic/typo';
-@import 'basic/forms';
-@import 'basic/buttons';
+@import 'basic/helper';
+
+@import 'components/typo';
+@import 'components/alert';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/table';
 
 @import 'layout/header';
 @import 'layout/nav';
@@ -31,3 +37,4 @@
 
 @import 'modules/backtotop';
 @import 'modules/overlay';
+@import 'modules/tabs';

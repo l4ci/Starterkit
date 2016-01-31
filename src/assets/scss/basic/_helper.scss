@@ -1,0 +1,42 @@
+/**
+ * Text-alignment
+ */
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+
+
+/**
+ * Floats and Clearfix
+ */
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.group:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/**
+ * Utility
+ */
+img, video, audio, embed, object{
+    max-width: 100%;
+}
+
+.responsive{
+    max-width: 100%;
+    height: auto;
+}
+
+.hidden,
+[hidden]{
+    display: none;
+}
