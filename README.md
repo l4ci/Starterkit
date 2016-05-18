@@ -13,10 +13,10 @@ To compile and minify `.scss` files you need to have [Gulp](http://gulpjs.com/) 
 `npm install gulp`
 
 2. Install gulp plugins
-`npm install gulp-autoprefixer gulp-changed gulp-concat gulp-cache del vinyl-ftp gulp-imagemin gulp-jshint gulp-livereload gulp-minify-css gulp-notify gulp-rename gulp-ruby-sass gulp-uglify gulp-util del --save-dev`
+`npm install  --save-dev`
 
 3. Run gulp
-`gulp watch`
+`gulp`
 
 # Resources:
 [Gulpjs](http://gulpjs.com/)
