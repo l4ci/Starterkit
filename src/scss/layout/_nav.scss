@@ -1,0 +1,143 @@
+.toggle-nav {
+    display: block;
+    margin-right: $spacing * -1;
+    margin-left: auto;
+    color: $black;
+    padding: 1rem $spacing * 1.5;
+    font-size: 1.2rem;
+
+    @include bp(md) {
+        display: none;
+    }
+
+    &::after {
+        font-family: $font-icon;
+        content: '\f0c9';
+    }
+
+    &.-open {
+        &::after {
+            content: '\f00d';
+            opacity: .8;
+        }
+    }
+}
+
+.nav {
+    display: none;
+    margin-left: auto;
+    margin-right: 0;
+    width: 100%;
+
+    @include bp(md) {
+        display: block;
+        width: auto;
+    }
+
+    &.nav--open {
+        display: block;
+        border-top: 1px solid $grey;
+
+        @include bp(md) {
+            border-top: 0;
+        }
+    }
+
+    // former ul
+    .nav__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    // former li
+    .nav__item {
+        display: block;
+
+        @include bp(md) {
+            display: inline-block;
+        }
+
+        // former > ul
+        > .nav__list {
+            display: none;
+        }
+
+        &.nav--hasdrop {
+            position: relative;
+
+            > a:after {
+                font-family: "FontAwesome";
+                content: '\f107';
+                padding-left: .5em;
+                position: absolute;
+                right: 1rem;
+
+                @include bp(md) {
+                    position: static;
+                }
+            }
+        }
+
+        &.nav--open {
+            a {
+
+            }
+
+            > a:after {
+                content: '\f106';
+            }
+            .nav__dropdown {
+                display: block;
+            }
+        }
+    }
+
+    a {
+        display: block;
+        color: rgba($black, .9);
+        padding: 1em;
+        font-weight: bold;
+
+        &:focus,
+        &:hover {
+            outline: none;
+        }
+
+        &:active,
+        &.nav__item--active {
+            color: $secondary;
+        }
+    }
+
+    .nav__dropdown {
+        display: none;
+
+        @include bp(md) {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 230px;
+        }
+
+        &.nav__sub-menu--last {
+            @include bp(md) {
+                right: 0;
+                left: auto;
+            }
+        }
+
+        .nav__item {
+            display: block;
+        }
+
+        a {
+            color: rgba($black ,.7);
+
+            &:hover,
+            &:focus {
+                color: $black;
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+/*
+---------------------------------------
+Typography
+---------------------------------------
+*/
+// @todo: Add ul, ol, dl, figure
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    display: block;
+    margin: 0 0 $spacing;
+    font-family: $font-sans;
+    font-weight: 400;
+
+    > a {
+        color: inherit;
+    }
+}
+
+p, .p {
+    display: block;
+    margin: 0 0 $spacing;
+    font-family: $font-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    + h1,+ .h1,
+    + h2,+ .h2,
+    + h3,+ .h3,
+    + h4,+ .h4,
+    + h5,+ .h5,
+    + h6,+ .h6 {
+        margin-top: 2em;
+    }
+}
+
+.lead {
+    font-size: 1.1rem;
+
+    @include bp(md) {
+        font-size: 1.2rem;
+    }
+
+    @include bp(lg) {
+        font-size: 1.3rem;
+    }
+}
+
+h2, .h2 {
+    font-size: 1.4rem;
+
+    @include bp(sm) {
+        font-size: 1.7rem;
+    }
+
+    @include bp(md) {
+        font-size: 2rem;
+    }
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    outline: 0;
+    margin: $spacing 0;
+    padding: 0;
+    background: $grey;
+}
+
+.more {
+    display: inline-block;
+    margin: $spacing 0;
+    color: $primary;
+    transition: all $timing-short;
+    font-weight: bold;
+
+    &::after {
+        display: inline-block;
+        font-family: $font-icon;
+        content: '\f105';
+        margin-left: .7em;
+        transform: translateX(-.2em);
+        transition: all $timing-short;
+    }
+
+    &:hover {
+        color: $secondary;
+
+        &::after {
+            transform: translate(0);
+        }
+    }
+}

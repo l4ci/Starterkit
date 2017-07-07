@@ -1,0 +1,44 @@
+@mixin min($value){
+    @media (min-width: $value) {
+        @content;
+    }
+}
+
+@mixin max($value){
+    @media (max-width: $value) {
+        @content;
+    }
+}
+
+@mixin only($min, $max){
+    @media (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+/**
+ * Defined Breakpoints
+ *
+ * Uses the defined breakpoints and automatically strips 1px off on max-width calculations
+ * @param  {string} $bp       defined in vars
+ * @param  {enum} $type:min min/max
+ * @return media query
+ */
+@mixin bp($bp, $type:min) {
+    $value: map-get($breakpoints, $bp);
+
+    @if $value != null {
+        @if $type == min {
+            @include min($value) {
+                @content;
+            }
+        } @else if $type == max {
+            $value: $value - 1;
+            @include max($value) {
+                @content;
+            }
+        }
+    } @else {
+        @warn 'Value `#{$bp}` could not be retrieved from $breakpoints map. Please make sure it is defined in `_vars.scss` or use mixins `min`, `max`, `only`.';
+    }
+}

@@ -1,0 +1,54 @@
+/*
+---------------------------------------
+Variables
+---------------------------------------
+
+Defining default variables for the whole
+project. Grid-settins, spacing, colors
+and more.
+
+*/
+
+// FONT-FAMILY
+$font-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-serif: 'Lora', Times, 'Times New Roman', Georgia, serif;
+$font-icon: 'FontAwesome';
+
+// COLORS
+$transparent: rgba(black, 0);
+
+$black: #111;
+$white: #fff;
+
+$lightgrey: #ddd;
+$grey: #999;
+$darkgrey: #333;
+
+$red: #b23236;
+$blue: #0a98e0;
+$green: #2db1b9;
+$yellow: #d3b628;
+
+$primary: $blue;
+$secondary: $green;
+
+// GRID
+$spacing: 1rem !default;
+
+$grid-max-width: 1200px;
+
+$breakpoints: (
+  'xs': 320px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+);
+
+$grid-values: (5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100);
+
+// MORE
+$timing-short: .5s ease;
+$timing-long: 2s ease;
+
+$border-radius: 10px;

@@ -1,0 +1,53 @@
+.header {
+    position: relative;
+    background: $white;
+    color: $black;
+    transition: background $timing-short;
+    border-bottom: 1px solid $lightgrey;
+
+    @include bp(md) {
+        position: relative;
+        top: auto;
+    }
+
+    &.header--fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+    }
+
+    > .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        transition: all $timing-short;
+
+        @include bp(md) {
+            flex-wrap: nowrap;
+            padding-top: $spacing;
+            padding-bottom: $spacing;
+        }
+    }
+
+    &.header--scrolled {
+        //background: $black;
+        > .container {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .header__logo {
+        display: block;
+        margin: 0;
+        padding: 0;
+        margin-right: auto;
+
+        a { display: block; }
+
+        img { display: block;}
+    }
+}

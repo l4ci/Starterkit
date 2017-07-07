@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js" lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Frontend Boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../../dist/css/style.css">
+
+    <script>document.createElement( "picture" );</script>
+    <script src="assets/polyfill/picturefill.js" async></script>
+</head>
+<body>
+
+    <script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../node_modules/jquery/dist/jquery.min.js">\x3C/script>')</script>
+
+    <script src="../../dist/js/main.js"></script>
+
+    <!-- Webfonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Open Sans:400,700']
+            },
+            custom: {
+                families: ['FontAwesome'],
+                urls: ['https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css']
+            }
+        };
+
+        (function(d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
+
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+</body>
+</html>

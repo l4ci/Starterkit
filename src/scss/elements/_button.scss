@@ -1,0 +1,42 @@
+/*
+---------------------------------------
+Basic Buttons
+---------------------------------------
+*/
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button,
+.btn {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    vertical-align: middle;
+
+    font-family: $font-sans;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+    text-align: center;
+
+    border: 0;
+    border-radius: $border-radius;
+
+    &--hover,
+    &--focus,
+    &:focus,
+    &:hover{
+        cursor: pointer;
+        outline: none;
+        background: $white;
+        color: $black;
+    }
+
+    &--active,
+    &:active {
+        box-shadow: none;
+    }
+
+}

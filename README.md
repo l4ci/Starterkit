@@ -1,24 +1,12 @@
-# Frontend Developer Starterkit
-Quick-start frontend developer boilerplate. Folder structure, useful sass mixins, and much more.
+# Frontend Boilerplate
+Quick-start frontend developer boilerplate. Modular folder structure, useful sass mixins, flexbox-grid and much more to get started.
 
-# Clone this repo
+## Clone this repo
 `git clone https://github.com/l4ci/Starterkit.git www`
 
-# Gulp
-To compile and minify `.scss` files you need to have [Gulp](http://gulpjs.com/) installed.
+## CD into the folder and run
+`yarn`*
 
-**Project specific gulp install**
+## Run `gulp watch` and start coding
 
-1. Install local gulp
-`npm install gulp`
-
-2. Install gulp plugins
-`npm install  --save-dev`
-
-3. Run gulp
-`gulp`
-
-# Resources:
-[Gulpjs](http://gulpjs.com/)
-[NodeJS](http://nodejs.org/)
-[SASS](http://sass-lang.com/)
+* This requires [yarn](https://yarnpkg.com/en/) of course.

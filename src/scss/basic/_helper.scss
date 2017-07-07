@@ -1,0 +1,51 @@
+/**
+ * Hidden Classes
+ *
+ * Usage: hidden-{breakpoint}-up/down
+ */
+@each $name, $size in $breakpoints {
+    @include bp($name) {
+        .hidden-#{$name}-up {
+            display: none;
+        }
+    }
+    @include bp($name, 'max') {
+        .hidden-#{$name}-down {
+            display: none;
+        }
+    }
+}
+
+// Text Alignment
+// Usage: --text-center
+.--text {
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+    &-left {
+        text-align: left;
+    }
+}
+
+// Float
+// Usage: --float-left
+.--float {
+    &-left {
+        float: left;
+    }
+
+    &-right {
+        float: right;
+    }
+}
+
+// Clearfix
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+

@@ -1,0 +1,93 @@
+/*
+---------------------------------------
+Forms and Input Elements
+---------------------------------------
+*/
+
+.label {
+    display: block;
+    margin-top: 0;
+    margin-bottom: $spacing;
+}
+
+
+.input {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: $spacing;
+    padding: .7em .4em .6em;
+    outline: none;
+    vertical-align: top;
+    color: $black;
+    background: $white;
+    border: 1px solid $bordercolor);
+
+    &:hover {
+        border-color: $grey;
+    }
+
+    &:active,
+    &:focus {
+        border-color: $primary;
+    }
+
+    &--full {
+        width: 100%;
+    }
+}
+
+
+.select {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: $spacing;
+    outline: none;
+    vertical-align: top;
+    color: $black;
+    background: $white;
+    border: 1px solid $border-color;
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        transform: translateY(-50%);
+        font-family: $font-family-icon;
+        content: '\f107';
+        line-height: 1;
+    }
+
+    &:hover {
+        border-color: $grey;
+
+        &::after {
+            color: $grey;
+        }
+    }
+
+    &:active,
+    &:focus {
+        border-color: $primary;
+    }
+
+    select {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        appearance: none;
+        padding: .7em .4em .6em;
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        background: $transparent;
+
+        &:focus {
+            outline: transparent;
+        }
+
+        &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+        }
+    }
+}
