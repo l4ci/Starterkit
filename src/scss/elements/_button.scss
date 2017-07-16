@@ -14,7 +14,7 @@ button,
     -webkit-appearance: none;
     vertical-align: middle;
 
-    font-family: $font-sans;
+    font-family: font(sans);
     font-size: 1rem;
     font-weight: bold;
     line-height: 1;
@@ -24,17 +24,17 @@ button,
     border: 0;
     border-radius: $border-radius;
 
-    &--hover,
-    &--focus,
+    &.btn--hover,
+    &.btn--focus,
     &:focus,
     &:hover{
         cursor: pointer;
         outline: none;
-        background: $white;
-        color: $black;
+        background: color(white);
+        color: color(black);
     }
 
-    &--active,
+    &.btn--active,
     &:active {
         box-shadow: none;
     }

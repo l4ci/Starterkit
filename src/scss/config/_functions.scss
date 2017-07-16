@@ -1,0 +1,29 @@
+/*
+---------------------------------------
+Functions
+---------------------------------------
+*/
+
+@function get-from($map, $key){
+    @if map-has-key($map, $key) {
+        @return map-get($map, $key);
+    }
+    @warn "Unknown `#{$key}` in #{$map}.";
+    @return null;
+}
+
+@function color($key) {
+    @return get-from($colors, $key);
+}
+
+@function font($key) {
+    @return get-from($fonts, $key);
+}
+
+@function z($key) {
+    @return get-from($z-layers, $key);
+}
+
+@function timing($key) {
+    @return get-from($timings, $key);
+}

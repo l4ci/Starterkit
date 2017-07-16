@@ -2,7 +2,7 @@
     display: block;
     margin-right: $spacing * -1;
     margin-left: auto;
-    color: $black;
+    color: color(black);
     padding: 1rem $spacing * 1.5;
     font-size: 1.2rem;
 
@@ -11,7 +11,7 @@
     }
 
     &::after {
-        font-family: $font-icon;
+        font-family: font(icon);
         content: '\f0c9';
     }
 
@@ -36,7 +36,7 @@
 
     &.nav--open {
         display: block;
-        border-top: 1px solid $grey;
+        border-top: 1px solid color(grey);
 
         @include bp(md) {
             border-top: 0;
@@ -95,7 +95,7 @@
 
     a {
         display: block;
-        color: rgba($black, .9);
+        color: rgba(color(black), .9);
         padding: 1em;
         font-weight: bold;
 
@@ -118,6 +118,7 @@
             top: 100%;
             left: 0;
             min-width: 230px;
+            z-index: z(dropdown);
         }
 
         &.nav__sub-menu--last {
@@ -132,11 +133,11 @@
         }
 
         a {
-            color: rgba($black ,.7);
+            color: rgba(color(black) ,.7);
 
             &:hover,
             &:focus {
-                color: $black;
+                color: color(black);
             }
         }
     }

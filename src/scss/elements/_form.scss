@@ -18,12 +18,12 @@ Forms and Input Elements
     padding: .7em .4em .6em;
     outline: none;
     vertical-align: top;
-    color: $black;
-    background: $white;
+    color: color(black);
+    background: color(white);
     border: 1px solid $bordercolor);
 
     &:hover {
-        border-color: $grey;
+        border-color: color(grey);
     }
 
     &:active,
@@ -31,7 +31,7 @@ Forms and Input Elements
         border-color: $primary;
     }
 
-    &--full {
+    &.input--full {
         width: 100%;
     }
 }
@@ -43,8 +43,8 @@ Forms and Input Elements
     margin-bottom: $spacing;
     outline: none;
     vertical-align: top;
-    color: $black;
-    background: $white;
+    color: color(black);
+    background: color(white);
     border: 1px solid $border-color;
 
     &::after {
@@ -58,10 +58,10 @@ Forms and Input Elements
     }
 
     &:hover {
-        border-color: $grey;
+        border-color: color(grey);
 
         &::after {
-            color: $grey;
+            color: color(grey);
         }
     }
 

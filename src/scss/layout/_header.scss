@@ -1,9 +1,9 @@
 .header {
     position: relative;
-    background: $white;
-    color: $black;
-    transition: background $timing-short;
-    border-bottom: 1px solid $lightgrey;
+    background: color(white);
+    color: color(black);
+    transition: background timing(short);
+    border-bottom: 1px solid color(lightgrey);
 
     @include bp(md) {
         position: relative;
@@ -15,15 +15,11 @@
         top: 0;
         left: 0;
         right: 0;
-        z-index: 9999;
+        z-index: z(header);
     }
 
     > .container {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
-        transition: all $timing-short;
+        transition: all timing(short);
 
         @include bp(md) {
             flex-wrap: nowrap;
@@ -33,7 +29,9 @@
     }
 
     &.header--scrolled {
-        //background: $black;
+        background: color(lightgrey);
+        border-bottom: 1px solid color(grey);
+
         > .container {
             padding-top: 0;
             padding-bottom: 0;
@@ -48,6 +46,13 @@
 
         a { display: block; }
 
-        img { display: block;}
+        img {
+            display: block;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: -2px;
+            color: color(black);
+            border: none;
+        }
     }
 }

@@ -3,7 +3,7 @@
  *
  * Usage: hidden-{breakpoint}-up/down
  */
-@each $name, $size in $breakpoints {
+@each $name, $size in $grid-breakpoints {
     @include bp($name) {
         .hidden-#{$name}-up {
             display: none;

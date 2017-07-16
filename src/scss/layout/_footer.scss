@@ -3,25 +3,17 @@
     font-size: .875rem;
     line-height: 1.7;
     padding: $spacing * 2 0;
-    background: darken($secondary, 40%);
-    color: $white;
+    background: color(black);
+    color: color(white);
 
     a {
-        color: rgba($white, .8);
+        color: rgba(color(white), .8);
 
         &:hover,
         &:active,
         &:focus {
-            color: $white;
+            color: color(white);
         }
-    }
-
-    .footer__inner {
-        @include flex-container;
-    }
-
-    .footer__subfooter {
-        @include flex-container;
     }
 
     .footer__copyright {

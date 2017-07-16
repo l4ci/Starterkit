@@ -1,3 +1,23 @@
+/**
+ * Default Variables
+ */
+
+$grid-breakpoints: (
+  'xs': 320px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+) !default;
+
+$grid-max-width: 1200px !default;
+
+// Available grid size-classes
+$grid-values: (5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100) !default;
+
+/**
+ * Grid Mixins
+ */
 @mixin container {
     position: relative;
     margin-left: auto;
@@ -47,35 +67,31 @@
     max-width: 0% + $value;
 }
 
+/**
+ * Container
+ */
 .container {
     @include container;
-
-    .row {
-        @include row;
-    }
-
-    [class*=col-]{
-        @include col;
-    }
+    .row { @include row; }
+    [class*=col-]{ @include col; }
 }
 
 .container--flex {
     @include flex-container;
-
-    .row {
-        @include flex-row;
-    }
-
-    [class*=col-]{
-        @include flex-col;
-    }
+    .row { @include flex-row; }
+    [class*=col-]{ @include flex-col; }
 }
 
 .container--full {
     max-width: 100%;
 }
 
-@each $name, $size in $breakpoints {
+.container--wrap {
+    flex-wrap: wrap;
+}
+
+// Generate col-{breakpoint}-{size} classes
+@each $name, $size in $grid-breakpoints {
     @include bp($name) {
         @each $va in $grid-values {
             .col-#{$name}-#{$va} {

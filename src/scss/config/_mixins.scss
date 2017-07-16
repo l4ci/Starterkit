@@ -1,3 +1,9 @@
+/*
+---------------------------------------
+Mixins
+---------------------------------------
+*/
+
 @mixin min($value){
     @media (min-width: $value) {
         @content;
@@ -25,7 +31,7 @@
  * @return media query
  */
 @mixin bp($bp, $type:min) {
-    $value: map-get($breakpoints, $bp);
+    $value: map-get($grid-breakpoints, $bp);
 
     @if $value != null {
         @if $type == min {
@@ -39,6 +45,6 @@
             }
         }
     } @else {
-        @warn 'Value `#{$bp}` could not be retrieved from $breakpoints map. Please make sure it is defined in `_vars.scss` or use mixins `min`, `max`, `only`.';
+        @warn 'Value `#{$bp}` could not be retrieved from $grid-breakpoints map. Please make sure it is defined in `_vars.scss` or use mixins `min`, `max`, `only`.';
     }
 }

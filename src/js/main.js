@@ -10,6 +10,10 @@ if (typeof jQuery == 'undefined') {
 (function($) {
     'use strict';
 
+    debug(true);
+
+    console.log('main.js loaded');
+
     var html = $('html'),
         body = $('body'),
         scrollTop = $(this).scrollTop();
@@ -89,9 +93,9 @@ if (typeof jQuery == 'undefined') {
 
         // Set header to scrolled
         if (scrollTop > $('.header').outerHeight()) {
-            $('.header').addClass('-scrolled');
+            $('.header').addClass('header--scrolled');
         }else{
-            $('.header.-scrolled').removeClass('-scrolled');
+            $('.header.header--scrolled').removeClass('header--scrolled');
         }
     }
 

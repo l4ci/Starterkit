@@ -18,7 +18,7 @@ html {
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    font-family: $font-sans;
+    font-family: font(sans);
 }
 
 *,
@@ -32,7 +32,7 @@ body {
     height: 100%;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    color: $black;
+    color: color(black);
 }
 
 a {
