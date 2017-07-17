@@ -19,14 +19,16 @@ var src  = path + '/src/',
     dist = path + '/dist/';
 
 
-gulp.task('default', ['styles', 'scripts', 'images']);
+gulp.task('default', ['styles', 'scripts', 'images', 'html']);
 
 gulp.task('clean', function () {
-    del([ dist + '/*']);
+    // Remove everything from dist folder
+    del([ dist + '/**/*', dist + '/.*' ]);
 });
 
-gulp.task('build', ['clean'] , function(){
-    // Build everything
+gulp.task('build', ['clean', 'default'] , function(){
+    // Clean everything, then reBuild everything
+    // @todo: default has to run after clean
 });
 
 gulp.task('styles', function () {
@@ -94,4 +96,5 @@ gulp.task('watch', ['server'] ,function () {
     gulp.watch( src + 'scss/**/*.scss' , ['styles'] );
     gulp.watch( src + 'js/**/*.js'     , ['scripts'] );
     gulp.watch( src + 'html/**/*.html' , ['html'] );
+    gulp.watch( src + 'img/**/*'       , ['images'] );
 });
