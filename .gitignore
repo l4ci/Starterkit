@@ -6,6 +6,11 @@
 bower_components
 node_modules
 
+#kirby
+/site/accounts
+/assets/avatars
+/thumbs/*
+
 # IDE and editor specific files
 nbproject
 .idea
