@@ -52,14 +52,10 @@ $grid-values: (5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75
     vertical-align: top;
     padding: 0 $spacing / 2;
     width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
 }
 
-@mixin flex-col {
-    flex: 0 0 100%;
-    width: 100%;
-    max-width: 100%;
-    padding: 0 $spacing / 2;
-}
 
 @mixin generate-col($value) {
     width: 0% + $value;
@@ -70,16 +66,20 @@ $grid-values: (5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75
 /**
  * Container
  */
+
+[class*=col-]{
+    @include col;
+}
+
 .container {
     @include container;
     .row { @include row; }
-    [class*=col-]{ @include col; }
+    [class*=col-]{ flex: none; }
 }
 
 .container--flex {
     @include flex-container;
     .row { @include flex-row; }
-    [class*=col-]{ @include flex-col; }
 }
 
 .container--full {
