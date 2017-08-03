@@ -42,8 +42,13 @@ $grid-values: (5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75
 }
 
 @mixin flex-row {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 $spacing / -2;
     padding: 0 $spacing / 2;
+    width: 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
 }
 
 @mixin col {
@@ -67,14 +72,19 @@ $grid-values: (5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75
  * Container
  */
 
+.col,
 [class*=col-]{
     @include col;
 }
 
 .container {
     @include container;
+
     .row { @include row; }
-    [class*=col-]{ flex: none; }
+
+    &:not(.container--flex){
+        [class*=col-]{ flex: none; }
+    }
 }
 
 .container--flex {
