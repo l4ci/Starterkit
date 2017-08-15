@@ -63,7 +63,7 @@
 
     <!-- Webfonts -->
     <script>
-        WebFontConfig = {
+        WebFont.load({
             google: {
                 families: ['Open Sans:400,700']
             },
@@ -71,21 +71,27 @@
                 families: ['FontAwesome'],
                 urls: ['https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
             }
-        };
-
-        // (optional) Load Webfonts asyn
-        // (function(d) {
-        //     var wf = d.createElement('script'), s = d.scripts[0];
-        //     wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-        //     s.parentNode.insertBefore(wf, s);
-        // })(document);
+        });
     </script>
-
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
+        var gaProperty = 'UA-XXXXX-Y';
+
         window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-        ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        ga('create', gaProperty,'auto');
+        ga('set','anonymizeIp',true);
+        ga('send','pageview');
+
+        var disableStr = 'ga-disable-' + gaProperty;
+        if (document.cookie.indexOf(disableStr + '=true') > -1) {
+            window[disableStr] = true;
+        }
+        function gaOptout() {
+            document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+            window[disableStr] = true;
+            alert('Google Analytics wurde für diese Seite deaktiviert!');
+        }
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
