@@ -89,20 +89,24 @@ $grid-values: (5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75
     &:not(.container--flex){
         [class*=col-]{ flex: none; }
     }
+
+    &--flex {
+        @include flex-container;
+        .row { @include flex-row; }
+    }
+
+    &--full {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &--wrap {
+        flex-wrap: wrap;
+    }
 }
 
-.container--flex {
-    @include flex-container;
-    .row { @include flex-row; }
-}
 
-.container--full {
-    max-width: 100%;
-}
-
-.container--wrap {
-    flex-wrap: wrap;
-}
 
 // Generate col-{breakpoint}-{size} classes
 @each $name, $size in $grid-breakpoints {
