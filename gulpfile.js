@@ -64,7 +64,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('images', function() {
-    gulp.src( src +'img/*')
+    gulp.src( src +'img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest( dist + 'img'))
         .pipe(browserSync.stream());
