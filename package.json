@@ -7,9 +7,7 @@
   },
   "author": "Volker Otto <hello@volkerotto.net> (http://volkerotto.net)",
   "license": "MIT",
-  "dependencies": {
-    "jquery": "^3.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
