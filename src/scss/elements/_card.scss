@@ -1,0 +1,29 @@
+/*
+---------------------------------------
+Card Layout
+---------------------------------------
+*/
+.card {
+    border: 1px solid color(grey);
+    border-radius: $border-radius;
+    margin: $spacing auto;
+}
+
+.card__header,
+.card__footer {
+    padding: $spacing;
+    background: rgba(color(grey), .2);
+}
+
+.card__body {
+    padding: $spacing;
+    background: color(white);
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.card__links {}
