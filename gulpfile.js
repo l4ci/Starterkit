@@ -54,7 +54,7 @@ gulp.task('scripts', function() {
         }))
         .pipe(gulp.dest(dist + 'js' ));
 
-    // Copy the rest but exclude main.js and includes
+    // Copy the rest but exclude main.js and includes starting with an underscore.
     gulp.src([
         src + 'js/**/*.js',
         '!' + src + 'js/main.js',
