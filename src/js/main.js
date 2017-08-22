@@ -105,7 +105,7 @@ if (typeof jQuery == 'undefined') {
     $(window).resize(function(){
         clearTimeout(window.resizedFinished);
         window.resizedFinished = setTimeout(windowResize, 250);
-    }).resize();
+    });
 
 
     /**
@@ -114,6 +114,7 @@ if (typeof jQuery == 'undefined') {
      */
     function init(){
         html.toggleClass('no-js js-init');
+        windowResize();
     }
     init();
 
