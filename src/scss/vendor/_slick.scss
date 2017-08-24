@@ -89,3 +89,146 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    line-height: 1;
+    font-size: 0;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: $spacing;
+    border: none;
+    outline: none;
+    z-index: z(default);
+
+    &:hover,
+    &:focus {
+        outline: none;
+        background: transparent;
+        color: transparent;
+
+        &:before { opacity: 1; }
+    }
+
+    &.slick-disabled:before {
+        opacity: .8;
+    }
+
+    &:before {
+        font-family: font(icon);
+        font-size: 2rem;
+        line-height: 2rem;
+        color: color(black);
+        opacity: 1;
+    }
+}
+
+.slick-prev {
+    left: 0;
+
+    [dir="rtl"] & {
+        left: auto;
+        right: 0;
+    }
+
+    &:before {
+        content: '\f104';
+
+        [dir="rtl"] & {
+            content: '\f105';
+        }
+    }
+}
+
+.slick-next {
+    right: 0;
+
+    [dir="rtl"] & {
+        left: 0;
+        right: auto;
+    }
+
+    &:before {
+        content: '\f105';
+
+        [dir="rtl"] & {
+            content: '\f104';
+        }
+    }
+}
+
+/* Dots */
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    li {
+        position: relative;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+
+        button {
+            border: 0;
+            background: transparent;
+            display: block;
+            height: 20px;
+            width: 20px;
+            outline: none;
+            line-height: 0px;
+            font-size: 0px;
+            color: transparent;
+            padding: 5px;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                outline: none;
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '\f111';
+                width: 20px;
+                height: 20px;
+                font-family: font(icon);
+                font-size: 1rem;
+                line-height: 20px;
+                text-align: center;
+                color: color(darkgrey);
+                opacity: .8;
+            }
+        }
+        &.slick-active button:before {
+            color: $primary;
+            opacity: 1;
+        }
+    }
+}
