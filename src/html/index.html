@@ -11,6 +11,7 @@
     <script src="/js/polyfill/picturefill.min.js" async></script>
 </head>
 <body>
+    <a class="skip-link sr-only sr-only--focusable" href="#content">Skip to content</a>
 
     <header class="header header--fixed">
         <div class="container container--flex container--wrap">
@@ -31,7 +32,18 @@
         <!-- /.container -->
     </header>
 
-    <main class="main">
+    <main class="main" id="content">
+
+        <div class="slider">
+            <div class="slider__inner"  data-slick='{"arrows": true, "autoplay": true, "autoplaySpeed": 2000, "dots": true, "fade": true, "cssEase": linear, "pauseOnFocus": true, "pauseOnHover": true, }'>
+                <div>Slide</div>
+                <div>Slide</div>
+                <div>Slide</div>
+            </div>
+            <!-- /.slider__inner -->
+        </div>
+        <!-- /.slider -->
+
         <div class="container">
             <h1>It works!</h1>
 

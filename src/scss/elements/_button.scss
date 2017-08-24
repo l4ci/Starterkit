@@ -3,11 +3,8 @@
 Basic Buttons
 ---------------------------------------
 */
-input[type="submit"],
-input[type="button"],
-input[type="reset"],
-button,
-.btn {
+
+@mixin btn {
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -38,5 +35,12 @@ button,
     &:active {
         box-shadow: none;
     }
+}
 
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button,
+.btn {
+    @include btn;
 }

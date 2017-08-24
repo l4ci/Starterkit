@@ -1,3 +1,7 @@
+.skip-link {
+    @include btn;
+}
+
 .main {
     position: relative;
     display: block;

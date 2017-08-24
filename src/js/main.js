@@ -21,6 +21,10 @@ if (typeof jQuery == 'undefined') {
 
     //$(".lazyload").unveil(200);
 
+    if ( $('.slider').length >= 1 ){
+        $('.slider__inner').slick();
+    }
+
 
     // Navigation Dropdown Menu
     $('.nav').on('click','.nav__item.nav--hasdrop',function(e){
