@@ -15,7 +15,7 @@
         content: '\f0c9';
     }
 
-    &.-open {
+    &.nav--open {
         &::after {
             content: '\f00d';
             opacity: .8;
