@@ -20,7 +20,7 @@ Forms and Input Elements
     vertical-align: top;
     color: color(black);
     background: color(white);
-    border: 1px solid $bordercolor);
+    border: 1px solid color(grey);
 
     &:hover {
         border-color: color(grey);
@@ -45,14 +45,14 @@ Forms and Input Elements
     vertical-align: top;
     color: color(black);
     background: color(white);
-    border: 1px solid $border-color;
+    border: 1px solid color(grey);
 
     &::after {
         position: absolute;
         top: 50%;
         right: 1em;
         transform: translateY(-50%);
-        font-family: $font-family-icon;
+        font-family: font(icon);
         content: '\f107';
         line-height: 1;
     }
@@ -79,14 +79,14 @@ Forms and Input Elements
         width: 100%;
         border: 0;
         border-radius: 0;
-        background: $transparent;
+        background: color(transparent);
 
         &:focus {
-            outline: transparent;
+            outline: color(transparent);
         }
 
         &:-moz-focusring {
-            color: transparent;
+            color: color(transparent);
             text-shadow: 0 0 0 #000;
         }
     }
