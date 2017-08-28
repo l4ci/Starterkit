@@ -60,7 +60,6 @@ $grid-values: (5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75
     max-width: 100%;
 }
 
-
 @mixin generate-col($value) {
     @if $value == 33 {
         $value: 33.33334;
@@ -105,7 +104,6 @@ $grid-values: (5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75
         flex-wrap: wrap;
     }
 }
-
 
 
 // Generate col-{breakpoint}-{size} classes
