@@ -7,7 +7,7 @@ Basic Buttons
 @mixin btn {
     display: inline-block;
     margin: 0;
-    padding: 0;
+    padding: $spacing / 2;
     -webkit-appearance: none;
     vertical-align: middle;
 
@@ -47,11 +47,12 @@ button,
 
 .btn--primary {
     background: $primary;
-    color: white;
+    color: c(white);
 
     &:focus,
     &:hover,
     &:active {
+        color: c(white);
         border-color: lighten($primary, 10%);
         background: lighten($primary, 10%);
     }
