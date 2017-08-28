@@ -37,10 +37,11 @@ $colors : (
     blue: #0a98e0,
     green: #2db1b9,
     yellow: #d3b628,
+    orange: #fe5649,
 );
 
 $primary: c(blue);
-$secondary: lighten( c(blue), 10%);
+$secondary: color(orange);
 
 /**
  * z-index
