@@ -45,8 +45,8 @@ if (typeof jQuery == 'undefined') {
     function windowResize(){
         breakpoint.refreshValue();
 
-        // Set body padding for fixed header
-        if ( $('.header').hasClass('header--fixed') ) {
+        // Set body padding for sticky header
+        if ( $('.header').hasClass('header--sticky') ) {
             body.css({'padding-top': $('.header').outerHeight()+'px'});
         }
     }
@@ -58,11 +58,13 @@ if (typeof jQuery == 'undefined') {
     function windowScroll(){
         scrollTop = $(window).scrollTop();
 
-        // Set header to scrolled
-        if (scrollTop > $('.header').outerHeight()) {
-            $('.header').addClass('header--scrolled');
-        }else{
-            $('.header.header--scrolled').removeClass('header--scrolled');
+        // Set header to scrolled, when sticky
+        if ( $('.header').hasClass('header--sticky') ) {
+            if (scrollTop > $('.header').outerHeight()) {
+                $('.header').addClass('header--scrolled');
+            }else{
+                $('.header.header--scrolled').removeClass('header--scrolled');
+            }
         }
     }
 
