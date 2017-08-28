@@ -18,12 +18,12 @@ Forms and Input Elements
     padding: .7em .4em .6em;
     outline: none;
     vertical-align: top;
-    color: color(black);
-    background: color(white);
-    border: 1px solid color(grey);
+    color: c(black);
+    background: c(white);
+    border: 1px solid c(grey);
 
     &:hover {
-        border-color: color(grey);
+        border-color: c(grey);
     }
 
     &:active,
@@ -43,25 +43,25 @@ Forms and Input Elements
     margin-bottom: $spacing;
     outline: none;
     vertical-align: top;
-    color: color(black);
-    background: color(white);
-    border: 1px solid color(grey);
+    color: c(black);
+    background: c(white);
+    border: 1px solid c(grey);
 
     &::after {
         position: absolute;
         top: 50%;
         right: 1em;
         transform: translateY(-50%);
-        font-family: font(icon);
+        font-family: f(icon);
         content: '\f107';
         line-height: 1;
     }
 
     &:hover {
-        border-color: color(grey);
+        border-color: c(grey);
 
         &::after {
-            color: color(grey);
+            color: c(grey);
         }
     }
 
@@ -79,14 +79,14 @@ Forms and Input Elements
         width: 100%;
         border: 0;
         border-radius: 0;
-        background: color(transparent);
+        background: c(transparent);
 
         &:focus {
-            outline: color(transparent);
+            outline: c(transparent);
         }
 
         &:-moz-focusring {
-            color: color(transparent);
+            color: c(transparent);
             text-shadow: 0 0 0 #000;
         }
     }

@@ -9,8 +9,10 @@ Author: Volker Otto <hello@volkerotto.net> (http://volkerotto.net)
 @import 'vendor/normalize';
 
 @import 'config/functions';
-@import 'config/mixins';
 @import 'config/vars';
+
+@import 'mixins/breakpoints';
+@import 'mixins/grid';
 
 @import 'vendor/slick';
 

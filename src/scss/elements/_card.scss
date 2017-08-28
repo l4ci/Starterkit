@@ -4,7 +4,7 @@ Card Layout
 ---------------------------------------
 */
 .card {
-    border: 1px solid color(grey);
+    border: 1px solid c(grey);
     border-radius: $border-radius;
     margin: $spacing auto;
 }
@@ -12,12 +12,12 @@ Card Layout
 .card__header,
 .card__footer {
     padding: $spacing;
-    background: rgba(color(grey), .2);
+    background: rgba(c(grey), .2);
 }
 
 .card__body {
     padding: $spacing;
-    background: color(white);
+    background: c(white);
 }
 
 .card__image {

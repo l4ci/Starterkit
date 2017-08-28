@@ -11,7 +11,7 @@ Basic Buttons
     -webkit-appearance: none;
     vertical-align: middle;
 
-    font-family: font(sans);
+    font-family: f(sans);
     font-size: 1rem;
     font-weight: bold;
     line-height: 1;
@@ -27,8 +27,8 @@ Basic Buttons
     &:hover{
         cursor: pointer;
         outline: none;
-        background: color(white);
-        color: color(black);
+        background: c(white);
+        color: c(black);
     }
 
     &.btn--active,

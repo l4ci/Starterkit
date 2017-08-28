@@ -1,9 +1,9 @@
 .header {
     position: relative;
-    background: color(white);
-    color: color(black);
-    transition: background timing(short);
-    border-bottom: 1px solid color(lightgrey);
+    background: c(white);
+    color: c(black);
+    transition: background t(short);
+    border-bottom: 1px solid c(lightgrey);
 
     @include bp(md) {
         position: relative;
@@ -19,7 +19,7 @@
     }
 
     > .container {
-        transition: all timing(short);
+        transition: all t(short);
 
         @include bp(md) {
             flex-wrap: nowrap;
@@ -29,8 +29,8 @@
     }
 
     &.header--scrolled {
-        background: color(lightgrey);
-        border-bottom: 1px solid color(grey);
+        background: c(lightgrey);
+        border-bottom: 1px solid c(grey);
 
         > .container {
             padding-top: 0;
@@ -51,7 +51,7 @@
             font-size: 1rem;
             font-weight: bold;
             letter-spacing: -2px;
-            color: color(black);
+            color: c(black);
             border: none;
         }
     }

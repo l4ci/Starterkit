@@ -1,4 +1,8 @@
-/* Slider */
+/**
+ * Slick Slider
+ *
+ * Use the slick slider in modules to overwrite the styles listed in here.
+ */
 
 .slick-slider {
     position: relative;
@@ -7,7 +11,7 @@
     -webkit-touch-callout: none;
     user-select: none;
     touch-action: pan-y;
-    -webkit-tap-highlight-color: color(transparent);
+    -webkit-tap-highlight-color: c(transparent);
 }
 .slick-list {
     position: relative;
@@ -122,10 +126,10 @@
     }
 
     &:before {
-        font-family: font(icon);
+        font-family: f(icon);
         font-size: 2rem;
         line-height: 2rem;
-        color: color(black);
+        color: c(black);
         opacity: 1;
     }
 }
@@ -218,11 +222,11 @@
                 content: '\f111';
                 width: 20px;
                 height: 20px;
-                font-family: font(icon);
+                font-family: f(icon);
                 font-size: 1rem;
                 line-height: 20px;
                 text-align: center;
-                color: color(darkgrey);
+                color: c(darkgrey);
                 opacity: .8;
             }
         }

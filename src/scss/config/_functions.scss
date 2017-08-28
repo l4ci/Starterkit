@@ -16,14 +16,32 @@ Functions
     @return get-from($colors, $key);
 }
 
-@function font($key) {
+@function font-family($key) {
     @return get-from($fonts, $key);
 }
 
-@function z($key) {
+@function z-index($key) {
     @return get-from($z-layers, $key);
 }
 
 @function timing($key) {
     @return get-from($timings, $key);
+}
+
+
+// Shorthands
+@function c($key) {
+    @return color($key);
+}
+
+@function z($key) {
+    @return z-index($key);
+}
+
+@function f($key) {
+    @return font-family($key);
+}
+
+@function t($key) {
+    @return timing($key);
 }

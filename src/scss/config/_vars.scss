@@ -10,7 +10,7 @@ Grid-settings, spacings, colors, font-families and more.
 
 /**
  * Font Families
- * Use with mixin: font(sans);
+ * Use with mixin: font-family(sans) or f(sans);
  */
 $fonts: (
     sans: #{'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif},
@@ -21,7 +21,7 @@ $fonts: (
 
 /**
  * Color Palett
- * Use with mixin: color(black);
+ * Use with mixin: color(black) or c(black);
  */
 $colors : (
     transparent: rgba(black, 0),
@@ -39,23 +39,24 @@ $colors : (
     yellow: #d3b628,
 );
 
-$primary: color(blue);
-$secondary: lighten( color(blue), 10%);
+$primary: c(blue);
+$secondary: lighten( c(blue), 10%);
 
 /**
  * z-index
- * Use with mixin: z(default);
+ * Use with mixin: z-index(default) or z(default);
  */
 $z-layers: (
     bottomless-pit: -9999,
     default: 1,
     header: 10,
-    dropdown: 20
+    dropdown: 20,
+    back-to-top: 30,
 );
 
 /**
  * timings
- * Use with mixin: timing(short);
+ * Use with mixin: timing(short) or t(short)
  */
 $timings: (
     short: .5s ease,

@@ -3,16 +3,16 @@
     font-size: .875rem;
     line-height: 1.7;
     padding: $spacing * 2 0;
-    background: color(black);
-    color: color(white);
+    background: c(black);
+    color: c(white);
 
     a {
-        color: rgba(color(white), .8);
+        color: rgba(c(white), .8);
 
         &:hover,
         &:active,
         &:focus {
-            color: color(white);
+            color: c(white);
         }
     }
 
