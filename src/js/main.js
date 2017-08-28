@@ -21,9 +21,7 @@ if (typeof jQuery == 'undefined') {
 
     //$(".lazyload").unveil(200);
 
-    if ( $('.slider').length >= 1 ){
-        $('.slider__inner').slick();
-    }
+    $('.slick').slick();
 
     /**
      * Include all UI functions
