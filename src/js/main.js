@@ -25,53 +25,14 @@ if (typeof jQuery == 'undefined') {
         $('.slider__inner').slick();
     }
 
-
-    // Navigation Dropdown Menu
-    $('.nav').on('click','.nav__item.nav--hasdrop',function(e){
-        var current = $(this);
-        e.preventDefault();
-
-        // Close all other submenus
-        $('.nav').find('.nav__item.nav--hasdrop.nav--open').not(current).removeClass('nav--open');
-
-        if (current.hasClass('nav--open')){
-            current.removeClass('nav--open')
-                .find('.nav__list')
-                .attr('aria-hidden', 'true');
-        }else{
-            current.addClass('nav--open')
-                .find('.nav__list')
-                .attr('aria-hidden', 'false');
-        }
-    }).on('click', '.nav__list', function(e) {
-        e.stopPropagation();
-    });
-
-
-    // Mobile Navigation Toggle
-    $('.toggle-nav').on('click', function(e){
-        e.preventDefault();
-        $('.nav').toggleClass('nav--open');
-        $(this).toggleClass('nav--open');
-    });
-
-
-    // General Toogle Function
-    $('.toggle .question').on('click',function(e){
-        var current = $(this).closest('.toggle');
-        e.preventDefault();
-
-        if (current.hasClass('-open')){
-            current.removeClass('-open')
-                .find('.answer')
-                .attr('aria-hidden', 'true');
-        }else{
-            current.addClass('-open')
-                .find('.answer')
-                .attr('aria-hidden', 'false');
-        }
-    });
-
+    /**
+     * Include all UI functions
+     */
+    //=include ui/_nav-dropdown.js
+    //=include ui/_mobile-navtoggle.js
+    //=include ui/_general-toggle.js
+    //=include ui/_smooth-scrolling.js
+    //=include ui/_data-scrollto.js
 
 
     /**
