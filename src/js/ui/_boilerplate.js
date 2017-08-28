@@ -32,4 +32,5 @@ var boilerplateModule = (function(){
     return {
         init: init;
     }
-});
+
+}());

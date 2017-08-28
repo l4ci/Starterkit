@@ -7,7 +7,7 @@ var dataOverlay = (function(){
         console.log('OVERLAYS: Closing all.');
         element.removeClass('-active');
         isOpen = false;
-    }
+    };
 
     var openOverlay = function(target){
         closeAllOverlays();
@@ -18,7 +18,7 @@ var dataOverlay = (function(){
         }else{
             console.log('OVERLAY: '+target+' not found!');
         }
-    }
+    };
 
     var setupBindings = function(){
         $('[data-overlay]').on('click',function(e){
@@ -53,6 +53,7 @@ var dataOverlay = (function(){
     };
 
     return {
-        init: init;
+        init: init,
     }
-});
+
+}());
