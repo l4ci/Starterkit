@@ -44,3 +44,15 @@ button,
 .btn {
     @include btn;
 }
+
+.btn--primary {
+    background: $primary;
+    color: white;
+
+    &:focus,
+    &:hover,
+    &:active {
+        border-color: lighten($primary, 10%);
+        background: lighten($primary, 10%);
+    }
+}
