@@ -9,3 +9,5 @@
 # IDEAS
 
 - info-box close function (js)
+- integrate waypoints <http://imakewebthings.com/waypoints/>
+- 
