@@ -6,16 +6,14 @@
     @include bp(xl) { padding: $spacing * 3 0;}
 }
 
-
 .module {
     @include module-spacing;
     position: relative;
 
-    &:nth-of-type(odd) {
+    &:nth-of-type(even) {
         background: c(lightgrey);
     }
 }
-
 
 .module__headline {
     margin: 0 0 $spacing * 2;
