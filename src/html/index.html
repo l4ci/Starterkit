@@ -28,40 +28,99 @@
     <header class="header header--fixed">
         <div class="container container--flex container--wrap">
             <div class="header__logo">
-                <a href="/"><img src="" alt="Logo"></a>
+                <a href="/"><img src="" alt="Starterkit"></a>
             </div><!-- /.header__logo -->
 
             <div class="toggle-nav"></div>
 
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html">Home</a></li>
-                    <li class="nav__item"><a href="index.html">About</a></li>
+                    <li class="nav__item"><a href="#typo">Typo</a></li>
+                    <li class="nav__item"><a href="#grid">Grid</a></li>
                     <li class="nav__item"><a href="index.html">Something</a></li>
                 </ul>
             </nav>
+
+            <a href="http://github.com/l4ci/Starterkit" target="_blank" class="btn btn--primary | header__c2a">Download</a>
+
+
         </div>
         <!-- /.container -->
     </header>
 
     <main class="main" id="content">
 
-        <div class="slider">
-            <div class="slider__inner"  data-slick='{"arrows": true, "autoplay": true, "autoplaySpeed": 2000, "dots": true, "pauseOnFocus": true, "pauseOnHover": true, }'>
-                <div>Slide</div>
-                <div>Slide</div>
-                <div>Slide</div>
+        <div class="module">
+            <div class="container">
+                <div class="slider">
+                    <div class="slider__inner"  data-slick='{"arrows": true, "autoplay": true, "autoplaySpeed": 2000, "dots": true, "pauseOnFocus": true, "pauseOnHover": true, }'>
+                        <div>Slide</div>
+                        <div>Slide</div>
+                        <div>Slide</div>
+                    </div>
+                    <!-- /.slider__inner -->
+                </div>
+                <!-- /.slider -->
             </div>
-            <!-- /.slider__inner -->
+            <!-- /.container -->
         </div>
-        <!-- /.slider -->
+        <!-- /.module -->
 
-        <div class="container">
-            <h1>It works!</h1>
+        <div class="module" id="typo">
+            <div class="module__headline">Typografie</div>
+            <div class="module__subline">and stuff...</div>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident doloribus laudantium dolores sequi nihil iure tempora quo ut dignissimos vel numquam distinctio quod ipsa possimus laborum, aspernatur minus. Vero maiores dolor similique! Perferendis possimus libero perspiciatis? Quam voluptate officiis eum nostrum, doloremque minus ipsum fugiat perferendis delectus possimus dicta eveniet architecto. Ut iusto natus officiis blanditiis praesentium cumque esse maxime aliquam rerum error sint veniam, impedit ad cum nulla odit cupiditate suscipit, pariatur eum eos? Tempore ipsum amet repudiandae blanditiis fugiat officia dolorum nesciunt et, veritatis vitae odit assumenda, fuga. Animi odio eum atque modi reiciendis sed doloribus numquam explicabo, libero quisquam, alias ipsa laborum accusamus illum dolorem, nostrum maxime magni officiis quibusdam hic deserunt autem magnam, placeat laboriosam. Natus impedit esse quis quasi nisi quo blanditiis nam, eum? Accusantium libero voluptatem eius explicabo placeat a laborum nulla architecto, nesciunt deserunt, nostrum vel earum suscipit maxime dignissimos ipsum sapiente optio aperiam perferendis quibusdam totam fuga ea sint vero. Autem pariatur, nulla veniam expedita, saepe quam iusto, soluta porro fuga ducimus dicta veritatis cum temporibus animi reiciendis eius quo. Laborum odit dignissimos tempora dicta harum ut aliquid nihil molestiae fuga minima facilis ea consequatur necessitatibus quis, aspernatur placeat, ex at eaque pariatur maxime sequi. Assumenda quas, voluptates totam itaque consequatur, laboriosam quidem, sed consequuntur sint dolorum, ea. Sint explicabo, pariatur reiciendis. Blanditiis eius est deleniti at delectus, totam a eaque omnis quisquam qui, sit voluptatibus ipsa iusto praesentium eum aut impedit unde eveniet libero incidunt veniam ipsum error quae! Corporis quo vero autem ducimus architecto, labore voluptas debitis ipsum, sint repudiandae! Explicabo, suscipit accusamus expedita quos doloribus, deleniti excepturi. Explicabo molestiae voluptate provident laborum molestias autem veniam suscipit vitae cumque enim natus excepturi, libero odit eligendi, amet animi quaerat esse illum tenetur quis optio? Odit, rem ipsum modi obcaecati repellat delectus.</p>
+            <div class="container">
+                <div class="h1"><code>.h1</code> Headline</div>
+                <div class="h2"><code>.h2</code> Headline</div>
+                <div class="h3"><code>.h3</code> Headline</div>
+                <div class="h4"><code>.h4</code> Headline</div>
+                <div class="h5"><code>.h5</code> Headline</div>
+                <div class="h6"><code>.h6</code> Headline</div>
+                <p class="lead"><code>.lead</code> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odit accusantium aliquam repellendus quos provident, temporibus quidem vero inventore maiores.</p>
+                <div class="rte">
+                    <p><code>p</code> Lorem <a href="#">ipsum dolor sit</a> amet, consectetur adipisicing elit. Aliquam eos magni dignissimos error, quisquam rerum iusto quo voluptatem sint eius, cupiditate maiores laborum velit aut tenetur. Maiores nostrum, culpa nesciunt libero corrupti expedita, odit cumque facilis illum fugit sit quis sapiente esse ex eveniet soluta ullam ea eius. Saepe, ut!</p>
+                </div>
+                <!-- /.rte -->
+            </div>
+            <!-- /.container -->
         </div>
-        <!-- /.container -->
+        <!-- /.module -->
+
+
+        <div class="module" id="grid">
+            <div class="module__headline">Grid</div>
+            <div class="module__text">These are helper classes, which can be used. Its recommended to use the <code>@mixin generate-col($percentage)</code> though.</div>
+
+            <div class="container">
+                <div class="row"></div>
+                <div class="row">
+                    <div class="col-md-50"><code>col-md-50</code></div>
+                    <div class="col-md-50"><code>col-md-50</code></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
+                    <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
+                    <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
+                    <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                    <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                    <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                    <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                    <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                    <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-20</code></div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#grid.module -->
+
+
     </main>
 
     <footer class="footer">
