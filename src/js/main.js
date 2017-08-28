@@ -80,6 +80,9 @@ if (typeof jQuery == 'undefined') {
     function init(){
         html.toggleClass('no-js js-init');
         windowResize();
+
+        dataOverlay.init();
+        backToTop.init();
     }
     init();
 
