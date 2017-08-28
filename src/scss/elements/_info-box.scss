@@ -1,9 +1,26 @@
 .info-box {
+    position: relative;
     display: block;
     padding: $spacing;
     margin: $spacing 0;
     background: rgba($primary, .2);
     border: 1px solid $primary;
+    z-index: z(default);
+
+    a {
+        color: inherit;
+        font-weight: bold;
+
+        &:focus,
+        &:hover {
+            border-bottom: 1px solid;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
 
     &--hidden {
         display: none;
@@ -23,8 +40,11 @@
 .info-box__headline {
     display: block;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .info-box__close {
-
+    position: absolute;
+    top: $spacing;
+    right: $spacing;
 }

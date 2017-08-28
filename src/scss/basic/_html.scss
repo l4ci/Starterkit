@@ -56,29 +56,10 @@ img {
 }
 
 
-.browsehappy,
-.no-js-hint {
-    position: relative;
-    padding: 1em;
-    margin: 0;
-    z-index: 9999;
-    color: #a94442;
-    background-color: #f2dede;
-    border: 1px solid #ebccd1;
-    font-size: 1rem;
-    text-align: center;
-
-    a {
-        color: inherit;
-        font-weight: bold;
-        border-bottom: 1px solid;
-    }
-}
-
-.no-js-hint {
+#no-js-hint {
     display: none;
 }
 
-.no-js .no-js-hint {
+.no-js #no-js-hint {
     display: block;
 }
