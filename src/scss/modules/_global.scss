@@ -11,3 +11,11 @@
     @include module-spacing;
     position: relative;
 }
+
+
+.module__headline {
+    font-weight: bold;
+    color: $primary;
+    text-transform: uppercase;
+    text-align: center;
+}
