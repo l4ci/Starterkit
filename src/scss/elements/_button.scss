@@ -57,3 +57,16 @@ button,
         background: lighten($primary, 10%);
     }
 }
+
+.btn--secondary {
+    background: $secondary;
+    color: c(white);
+
+    &:focus,
+    &:hover,
+    &:active {
+        color: c(white);
+        border-color: lighten($secondary, 10%);
+        background: lighten($secondary, 10%);
+    }
+}
