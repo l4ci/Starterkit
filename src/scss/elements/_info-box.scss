@@ -1,0 +1,30 @@
+.info-box {
+    display: block;
+    padding: $spacing;
+    margin: $spacing 0;
+    background: rgba($primary, .2);
+    border: 1px solid $primary;
+
+    &--hidden {
+        display: none;
+    }
+
+    &--alert {
+        background: rgba(c(red), .2);
+        border-color: c(red);
+    }
+
+    &--success {
+        background: rgba(c(green), .2);
+        border-color: c(green);
+    }
+}
+
+.info-box__headline {
+    display: block;
+    font-weight: bold;
+}
+
+.info-box__close {
+
+}
