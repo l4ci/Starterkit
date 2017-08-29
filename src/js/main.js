@@ -86,6 +86,7 @@ if (typeof jQuery == 'undefined') {
         windowResize();
 
         dataOverlay.init();
+        dataScrollTo.init();
         backToTop.init();
     }
     init();
