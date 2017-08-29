@@ -62,15 +62,13 @@
 
         <div class="module slider">
             <div class="container">
-
-                    <div class="slick"  data-slick='{"arrows": true, "autoplay": true, "autoplaySpeed": 2000, "dots": true, "pauseOnFocus": true, "pauseOnHover": true, "adaptiveHeight": true }'>
-                        <div>Get started quickly with some useful defaults: Project directory, Gulp Workflows with browserSync...</div>
-                        <div>Modulare Sass: Hero, Typografie, Layout Options, Slider, a Flexbox Grid System and much more</div>
-                        <div>HTML Defaults: No-Js and Browsehappy hints, asynchron, anonymized GoogleAnalytics with OptOut</div>
-                        <div>Modulare JS, bundled with many functions and features</div>
-                    </div>
-                    <!-- /.slick -->
-
+                <div class="slick"  data-slick='{"arrows": true, "autoplay": true, "autoplaySpeed": 2000, "dots": true, "pauseOnFocus": true, "pauseOnHover": true, "adaptiveHeight": true }'>
+                    <div>Get started quickly with some useful defaults: Project directory, Gulp Workflows with browserSync...</div>
+                    <div>Modulare Sass: Hero, Typografie, Layout Options, Slider, a Flexbox Grid System and much more</div>
+                    <div>HTML Defaults: No-Js and Browsehappy hints, asynchron, anonymized GoogleAnalytics with OptOut</div>
+                    <div>Modulare JS, bundled with many functions and features</div>
+                </div>
+                <!-- /.slick -->
             </div>
             <!-- /.container -->
         </div>
@@ -97,18 +95,105 @@
         </div>
         <!-- /#typo.module -->
 
+        <div class="module" id="js">
+            <div class="module__headline">Javascript</div>
+            <!-- /.module__headline -->
+            <div class="module__text">Setting some useful default functions and a expandable, modulare js-boilerplate</div>
+            <!-- /.module__text -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-33">
+                        <div class="card">
+                            <div class="card__header">
+                                <h3>ScrollTo <span class="badge badge--success">Modul</span></h3>
+                            </div>
+                            <!-- /.card__header -->
+                            <div class="card__body">
+                                Adding <code>data-scrollto="#id"</code> to any element, animates to the element on click. Also calculates a sticky header, if present.
+                            </div>
+                            <!-- /.card__body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-md-33">
+                        <div class="card">
+                            <div class="card__header">
+                                <h3>Overlays <span class="badge badge--success">Modul</span><span class="badge badge--alert">WIP</span></h3>
+                            </div>
+                            <!-- /.card__header -->
+                            <div class="card__body">
+                                Adding <code>data-overlay="id"</code> to any element, will set the <code>.overlay#id</code> to active and close all other overlays. Also disables body scroll.
+
+                                <div class="card__links">
+                                    <a href="#overlaytest" data-overlay="overlaytest">Open Overlay</a>
+                                    <a href="#overlaytest" data-overlay="overlaytest">Open Overlay</a>
+                                </div>
+                            </div>
+                            <!-- /.card__body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-md-33">
+                        <div class="card">
+                            <div class="card__header">
+                                <h3>General toggle <span class="badge badge--alert">Modul</span><span class="badge badge--alert">WIP</span></h3>
+                            </div>
+                            <!-- /.card__header -->
+                            <div class="card__body">
+                                Adding <code>data-toggle="#id"</code> to any element, will set the <code>#id</code> to active.
+                            </div>
+                            <!-- /.card__body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-md-33">
+                        <div class="card">
+                            <div class="card__header">
+                                <h3>Others <span class="badge badge--alert">Modul</span><span class="badge badge--alert">WIP</span></h3>
+                            </div>
+                            <!-- /.card__header -->
+                            <div class="card__body">
+                                <code>mobile-navtoggle</code><br>
+                                <code>nav-dropdown</code><br>
+                                <code>back-to-top</code>
+                            </div>
+                            <!-- /.card__body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#js.module -->
+
+        <div class="overlay" id="overlaytest">
+            <div class="overlay__inner">
+                <div class="overlay__close"></div>
+                Overlay Test
+            </div>
+            <!-- /.overlay__inner -->
+        </div>
+        <!-- /.overlay -->
 
         <div class="module" id="grid">
             <div class="module__headline">Grid</div>
             <div class="module__text">These are helper classes, which can be used. Its recommended to use the <code>@mixin generate-col($percentage)</code> though.</div>
 
             <div class="container">
-                <div class="row"></div>
                 <div class="row">
                     <div class="col-md-50"><code>col-md-50</code></div>
                     <div class="col-md-50"><code>col-md-50</code></div>
                 </div>
-                <br>
+                <br><!-- br for styling purposes only -->
                 <div class="row">
                     <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
                     <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
