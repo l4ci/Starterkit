@@ -30,7 +30,7 @@ var boilerplateModule = (function(){
 
     // Expose publicly
     return {
-        init: init;
+        init: init,
     }
 
 }());
