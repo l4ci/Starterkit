@@ -30,14 +30,14 @@ $colors : (
     white: #fff,
 
     lightgrey: #f8f8f8,
-    grey: #999,
-    darkgrey: #333,
+    grey: #bdbdbd,
+    darkgrey: #424242,
 
-    red: #b23236,
-    blue: #0a98e0,
-    green: #2db1b9,
-    yellow: #d3b628,
-    orange: #fe5649,
+    red: #e91e63,
+    blue: #03a9f4,
+    green: #8bc34a,
+    yellow: #ffc107,
+    orange: #ff9800,
 );
 
 $primary: c(blue);
@@ -53,6 +53,7 @@ $z-layers: (
     header: 10,
     dropdown: 20,
     back-to-top: 30,
+    overlay: 40,
 );
 
 /**
