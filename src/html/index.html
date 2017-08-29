@@ -80,7 +80,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-50">
-                        <div class="h1"><code>.h1</code> Headline</div>
+                        <div class="h1"><code>.h1</code> Headline <small>Something else</small></div>
                         <div class="h2"><code>.h2</code> Headline</div>
                         <div class="h3"><code>.h3</code> Headline</div>
                         <div class="h4"><code>.h4</code> Headline</div>
@@ -149,7 +149,7 @@
                                 Adding <code>data-overlay="id"</code> to any element, will set the <code>.overlay#id</code> to active and close all other overlays. Also disables body scroll.
 
                                 <div class="card__links">
-                                    <a href="#overlaytest" data-overlay="overlaytest">Open Overlay</a>
+                                    <a href="#overlaytest" data-overlay="overlaytest" class="more">Open Overlay</a>
 
                                 </div>
                             </div>
@@ -198,7 +198,7 @@
         <!-- /#js.module -->
 
         <div class="overlay" id="overlaytest">
-            <div class="overlay__inner">
+            <div class="overlay__inner" role="dialog" aria-hidden="true">
                 <div class="overlay__close"></div>
                 Overlay Test
             </div>
