@@ -11,6 +11,7 @@
     bottom: 0;
     background: rgba(c(black), .7);
     z-index: z(overlay);
+    overflow-y: scroll;
 
     &--active {
        display: flex;

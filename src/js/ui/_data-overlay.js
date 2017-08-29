@@ -6,7 +6,7 @@ var dataOverlay = (function(){
 
     var closeAllOverlays = function(){
         console.log('OVERLAYS: Closing all.');
-        element.removeClass('overlay--active');
+        element.removeClass('overlay--active').find('.overlay__inner').attr('aria-hidden', true);
         isOpen = false;
         body.removeClass('noscroll');
     };
@@ -19,7 +19,7 @@ var dataOverlay = (function(){
 
         if (target.length){
             console.log('OVERLAY: Opening:'+target);
-            $('#'+target).addClass('overlay--active');
+            $('#'+target).addClass('overlay--active').find('.overlay__inner').attr('aria-hidden', false);
             isOpen = true;
         }else{
             console.log('OVERLAY: '+target+' not found!');
