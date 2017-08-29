@@ -19,9 +19,11 @@ if (typeof jQuery == 'undefined') {
         scrollTop = $(this).scrollTop();
 
 
-    //$(".lazyload").unveil(200);
+    $(".lazyload").unveil(200);
 
-    $('.slick').slick();
+    $('.slick').slick({
+        'dots': true,
+    });
 
     /**
      * Include all UI functions
@@ -29,7 +31,7 @@ if (typeof jQuery == 'undefined') {
     //=include ui/_back-to-top.js
     //=include ui/_data-overlay.js
     //=include ui/_data-scrollto.js
-    ////=include ui/_general-toggle.js
+    //=include ui/_general-toggle.js
     //=include ui/_mobile-navtoggle.js
     //=include ui/_nav-dropdown.js
     //=include ui/_smooth-scrolling.js
