@@ -6,7 +6,7 @@ var dataOverlay = (function(){
 
     var closeAllOverlays = function(){
         console.log('OVERLAYS: Closing all.');
-        element.removeClass('-active');
+        element.removeClass('overlay--active');
         isOpen = false;
         body.removeClass('noscroll');
     };
@@ -19,7 +19,7 @@ var dataOverlay = (function(){
 
         if (target.length){
             console.log('OVERLAY: Opening:'+target);
-            $('#'+target).addClass('-active');
+            $('#'+target).addClass('overlay--active');
             isOpen = true;
         }else{
             console.log('OVERLAY: '+target+' not found!');
