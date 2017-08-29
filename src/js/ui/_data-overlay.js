@@ -1,21 +1,21 @@
 var dataOverlay = (function(){
 
     var element = $('.overlay'),
+        body = $('body'),
         isOpen = false;
 
     var closeAllOverlays = function(){
         console.log('OVERLAYS: Closing all.');
         element.removeClass('-active');
         isOpen = false;
-
-        // @todo: enable scrolling of body in the background
+        body.removeClass('noscroll');
     };
 
     var openOverlay = function(target){
 
         closeAllOverlays();
 
-        //@todo: disable scrolling of body in the background
+        body.addClass('noscroll');
 
         if (target.length){
             console.log('OVERLAY: Opening:'+target);
