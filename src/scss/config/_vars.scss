@@ -13,8 +13,8 @@ Grid-settings, spacings, colors, font-families and more.
  * Use with mixin: font-family(sans) or f(sans);
  */
 $fonts: (
-    sans: #{'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif},
-    serif: #{Georgia, 'Times New Roman', sans-serif},
+    sans: #{'Source Sans Pro', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif},
+    serif: #{'Source Serif Pro', Georgia, 'Times New Roman', sans-serif},
     mono: monospace,
     icon: 'FontAwesome',
 );
