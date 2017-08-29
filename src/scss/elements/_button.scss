@@ -20,6 +20,8 @@ Basic Buttons
 
     border: 0;
     border-radius: $border-radius;
+    background: c(grey);
+    color: c(white);
 
     &.btn--hover,
     &.btn--focus,
@@ -27,8 +29,8 @@ Basic Buttons
     &:hover{
         cursor: pointer;
         outline: none;
-        background: c(white);
-        color: c(black);
+        background: lighten(c(grey), 5%);
+        color: c(white);
     }
 
     &.btn--active,
