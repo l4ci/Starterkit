@@ -73,10 +73,10 @@
         border: 1px solid transparent;
     }
 }
+
 .slick-arrow.slick-hidden {
     display: none;
 }
-
 
 /* Arrows */
 .slick-prev,
@@ -86,22 +86,27 @@
     line-height: 1;
     font-size: 0;
     cursor: pointer;
-    background: transparent;
-    color: transparent;
+    background: c(transparent);
+    color: c(transparent);
     top: 50%;
     transform: translate(0, -50%);
     padding: $spacing;
     border: none;
     outline: none;
     z-index: z(default);
+    border-radius: 0;
 
     &:hover,
     &:focus {
         outline: none;
-        background: transparent;
-        color: transparent;
+        background: c(transparent);
+        color: c(transparent);
 
         &:before { opacity: 1; }
+    }
+
+    &:hover {
+        background: rgba(c(black), .1);
     }
 
     &.slick-disabled:before {
