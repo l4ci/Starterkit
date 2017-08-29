@@ -1,0 +1,40 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(c(black), .7);
+    z-index: z(overlay);
+
+    &--active {
+       display: flex;
+       justify-content: center;
+    }
+}
+
+.overlay__inner {
+    position: relative;
+    flex: 1 1 100%;
+    width: 100%;
+    margin: auto;
+    padding: $spacing;
+    max-width: 600px;
+    background: c(white);
+}
+
+.overlay__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: c(red);
+    font-size: 1.4rem;
+    padding: $spacing / 2;
+    line-height: 1;
+
+    &:before{
+        font-family: f(icon);
+        content: '\f057';
+    }
+}
