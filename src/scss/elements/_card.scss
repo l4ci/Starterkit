@@ -7,12 +7,18 @@ Card Layout
     border: 1px solid c(grey);
     border-radius: $border-radius;
     margin: $spacing auto;
+    overflow: hidden;
 }
 
 .card__header,
 .card__footer {
     padding: $spacing;
-    background: rgba(c(grey), .2);
+    background: rgba(c(grey), .1);
+}
+
+.card__header > * {
+    margin-bottom: 0;
+    line-height: 1;
 }
 
 .card__body {
@@ -26,4 +32,15 @@ Card Layout
     margin: 0;
 }
 
-.card__links {}
+.card__links {
+    margin: $spacing 0 0;
+    padding: 0;
+    line-height: 1;
+    border-top: 1px solid c(grey);
+
+    a {
+        display: inline-block;
+        padding: $spacing $spacing / 2 0 0;
+        color: c(darkgrey);
+    }
+}
