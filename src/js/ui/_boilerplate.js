@@ -8,9 +8,15 @@ var boilerplateModule = (function(){
     // Add variables and elements
     var element = $('.some-element');
 
+    var config = {
+        'default': true,
+    };
+
     // Add functions
     var doSomething = function(){
         console.log('Boilerplate running.');
+        console.log('Loaded config:');
+        console.table(config);
     }
 
     // Add event handlers and keybindings here
@@ -24,7 +30,10 @@ var boilerplateModule = (function(){
         $(window).on('scroll.boilerplateModule', doSomething);
     };
 
-    var init = function(){
+    var init = function(settings){
+        // Allow overriding the default config
+        if (settings) $.extend( config, settings );
+
         setupBindings();
     };
 
