@@ -5,11 +5,10 @@
  */
 var boilerplateModule = (function(){
 
-    // Add variables and elements
-    var element = $('.some-element');
 
     var config = {
         'default': true,
+        'element': $('.some-element'),
     };
 
     // Add functions
@@ -21,7 +20,7 @@ var boilerplateModule = (function(){
 
     // Add event handlers and keybindings here
     var setupBindings = function(){
-        element.on('click',function(e){
+        config.element.on('click',function(e){
             e.preventDefault();
             doSomething();
         });
