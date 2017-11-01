@@ -15,9 +15,25 @@ $grid-max-width: 1200px !default;
 // Available grid size-classes
 $grid-values: (5, 10, 15, 16, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100) !default;
 
+
 /**
- * Container
+ * JS Breakpoint helpers
+ * .js counterpart in `js/inc/_breakpoints.js`
+ *
+ * @source https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
+ *
  */
+body:before {
+    display: none;
+    content:'xs';
+
+    @each $name, $size in $grid-breakpoints {
+        @include bp($name) {
+            content: '#{$name}';
+        }
+    }
+}
+
 
 .col,
 [class*=col-]{
@@ -33,18 +49,18 @@ $grid-values: (5, 10, 15, 16, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70
         [class*=col-]{ flex: none; }
     }
 
-    &--flex {
+    &.container--flex {
         @include flex-container;
         .row { @include flex-row; }
     }
 
-    &--full {
+    &.container--full {
         max-width: 100%;
         padding-left: 0;
         padding-right: 0;
     }
 
-    &--wrap {
+    &.container--wrap {
         flex-wrap: wrap;
     }
 }

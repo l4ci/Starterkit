@@ -1,5 +1,6 @@
 /**
- * Global: Get current CSS breakpoint into Javascript
+ * Get current CSS breakpoint into Javascript
+ * .scss counterpart in `basic/_grid.scss`
  *
  * @source https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
  *
