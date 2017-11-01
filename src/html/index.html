@@ -9,6 +9,8 @@
 
     <script>document.createElement( "picture" );</script>
     <script src="/js/polyfill/picturefill.min.js" async></script>
+    <!-- Push functions here, that require jquery. They will get called after jQuery is loaded. -->
+    <script>var afterJQ = [];</script>
 </head>
 <body>
     <a class="skip-link sr-only sr-only--focusable" href="#content">Skip to content</a>
@@ -26,6 +28,13 @@
             <p>Um den vollen Funktionsumfang dieser Webseite zu erfahren, benötigen Sie JavaScript. Hier finden Sie die <a href="http://www.enable-javascript.com/de/" target="_blank">Anleitung wie Sie JavaScript in Ihrem Browser einschalten</a>.</p>
         </div>
     </noscript>
+
+    <!-- Example: Save a function until jQuery is loaded -->
+    <script>
+        afterJQ.push(function(){
+            console.log('This will run after jQuery is loaded!');
+        });
+    </script>
 
 
     <header class="header header--sticky">
@@ -264,6 +273,9 @@
     <script src="/js/libs/popper.min.js"></script>
 
     <script src="/js/main.min.js"></script>
+
+    <!-- Run saved functions that require jQuery -->
+    <script>for(var i = 0; i < afterJQ.length; i++) afterJQ[i]();</script>
 
     <!-- Webfonts -->
     <script>
