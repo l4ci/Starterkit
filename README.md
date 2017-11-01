@@ -4,8 +4,7 @@ Quick-start frontend developer boilerplate. Modular folder structure, useful sas
 ## Get started
 1. `git clone https://github.com/l4ci/Starterkit.git www`
 2. `cd www`
-3. `yarn`*
-4. `gulp watch`
-5. Start coding
-
-* This requires [yarn](https://yarnpkg.com/en/) of course.
+3. `yarn` (This requires [yarn](https://yarnpkg.com/en/) to be installed first)
+4. `gulp watch` (This will open your browser and setup BrowserSync)
+5. Read index page, that just opened.
+6. Start coding within the `/src` folder. Every change should auto-compile into `/dist` and be displayed right away.
