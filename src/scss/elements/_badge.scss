@@ -12,22 +12,22 @@
     background: c(grey);
     color: c(white);
 
-    &--primary {
+    &.badge--primary {
         background: $primary;
         color: c(white);
     }
 
-    &--secondary {
+    &.badge--secondary {
         background: $secondary;
         color: c(white);
     }
 
-    &--alert {
+    &.badge--alert {
         background: c(red);
         color: c(white);
     }
 
-    &--success {
+    &.badge--success {
         background: c(green);
         color: c(white);
     }

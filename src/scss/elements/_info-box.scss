@@ -22,16 +22,16 @@
     }
 
 
-    &--hidden {
+    &.info-box--hidden {
         display: none;
     }
 
-    &--alert {
+    &.info-box--alert {
         background: rgba(c(red), .2);
         border-color: c(red);
     }
 
-    &--success {
+    &.info-box--success {
         background: rgba(c(green), .2);
         border-color: c(green);
     }

@@ -13,6 +13,7 @@
     touch-action: pan-y;
     -webkit-tap-highlight-color: c(transparent);
 }
+
 .slick-list {
     position: relative;
     overflow: hidden;
@@ -27,6 +28,7 @@
         cursor: hand;
     }
 }
+
 .slick-slider .slick-track,
 .slick-slider .slick-list {
     transform: translate3d(0, 0, 0);
@@ -50,6 +52,7 @@
 
     .slick-loading & { visibility: hidden; }
 }
+
 .slick-slide {
     float: left;
     height: 100%;

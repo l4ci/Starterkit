@@ -10,49 +10,6 @@
     align-items: center;
     text-align: center;
 
-    .hero__inner {
-        margin: 0 auto;
-        padding: $spacing;
-
-        @include bp(md) {
-            max-width: $grid-max-width;
-            padding: $spacing *2 $spacing;
-        }
-    }
-
-    .hero__title {
-        font-size: 2rem;
-        color: inherit;
-        font-weight: bold;
-        margin-bottom: $spacing;
-
-        @include bp(md) {
-            font-size: 3rem;
-        }
-
-        @include bp(lg) {
-            font-size: 4rem;
-        }
-    }
-
-    .hero__text {
-        color: inherit;
-        opacity: .9;
-        max-width: $grid-max-width / 2;
-
-        p {
-            font-size: 1.1rem;
-
-            @include bp(md) {
-                font-size: 1.2rem;
-            }
-
-            @include bp(lg) {
-                font-size: 1.3rem;
-            }
-        }
-    }
-
     &.hero--slim {
         padding: $spacing 0;
         text-align: left;
@@ -72,6 +29,49 @@
         .hero__title {
             font-size: 2rem;
             text-shadow: none;
+        }
+    }
+}
+
+.hero__inner {
+    margin: 0 auto;
+    padding: $spacing;
+
+    @include bp(md) {
+        max-width: $grid-max-width;
+        padding: $spacing *2 $spacing;
+    }
+}
+
+.hero__title {
+    font-size: 2rem;
+    color: inherit;
+    font-weight: bold;
+    margin-bottom: $spacing;
+
+    @include bp(md) {
+        font-size: 3rem;
+    }
+
+    @include bp(lg) {
+        font-size: 4rem;
+    }
+}
+
+.hero__text {
+    color: inherit;
+    opacity: .9;
+    max-width: $grid-max-width / 2;
+
+    p {
+        font-size: 1.1rem;
+
+        @include bp(md) {
+            font-size: 1.2rem;
+        }
+
+        @include bp(lg) {
+            font-size: 1.3rem;
         }
     }
 }

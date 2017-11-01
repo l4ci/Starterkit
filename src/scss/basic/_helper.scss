@@ -61,16 +61,16 @@
     clip-path: inset(50%);
     border: 0;
 
-    &--focusable {
-      &:active,
-      &:focus {
-        position: static;
-        width: auto;
-        height: auto;
-        overflow: visible;
-        clip: auto;
-        white-space: normal;
-        clip-path: none;
-      }
-  }
+    &.sr-only--focusable {
+        &:active,
+        &:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            overflow: visible;
+            clip: auto;
+            white-space: normal;
+            clip-path: none;
+        }
+    }
 }

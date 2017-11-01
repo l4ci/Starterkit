@@ -1,0 +1,15 @@
+/**
+ * Use this class around every Rich-Text output
+ */
+.rte {
+
+    a {
+        color: $primary;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+            border-bottom: 1px solid;
+        }
+    }
+}

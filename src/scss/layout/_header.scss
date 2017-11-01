@@ -10,14 +10,6 @@
         top: auto;
     }
 
-    &--sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: z(header);
-    }
-
     > .container {
         transition: all t(short);
 
@@ -28,7 +20,15 @@
         }
     }
 
-    &--scrolled {
+    &.header--sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: z(header);
+    }
+
+    &.header--scrolled {
         background: c(white);
         border-bottom: 1px solid c(lightgrey);
 

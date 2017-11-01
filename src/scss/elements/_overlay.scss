@@ -1,4 +1,4 @@
-.noscroll {
+body.noscroll {
     overflow: hidden;
 }
 
@@ -13,7 +13,7 @@
     z-index: z(overlay);
     overflow-y: scroll;
 
-    &--active {
+    &.overlay--active {
        display: flex;
        justify-content: center;
     }
