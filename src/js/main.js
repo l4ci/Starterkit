@@ -42,8 +42,6 @@ if (typeof jQuery == 'undefined') {
      * runs on each resize event, after 250ms throtteling
      */
     function windowResize(){
-        breakpoint.refreshValue();
-
         // Set body padding for sticky header
         if ( $('.header').hasClass('header--sticky') ) {
             body.css({'padding-top': $('.header').outerHeight()+'px'});
@@ -71,6 +69,7 @@ if (typeof jQuery == 'undefined') {
     $(window).scroll(windowScroll).scroll();
 
     $(window).resize(function(){
+        breakpoint.refreshValue(); // Instant Breakpoint refresh
         clearTimeout(window.resizedFinished);
         window.resizedFinished = setTimeout(windowResize, 250);
     });
