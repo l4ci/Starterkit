@@ -5,14 +5,14 @@
  * En/Disable hover or click subnavigation dropdowns
  *
  */
-var backToTop = (function(){
+var navDropdown = (function(){
 
     var hoverElement = '.nav__item.nav--hasdrop',
-        enabledClick = true;
+        enabledType;
 
    var enableClickNavigation = function(){
         console.log('Enable Click Navigation');
-        enabledClick = true;
+        enabledType = 'click';
 
         $(hoverElement).off('mouseenter mouseleave');
 
@@ -39,7 +39,7 @@ var backToTop = (function(){
 
     var enableHoverNavigation = function(){
         console.log('Enable Hover Navigation');
-        enabledClick = false;
+        enabledType = 'hover';
 
         $('.nav').off('click');
 
@@ -60,20 +60,24 @@ var backToTop = (function(){
     };
 
     var checkNavigation = function(){
-        console.log('Checking ' + breakpoint.value);
+        if (!breakpoint.value){
+            breakpoint.refreshValue();
+            console.log('Checking ' + breakpoint.value);
+        }
+
         if (breakpoint.value == 'md' || breakpoint.value == 'lg' || breakpoint.value == 'xl') {
-            if (enabledClick){
+            if (enabledType != 'hover'){
                 enableHoverNavigation();
             }
         }else{
-            if (!enabledClick){
+            if (enabledType != 'click'){
                 enableClickNavigation();
             }
         }
     };
 
     var init = function(){
-        enableClickNavigation();
+        checkNavigation();
         $(window).on('resize.navigation',checkNavigation);
     };
 

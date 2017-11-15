@@ -83,6 +83,8 @@ if (typeof jQuery == 'undefined') {
         html.toggleClass('no-js js-init');
         windowResize();
 
+        navDropdown.init();
+
         dataOverlay.init();
         dataScrollTo.init();
         backToTop.init();
