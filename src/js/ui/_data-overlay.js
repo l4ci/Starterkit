@@ -26,7 +26,32 @@ var dataOverlay = (function(){
         }
     };
 
+    var nextPrevClicked = function(that, dir){
+        var current = that.closest('.overlay');
+        if ( !current.hasClass('overlay--active') ){
+            console.log('OVERLAY: Clicked overlay is not active');
+            return;
+        }
+
+        var group = current.attr('data-group');
+        if (group) {
+            var dtarget = '[data-group="'+ group +'"]';
+            var target = (dir == 'prev' ? current.prev(dtarget) : current.next(dtarget) );
+            if (target) {
+                openOverlay(target.attr('id'));
+            } else {
+                console.log('OVERLAY: '+ dir +' target not found');
+            }
+        } else {
+            console.log('OVERLAY: Clicked overlay has no group');
+        }
+    };
+
     var setupBindings = function(){
+        $('.overlay[data-group]').each( function(){
+            $(this).find('.overlay__inner').append('<div class="overlay__prev"></div><div class="overlay__next"></div>');
+        });
+
         $('[data-overlay]').on('click',function(e){
             e.preventDefault();
             e.stopPropagation();
@@ -47,11 +72,19 @@ var dataOverlay = (function(){
             closeAllOverlays();
         });
 
+        $('.overlay__next').on('click', function(e){
+            nextPrevClicked($(this), 'next');
+            e.preventDefault();
+        });
+
+        $('.overlay__prev').on('click', function(e){
+            nextPrevClicked($(this), 'prev');
+            e.preventDefault();
+        });
+
         $(document).keyup(function(e) {
              if (e.keyCode == 27) {
-                if (isOpen){
-                    closeAllOverlays();
-                }
+                if (isOpen) closeAllOverlays();
             }
         });
     };

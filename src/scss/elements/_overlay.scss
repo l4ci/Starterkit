@@ -43,3 +43,31 @@ body.noscroll {
         content: '\f057';
     }
 }
+
+.overlay__prev,
+.overlay__next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: $spacing;
+
+    &::after {
+        font-family: f(icon);
+        content: '\f137';
+    }
+}
+
+.overlay__prev {
+    right: auto;
+}
+
+.overlay__next {
+    left: auto;
+
+    &::after{
+        content: '\f138';
+    }
+}
