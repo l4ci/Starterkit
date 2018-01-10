@@ -60,8 +60,8 @@ body:before {
         padding-right: 0;
     }
 
-    &.container--wrap {
-        flex-wrap: wrap;
+    &.container--nowrap {
+        flex-wrap: nowrap;
     }
 }
 
