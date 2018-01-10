@@ -14,7 +14,7 @@
 @mixin flex-container {
     @include container;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 @mixin row {
