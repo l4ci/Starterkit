@@ -33,6 +33,15 @@
     flex: 1 1 100%;
 }
 
+@mixin flex-options {
+    &--row { flex-direction: row; }
+    &--row-reverse { flex-direction: row-reverse; }
+    &--column { flex-direction: column; }
+    &--column-reverse { flex-direction: column-reverse; }
+    &--nowrap { flex-wrap: nowrap; }
+    &--wrap { flex-wrap: wrap; }
+}
+
 @mixin col {
     display: inline-block;
     font-size: 1rem;
