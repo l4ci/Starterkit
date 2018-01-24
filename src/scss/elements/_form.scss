@@ -8,6 +8,16 @@ Forms and Input Elements
     display: block;
     margin-top: 0;
     margin-bottom: $spacing;
+
+    &.label--inline {
+        display: inline-block;
+        margin-right: $spacing;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        margin-right: $spacing / 2;
+    }
 }
 
 
@@ -38,9 +48,11 @@ Forms and Input Elements
 
 
 .select {
+    position: relative;
     display: inline-block;
     margin-top: 0;
     margin-bottom: $spacing;
+    margin-right: $spacing / 2;
     outline: none;
     vertical-align: top;
     color: c(black);
@@ -50,23 +62,26 @@ Forms and Input Elements
     &::after {
         position: absolute;
         top: 50%;
-        right: 1em;
+        right: $spacing * .8;
         transform: translateY(-50%);
         font-family: f(icon);
         content: '\f107';
         line-height: 1;
         pointer-events: none;
+        color: c(grey);
     }
 
     &:hover {
         border-color: c(grey);
 
         &::after {
-            color: c(grey);
+            color: c(black);
         }
     }
 
+    &.select--active,
     &:active,
+    &.select--focus,
     &:focus {
         border-color: $primary;
     }
@@ -76,7 +91,7 @@ Forms and Input Elements
         position: relative;
         box-shadow: none;
         appearance: none;
-        padding: .7em .4em .6em;
+        padding: .7em $spacing .6em;
         padding-right: $spacing * 2;
         width: 100%;
         border: 0;
@@ -84,12 +99,24 @@ Forms and Input Elements
         background: c(transparent);
 
         &:focus {
-            outline: c(transparent);
+            outline: none;
         }
 
         &:-moz-focusring {
             color: c(transparent);
             text-shadow: 0 0 0 #000;
+        }
+    }
+
+    .select__label {
+        display: inline-block;
+        font-weight: bold;
+        padding-left: $spacing;
+        user-select: none;
+
+        & + select {
+            display: inline-block;
+            width: auto;
         }
     }
 }
