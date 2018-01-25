@@ -19,27 +19,20 @@
 // Text Alignment
 // Usage: --text-center
 .--text {
-    &-center {
-        text-align: center;
-    }
-    &-right {
-        text-align: right;
-    }
-    &-left {
-        text-align: left;
-    }
+    &-center { text-align: center; }
+    &-right  { text-align: right; }
+    &-left   { text-align: left; }
+    &-upper  { text-transform: uppercase; }
+    &-lower  { text-transform: lowercase; }
+    &-bold   { font-weight: bold; }
+    &-italic { font-style: italic; }
 }
 
 // Float
 // Usage: --float-left
 .--float {
-    &-left {
-        float: left;
-    }
-
-    &-right {
-        float: right;
-    }
+    &-left { float: left; }
+    &-right { float: right;}
 }
 
 // Clearfix
