@@ -10,14 +10,15 @@ if (typeof jQuery == 'undefined') {
 (function($) {
     'use strict';
 
-    debug(true);
-
     console.log('main.js loaded');
 
     var html = $('html'),
         body = $('body'),
         scrollTop = $(this).scrollTop();
 
+    if (body.hasClass('debug')) {
+        debug(true);
+    }
 
     $(".lazyload").unveil(200);
 
