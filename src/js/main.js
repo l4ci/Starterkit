@@ -35,7 +35,7 @@ if (typeof jQuery == 'undefined') {
     //=include ui/_data-toggle.js
     //=include ui/_mobile-navtoggle.js
     //=include ui/_nav-dropdown.js
-    //=include ui/_prefooter.js
+    //=include ui/_prefooter-toggle.js
 
 
     /**
@@ -90,6 +90,7 @@ if (typeof jQuery == 'undefined') {
         dataOverlay.init();
         dataScrollTo.init();
         backToTop.init();
+        prefooterToggle.init();
     }
     init();
 
