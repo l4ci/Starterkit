@@ -58,6 +58,7 @@
     width: 100%;
     flex: 0 0 100%;
     max-width: 100%;
+    transition: all t(short);
 }
 
 @mixin generate-col($value) {
