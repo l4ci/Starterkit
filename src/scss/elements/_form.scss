@@ -8,15 +8,20 @@ Forms and Input Elements
     display: block;
     margin-top: 0;
     margin-bottom: $spacing;
+    font-weight: bold;
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        margin-right: $spacing / 2;
+    }
 
     &.label--inline {
         display: inline-block;
         margin-right: $spacing;
     }
 
-    input[type="checkbox"],
-    input[type="radio"] {
-        margin-right: $spacing / 2;
+    &.label--error {
+        color: c(red);
     }
 }
 
@@ -25,12 +30,13 @@ Forms and Input Elements
     display: inline-block;
     margin-top: 0;
     margin-bottom: $spacing;
-    padding: .7em .4em .6em;
+    padding: .8em 1em .7em;
     outline: none;
     vertical-align: top;
     color: c(black);
     background: c(white);
     border: 1px solid c(grey);
+    transition: all .2s ease;
 
     &:hover {
         border-color: c(grey);
@@ -38,11 +44,15 @@ Forms and Input Elements
 
     &:active,
     &:focus {
-        border-color: $primary;
+        border-color: c(darkgrey);
     }
 
     &.input--full {
         width: 100%;
+    }
+
+    &.input--error {
+        border-color: c(red);
     }
 }
 
@@ -58,6 +68,7 @@ Forms and Input Elements
     color: c(black);
     background: c(white);
     border: 1px solid c(grey);
+    transition: all .2s ease;
 
     &::after {
         position: absolute;
@@ -72,7 +83,7 @@ Forms and Input Elements
     }
 
     &:hover {
-        border-color: c(grey);
+        border-color: c(darkgrey);
 
         &::after {
             color: c(black);
