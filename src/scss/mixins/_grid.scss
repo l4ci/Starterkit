@@ -52,6 +52,14 @@
     max-width: 100%;
 }
 
+@mixin flex-col {
+    display: inline-block;
+    padding: 0 $spacing / 2;
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
 @mixin generate-col($value) {
     $string_value: to-string($value);
     @if (ends-with($string_value, '3')){

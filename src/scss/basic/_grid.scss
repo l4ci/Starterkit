@@ -37,26 +37,16 @@ body:before {
 
 .col,
 [class*=col-]{
-    @include col;
+    @include flex-col;
 }
 
 .container {
-    @include container;
+    @include flex-container;
+    @include flex-options;
 
-    .row { @include row; }
-
-    &:not(.container--flex){
-        [class*=col-]{ flex: none; }
-    }
-
-    &.container--flex {
-        @include flex-container;
+    .row {
+        @include flex-row;
         @include flex-options;
-
-        .row {
-            @include flex-row;
-            @include flex-options;
-        }
     }
 
     &.container--full {
