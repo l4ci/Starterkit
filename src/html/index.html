@@ -48,12 +48,14 @@
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#typo" data-scrollto="#typo">Typo</a></li>
+                    <li class="nav__item"><a href="#typo" data-scrollto="#form">Form</a></li>
                     <li class="nav__item"><a href="#js" data-scrollto="#js">Javascript</a></li>
                     <li class="nav__item"><a href="#grid" data-scrollto="#grid">Grid</a></li>
+                    <li class="nav__item"><a href="#helper" data-scrollto="#grid">Helper</a></li>
                 </ul>
             </nav>
 
-            <a href="http://github.com/l4ci/Starterkit" target="_blank" class="btn btn--secondary | header__c2a">Download</a>
+            <a href="http://github.com/l4ci/Starterkit" target="_blank" class="btn btn--small btn--secondary | header__c2a">Download</a>
 
         </div>
         <!-- /.container -->
@@ -63,7 +65,7 @@
 
         <div class="module hero">
             <div class="hero__inner">
-                <div class="hero__title">Starterkit</div>
+                <h1 class="hero__title">Starterkit</h1>
                 <div class="hero__text"><p>A fully responsive, performance-orientated, work-in-progress frontend boilerplate, I built for myself.</p></div>
             </div>
         </div>
@@ -84,7 +86,7 @@
         <!-- /.module slider -->
 
         <div class="module" id="typo">
-            <div class="module__headline">Typografie &amp; Elements</div>
+            <h2 class="module__headline">Typografie &amp; Elements</h2>
 
             <div class="container">
                 <div class="row">
@@ -111,6 +113,12 @@
                             <input type="submit" href="#" class="btn btn--secondary" value="Secondary">
                         </div>
 
+                        <div>
+                            <a href="#" class="btn btn--primary btn--small">Small Button</a>
+
+                            <a href="#" class="btn btn--primary btn--big">Big Button</a>
+                        </div>
+
                         <h2>Badges</h2>
                         <span class="badge">Badge</span>
                         <span class="badge badge--primary">Primary</span>
@@ -128,7 +136,7 @@
 
 
          <div class="module" id="form">
-            <div class="module__headline">Forms &amp; Input fields</div>
+            <h2 class="module__headline">Forms &amp; Input fields</h2>
 
             <div class="container">
                 <div class="row">
@@ -189,7 +197,7 @@
 
 
         <div class="module" id="js">
-            <div class="module__headline">Javascript</div>
+            <h2 class="module__headline">Javascript</h2>
             <!-- /.module__headline -->
             <div class="module__text">Setting some useful default functions and a expandable, modulare js-boilerplate</div>
             <!-- /.module__text -->
@@ -198,7 +206,7 @@
                     <div class="col-md-33">
                         <div class="card">
                             <div class="card__header">
-                                <h3>ScrollTo <span class="badge badge--success">Modul</span></h3>
+                                <h3>data-scrollto <span class="badge badge--success">Modul</span></h3>
                             </div>
                             <!-- /.card__header -->
                             <div class="card__body">
@@ -213,7 +221,7 @@
                     <div class="col-md-33">
                         <div class="card">
                             <div class="card__header">
-                                <h3>Overlays <span class="badge badge--success">Modul</span><span class="badge badge--alert">WIP</span></h3>
+                                <h3>data-overlay <span class="badge badge--success">Modul</span><span class="badge badge--alert">WIP</span></h3>
                             </div>
                             <!-- /.card__header -->
                             <div class="card__body">
@@ -235,7 +243,7 @@
                     <div class="col-md-33">
                         <div class="card">
                             <div class="card__header">
-                                <h3>General toggle <span class="badge badge--alert">Modul</span><span class="badge badge--alert">WIP</span></h3>
+                                <h3>data-toggle <span class="badge badge--alert">Modul</span><span class="badge badge--alert">WIP</span></h3>
                             </div>
                             <!-- /.card__header -->
                             <div class="card__body">
@@ -270,17 +278,8 @@
         </div>
         <!-- /#js.module -->
 
-        <div class="overlay" id="overlaytest">
-            <div class="overlay__inner" role="dialog" aria-hidden="true">
-                <div class="overlay__close"></div>
-                Overlay Test
-            </div>
-            <!-- /.overlay__inner -->
-        </div>
-        <!-- /.overlay -->
-
         <div class="module" id="grid">
-            <div class="module__headline">Grid</div>
+            <h2 class="module__headline">Grid</h2>
             <div class="module__text">These are helper classes, which can be used. Its recommended to use the <code>@mixin generate-col($percentage)</code> though.</div>
 
             <div class="container">
@@ -311,6 +310,40 @@
         <!-- /#grid.module -->
 
 
+        <div class="module" id="helper">
+            <h2 class="module__headline">Helper</h2>
+            <div class="module__text"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3>Text</h3>
+                        <code>--text-left</code>
+                        <code>--text-center</code>
+                        <code>--text-right</code>
+                        <code>--text-upper</code>
+                        <code>--text-lower</code>
+                        <code>--text-bold</code>
+                        <code>--text-italic</code>
+
+                        <h3>Float</h3>
+                        <code>--float-left</code>
+                        <code>--float-right</code>
+
+                        <h3>Hidden</h3>
+                        <code>hidden-{bp}-up</code>
+                        <code>hidden-{bp}-down</code>
+
+                        <h3>Screen-reader</h3>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.module -->
+
+
     </main>
 
     <footer class="footer">
@@ -327,14 +360,21 @@
         <!-- /.container -->
     </footer>
 
+    <div class="overlay" id="overlaytest">
+        <div class="overlay__inner" role="dialog" aria-hidden="true">
+            <div class="overlay__close"></div>
+            Overlay Test
+        </div>
+        <!-- /.overlay__inner -->
+    </div>
+    <!-- /.overlay -->
+
     <a class="back-to-top" href="javascript:void(0);"><i class="fa fa-chevron-up"></i></a>
 
     <!-- jsdelivr.com: Group all js files together -->
     <script src="https://cdn.jsdelivr.net/g/jquery@3.2.1,webfontloader@1.6.27"></script>
 
     <script>window.jQuery || document.write('<script src="/js/libs/jquery.min.js">\x3C/script>')</script>
-
-    <script src="/js/libs/popper.min.js"></script>
 
     <script src="/js/main.min.js"></script>
 

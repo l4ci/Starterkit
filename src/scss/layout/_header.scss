@@ -63,5 +63,6 @@
 
     @include bp(md) {
         order: 1;
+        margin-left: $spacing;
     }
 }

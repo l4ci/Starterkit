@@ -32,7 +32,7 @@ if (typeof jQuery == 'undefined') {
     //=include ui/_back-to-top.js
     //=include ui/_data-overlay.js
     //=include ui/_data-scrollto.js
-    //=include ui/_general-toggle.js
+    //=include ui/_data-toggle.js
     //=include ui/_mobile-navtoggle.js
     //=include ui/_nav-dropdown.js
 
