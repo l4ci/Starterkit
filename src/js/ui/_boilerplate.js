@@ -1,7 +1,9 @@
 /**
  * Example Boilerplate Module
+ * ========================
  *
  * Add boilerplateModule.init() to main.js to initiate it.
+ *
  */
 var boilerplateModule = (function(){
 
@@ -24,6 +26,10 @@ var boilerplateModule = (function(){
             e.preventDefault();
             doSomething();
         });
+
+        if (breakpoint.value == 'md') {
+            // Respond to current viewport
+        }
 
         // Always append module name on global functions
         $(window).on('scroll.boilerplateModule', doSomething);
