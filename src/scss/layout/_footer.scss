@@ -3,7 +3,8 @@
     font-size: .875rem;
     line-height: 1.7;
     padding: $spacing * 2 0;
-    background: c(white);
+    background: c(lightgrey);
+    color: c(darkgrey);
 
     a {
         color: inherit;
@@ -11,38 +12,32 @@
         &:hover,
         &:active,
         &:focus {
-            color: $primary;
+            color: c(black);
         }
     }
 }
 
 .footer__copyright {
-    display: block;
+    @include col;
     text-align: center;
-    margin: 0 auto;
-    padding: $spacing 0;
     order: 2;
-    width: 100%;
 
     @include bp(sm) {
-        width: auto;
+        @include generate-col(50);
         text-align:left;
-        margin-left: 0;
         order: 1;
     }
 }
 
 .footer__links {
-    margin: 0 auto;
-    padding: $spacing 0;
+    @include col;
+    margin: 0;
     list-style: none;
     text-align: center;
     order: 1;
-    width: 100%;
 
     @include bp(sm) {
-        width: auto;
-        margin-right: 0;
+        @include generate-col(50);
         text-align:right;
         order: 2;
     }
