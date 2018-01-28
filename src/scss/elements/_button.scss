@@ -15,6 +15,7 @@ Basic Buttons
     font-size: 1rem;
     font-weight: bold;
     line-height: 1;
+    letter-spacing: .5pt;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
@@ -37,51 +38,48 @@ Basic Buttons
     &.btn--active,
     &:active {
         box-shadow: none;
-    }
-
-    &.btn--primary {
-        background: $primary;
-        color: c(white);
-
-        &:focus,
-        &:hover,
-        &:active {
-            color: c(white);
-            border-color: lighten($primary, 10%);
-            background: lighten($primary, 10%);
-        }
-    }
-
-    &.btn--secondary {
-        background: $secondary;
-        color: c(white);
-
-        &:focus,
-        &:hover,
-        &:active {
-            color: c(white);
-            border-color: lighten($secondary, 10%);
-            background: lighten($secondary, 10%);
-        }
-    }
-
-    &.btn--small {
-        font-size: .875rem;
-        padding: $spacing * .8 $spacing * 1.2;
-    }
-
-    &.btn--big {
-        @include bp(md) {
-            font-size: 1.5rem;
-            padding: $spacing * 1.5 $spacing * 4;
-        }
+        transform: translateY(3px);
     }
 }
 
-input[type="submit"],
-input[type="button"],
-input[type="reset"],
-button,
 .btn {
     @include btn;
+}
+
+.btn--primary {
+    background: $primary;
+    color: c(white);
+
+    &:focus,
+    &:hover,
+    &:active {
+        color: c(white);
+        border-color: lighten($primary, 10%);
+        background: lighten($primary, 10%);
+    }
+}
+
+.btn--secondary {
+    background: $secondary;
+    color: c(white);
+
+    &:focus,
+    &:hover,
+    &:active {
+        color: c(white);
+        border-color: lighten($secondary, 10%);
+        background: lighten($secondary, 10%);
+    }
+}
+
+.btn--small {
+    font-size: .875rem;
+    padding: $spacing * .8 $spacing * 1.2;
+}
+
+.btn--big {
+    @include bp(md) {
+        font-size: 1.5rem;
+        padding: $spacing * 1.5 $spacing * 4;
+    }
 }
