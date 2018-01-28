@@ -1,12 +1,8 @@
 .prefooter {
+    @include module-spacing(2);
     display: block;
-    padding: $spacing 0;
     background: c(darkgrey);
     color: c(lightgrey);
-
-    @include bp(md) {
-        padding: $spacing * 2 0;
-    }
 
     a {
         color: inherit;

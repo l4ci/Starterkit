@@ -54,3 +54,13 @@ Functions
 @function t($key) {
     @return timing($key);
 }
+
+
+@mixin module-spacing($modifier:1) {
+    $spacing: $modifier * $spacing;
+    padding: $spacing 0;
+    @include bp(sm) { padding: $spacing * 1.5 0;}
+    @include bp(md) { padding: $spacing * 2 0;}
+    @include bp(lg) { padding: $spacing * 2.5 0;}
+    @include bp(xl) { padding: $spacing * 3 0;}
+}
