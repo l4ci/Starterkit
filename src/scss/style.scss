@@ -28,11 +28,12 @@ Author: Volker Otto <hello@volkerotto.net> (http://volkerotto.net)
 @import 'elements/overlay';
 
 @import 'layout/header';
+@import 'layout/prefooter';
 @import 'layout/footer';
 @import 'layout/nav';
 @import 'layout/main';
 @import 'layout/rte';
 
-@import 'modules/global';
+@import 'modules/module';
 @import 'modules/hero';
 @import 'modules/slider';

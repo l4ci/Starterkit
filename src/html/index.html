@@ -38,7 +38,7 @@
 
 
     <header class="header header--sticky">
-        <div class="container container--flex container--wrap">
+        <div class="container">
             <div class="header__logo">
                 <a href="/"><img src="" alt="Starterkit"></a>
             </div><!-- /.header__logo -->
@@ -51,7 +51,7 @@
                     <li class="nav__item"><a href="#typo" data-scrollto="#form">Form</a></li>
                     <li class="nav__item"><a href="#js" data-scrollto="#js">Javascript</a></li>
                     <li class="nav__item"><a href="#grid" data-scrollto="#grid">Grid</a></li>
-                    <li class="nav__item"><a href="#helper" data-scrollto="#grid">Helper</a></li>
+                    <li class="nav__item"><a href="#helper" data-scrollto="#helper">Helper</a></li>
                 </ul>
             </nav>
 
@@ -109,7 +109,7 @@
                         <p>If <code>a</code>, <code>button</code> or <code>input[type=submit]</code> - adding <code>.btn</code> makes it a button.</p>
                         <div>
                             <a href="#" class="btn">Button</a>
-                            <button class="btn btn--primary">Primary</button>
+                            <button class="btn btn--primary"><i class="fa fa-info-circle"></i> Primary</button>
                             <input type="submit" href="#" class="btn btn--secondary" value="Secondary">
                         </div>
 
@@ -177,6 +177,12 @@
 
                             <label for="input1" class="label">Label:</label>
                             <input type="text" id="input1" class="input" placeholder="Text input">
+
+                            <label for="input3" class="label">Label:</label>
+                            <input type="text" id="input3" class="input" placeholder="Text input">
+
+                            <label for="input4" class="label label--error">Label:</label>
+                            <input type="text" id="input4" class="input input--error" placeholder="Text input">
 
                             <label for="input2" class="label">Label:</label>
                             <input type="text" id="input2" class="input input--full" placeholder="Text input">
@@ -346,8 +352,59 @@
 
     </main>
 
-    <footer class="footer">
-        <div class="container container--flex container--wrap">
+    <div class="prefooter" id="prefooter">
+        <div class="container">
+            <div class="col-md-33">
+                <div class="prefooter__block prefooter__block--open">
+                    <div class="prefooter__headline">About us</div>
+
+                    <ul class="prefooter__links">
+                        <li><a href="#prefooter">Impressum</a></li>
+                        <li><a href="#prefooter">AGB</a></li>
+                        <li><a href="#prefooter">Datenschutz</a></li>
+                    </ul>
+                    <!-- /.prefooter__links -->
+                </div>
+                <!-- /.prefooter__block -->
+            </div>
+            <!-- /.col -->
+
+            <div class="col-md-33">
+                <div class="prefooter__block">
+                    <div class="prefooter__headline">About us</div>
+
+                    <ul class="prefooter__links">
+                        <li><a href="#prefooter">Impressum</a></li>
+                        <li><a href="#prefooter">AGB</a></li>
+                        <li><a href="#prefooter">Datenschutz</a></li>
+                    </ul>
+                    <!-- /.prefooter__links -->
+                </div>
+                <!-- /.prefooter__block -->
+            </div>
+            <!-- /.col -->
+
+            <div class="col-md-33">
+                <div class="prefooter__block">
+                    <div class="prefooter__headline">About us</div>
+
+                    <ul class="prefooter__links">
+                        <li><a href="#prefooter">Impressum</a></li>
+                        <li><a href="#prefooter">AGB</a></li>
+                        <li><a href="#prefooter">Datenschutz</a></li>
+                    </ul>
+                    <!-- /.prefooter__links -->
+                </div>
+                <!-- /.prefooter__block -->
+            </div>
+            <!-- /.col -->
+
+        </div>
+        <!-- /.container -->
+    </div>
+
+    <footer class="footer" id="footer">
+        <div class="container">
             <div class="footer__copyright">Copyright &copy; 2017</div>
 
             <ul class="footer__links">

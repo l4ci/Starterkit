@@ -35,6 +35,7 @@ if (typeof jQuery == 'undefined') {
     //=include ui/_data-toggle.js
     //=include ui/_mobile-navtoggle.js
     //=include ui/_nav-dropdown.js
+    //=include ui/_prefooter.js
 
 
     /**
