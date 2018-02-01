@@ -139,9 +139,15 @@ hr {
 code {
     font-family: monospace;
     letter-spacing: 0;
-    background: rgba(c(black), .05);
-    padding: .2em .3em .1em;
+    background: rgba(c(black), .1);
+    padding: .3em .5em .2em;
     border-radius: 3px;
+    font-weight: bold;
+
+    &:hover {
+        color: c(white);
+        background: $primary;
+    }
 }
 
 blockquote {
