@@ -47,27 +47,42 @@ body.noscroll {
 .overlay__prev,
 .overlay__next {
     position: absolute;
-    top: 0;
+    top: 50%;
     bottom: 0;
     left: 0;
     right: 0;
+    transform: translateY(-50%);
     margin: auto;
     padding: $spacing;
+    transition: all t(quick);
+    color: c(white);
 
-    &::after {
-        font-family: f(icon);
-        content: '\f137';
+    &::after { font-family: f(icon); }
+
+    &:hover {
+        cursor: pointer;
+        color: c(white);
     }
 }
 
 .overlay__prev {
+    left: $spacing * -3;
     right: auto;
+
+    &::after { content: '\f060'; }
+
+    &:hover {
+        transform: translate($spacing * -.5, -50%);
+    }
 }
 
 .overlay__next {
     left: auto;
+    right: $spacing *-3;
 
-    &::after{
-        content: '\f138';
+    &::after{ content: '\f061'; }
+
+    &:hover {
+        transform: translate($spacing * .5, -50%);
     }
 }

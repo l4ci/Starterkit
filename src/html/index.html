@@ -232,12 +232,17 @@
                             </div>
                             <!-- /.card__header -->
                             <div class="card__body">
-                                Adding <code>data-overlay="id"</code> to any element, will set the <code>.overlay#id</code> to active and close all other overlays. Also disables body scroll.
+                                <p>Adding <code>data-overlay="id"</code> to any element, will set the <code>.overlay#id</code> to active and close all other overlays. Also disables body scroll.</p>
 
-                                Grouping overlays with <code>data-group</code> will append arrows to go to the next/prev overlay.
+                                <p>Grouping overlays with <code>data-group</code> will append arrows to go to the next/prev overlay.</p>
+
+                                <p>Looping in overlay groups is possible with <code>data-loop="true"</code>.</p>
+
+                                <p>Adding <code>data-close="true"</code> will add an close icon.</p>
 
                                 <div class="card__links">
                                     <a href="#overlaytest" data-overlay="overlaytest" class="more">Open Overlay</a>
+                                    <a href="#overlaytest3" data-overlay="overlaytest3" class="more">Open Overlay without loop</a>
 
                                 </div>
                             </div>
@@ -421,10 +426,37 @@
         <!-- /.container -->
     </footer>
 
-    <div class="overlay" id="overlaytest">
+    <div class="overlay" data-group="overlaygroup" data-loop="true" data-close="true" id="overlaytest">
         <div class="overlay__inner" role="dialog" aria-hidden="true">
-            <div class="overlay__close"></div>
-            Overlay Test
+            <h3>Overlay</h3>
+            <p>This overlay is in <code>data-group="overlaygroup1"</code> and is set to <code>data-loop="true"</code> and <code>data-close="true"</code>.</p>
+        </div>
+        <!-- /.overlay__inner -->
+    </div>
+    <!-- /.overlay -->
+
+    <div class="overlay" data-group="overlaygroup" data-loop="true" data-close="true" id="overlaytest2">
+        <div class="overlay__inner" role="dialog" aria-hidden="true">
+            <h3>Second Overlay</h3>
+            <p>This overlay is in <code>data-group="overlaygroup1"</code> and is set to <code>data-loop="true"</code> and <code>data-close="true"</code>.</p>
+        </div>
+        <!-- /.overlay__inner -->
+    </div>
+    <!-- /.overlay -->
+
+    <div class="overlay" data-group="overlaygroup2" id="overlaytest3">
+        <div class="overlay__inner" role="dialog" aria-hidden="true">
+            <h3>Overlay</h3>
+            <p>This overlay is in <code>data-group="overlaygroup2"</code> and has no loop and no close button.</p>
+        </div>
+        <!-- /.overlay__inner -->
+    </div>
+    <!-- /.overlay -->
+
+    <div class="overlay" data-group="overlaygroup2" id="overlaytest4">
+        <div class="overlay__inner" role="dialog" aria-hidden="true">
+            <h3>Second Overlay</h3>
+            <p>This overlay is in <code>data-group="overlaygroup2"</code> and has no loop and no close button.</p>
         </div>
         <!-- /.overlay__inner -->
     </div>

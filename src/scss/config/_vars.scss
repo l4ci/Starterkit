@@ -61,6 +61,7 @@ $z-layers: (
  * Use with mixin: timing(short) or t(short)
  */
 $timings: (
+    quick: .2s ease,
     short: .5s ease,
     long: 2s ease
 );

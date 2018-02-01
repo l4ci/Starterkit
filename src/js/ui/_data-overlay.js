@@ -33,11 +33,21 @@ var dataOverlay = (function(){
             return;
         }
 
-        var group = current.attr('data-group');
-        if (group) {
+        var group = current.data('group'),
+            loop = current.data('loop') ? true : false;
+
+        if ( group ) {
             var dtarget = '[data-group="'+ group +'"]';
             var target = (dir == 'prev' ? current.prev(dtarget) : current.next(dtarget) );
-            if (target) {
+
+            if ( target.length <= 0 ) {
+                console.log('OVERLAY: '+ dir +' target not found');
+                if ( loop ) {
+                    target = (dir == 'prev' ? $(dtarget).last() : $(dtarget).first() );
+                }
+            }
+
+            if ( target.length ) {
                 openOverlay(target.attr('id'));
             } else {
                 console.log('OVERLAY: '+ dir +' target not found');
@@ -49,7 +59,35 @@ var dataOverlay = (function(){
 
     var setupBindings = function(){
         $('.overlay[data-group]').each( function(){
-            $(this).find('.overlay__inner').append('<div class="overlay__prev"></div><div class="overlay__next"></div>');
+            var el = $(this),
+                elInner = el.find('.overlay__inner'),
+                groupname = el.data('group'),
+                loop = el.data('loop') ? true : false,
+                close = el.data('close') ? true : false;
+
+            console.log('Groupname: ' + groupname);
+            console.log('Loop: ' + loop);
+
+            if ( close ) {
+                elInner.append('<a class="overlay__close" href="javascript:void(0)"></a>');
+            }
+
+            if ( groupname == '' ) return;
+
+            var group = $('.overlay[data-group="'+groupname+'"]');
+
+            if ( loop ) {
+                elInner
+                    .append('<a class="overlay__prev" href="javascript:void(0)"></a>')
+                    .append('<a class="overlay__next" href="javascript:void(0)"></a>');
+            } else {
+                if ( !el.is(group.first()) ) {
+                    elInner.append('<a class="overlay__prev" href="javascript:void(0)"></a>');
+                }
+                if ( !el.is(group.last()) && ! loop ) {
+                    elInner.append('<a class="overlay__next" href="javascript:void(0)"></a>');
+                }
+            }
         });
 
         $('[data-overlay]').on('click',function(e){
