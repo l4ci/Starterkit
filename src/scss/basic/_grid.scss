@@ -41,12 +41,15 @@ body:before {
 }
 
 .container {
-    @include flex-container;
-    @include flex-options;
+    @include container;
 
     .row {
         @include flex-row;
         @include flex-options;
+    }
+
+    &.container--flex {
+        @include flex-container;
     }
 
     &.container--full {
