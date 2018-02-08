@@ -20,10 +20,20 @@ if (typeof jQuery == 'undefined') {
         debug(true);
     }
 
+
+    // Unveil included for lazy loading
     $(".lazyload").unveil(200);
 
+    // Slick included for sliders
     $('.slick').slick({
         'dots': true,
+    });
+
+    // Waypoints included for scroll events
+    var waypoints = $('.main').waypoint({
+        handler: function(direction) {
+            console.log('Reached .main');
+        }
     });
 
     /**
