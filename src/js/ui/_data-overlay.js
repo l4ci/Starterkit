@@ -65,8 +65,8 @@ var dataOverlay = (function(){
                 loop = el.data('loop') ? true : false,
                 close = el.data('close') ? true : false;
 
-            console.log('Groupname: ' + groupname);
-            console.log('Loop: ' + loop);
+            // console.log('Groupname: ' + groupname);
+            // console.log('Loop: ' + loop);
 
             if ( close ) {
                 elInner.append('<a class="overlay__close" href="javascript:void(0)"></a>');
