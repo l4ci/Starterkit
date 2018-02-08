@@ -39,23 +39,27 @@
 
     <header class="header header--sticky">
         <div class="container">
-            <div class="header__logo">
-                <a href="/"><img src="" alt="Starterkit"></a>
-            </div><!-- /.header__logo -->
+            <div class="row">
 
-            <div class="toggle-nav"></div>
+                <div class="header__logo">
+                    <a href="/"><img src="" alt="Starterkit"></a>
+                </div><!-- /.header__logo -->
 
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#typo" data-scrollto="#typo">Typo</a></li>
-                    <li class="nav__item"><a href="#typo" data-scrollto="#form">Form</a></li>
-                    <li class="nav__item"><a href="#js" data-scrollto="#js">Javascript</a></li>
-                    <li class="nav__item"><a href="#grid" data-scrollto="#grid">Grid</a></li>
-                    <li class="nav__item"><a href="#helper" data-scrollto="#helper">Helper</a></li>
-                </ul>
-            </nav>
+                <div class="toggle-nav"></div>
 
-            <a href="http://github.com/l4ci/Starterkit" target="_blank" class="btn btn--small btn--secondary | header__c2a">Download</a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#typo" data-scrollto="#typo">Typo</a></li>
+                        <li class="nav__item"><a href="#typo" data-scrollto="#form">Form</a></li>
+                        <li class="nav__item"><a href="#js" data-scrollto="#js">Javascript</a></li>
+                        <li class="nav__item"><a href="#grid" data-scrollto="#grid">Grid</a></li>
+                        <li class="nav__item"><a href="#helper" data-scrollto="#helper">Helper</a></li>
+                    </ul>
+                </nav>
+
+                <a href="http://github.com/l4ci/Starterkit" target="_blank" class="btn btn--small btn--secondary | header__c2a">Download</a>
+            </div>
+            <!-- /.row -->
 
         </div>
         <!-- /.container -->
@@ -63,16 +67,16 @@
 
     <main class="main" id="content">
 
-        <div class="module hero">
+        <div class="section section--hero hero">
             <div class="hero__inner">
                 <h1 class="hero__title">Starterkit</h1>
                 <div class="hero__text"><p>A fully responsive, performance-orientated, work-in-progress frontend boilerplate, I built for myself.</p></div>
                 <a href="#typo" data-scrollto="#typo" class="btn btn--secondary | hero__btn">Explore <i class="fa fa-level-down"></i></a>
             </div>
         </div>
-        <!-- /.module hero -->
+        <!-- /.section.hero -->
 
-        <div class="module slider">
+        <div class="section section--slider slider">
             <div class="container">
                 <div class="slick"  data-slick='{"arrows": true, "autoplay": true, "autoplaySpeed": 2000, "dots": true, "pauseOnFocus": true, "pauseOnHover": true, "adaptiveHeight": true }'>
                     <div>Get started quickly with some useful defaults: Project directory, Gulp Workflows with browserSync...</div>
@@ -84,12 +88,13 @@
             </div>
             <!-- /.container -->
         </div>
-        <!-- /.module slider -->
+        <!-- /.section slider -->
 
-        <div class="module" id="typo">
-            <h2 class="module__headline">Typografie &amp; Elements</h2>
-
+        <div class="section" id="typo">
             <div class="container">
+
+                <h2 class="section__headline">Typografie &amp; Elements</h2>
+
                 <div class="row">
                     <div class="col-md-50">
                         <div class="h1"><code>.h1</code> Headline <small>Something else</small></div>
@@ -133,13 +138,14 @@
             </div>
             <!-- /.container -->
         </div>
-        <!-- /#typo.module -->
+        <!-- /#typo.section -->
 
 
-         <div class="module" id="form">
-            <h2 class="module__headline">Forms &amp; Input fields</h2>
-
+         <div class="section section--alternate" id="form">
             <div class="container">
+
+                <h2 class="section__headline">Forms &amp; Input fields</h2>
+
                 <div class="row">
                     <div class="col-md-50">
                         <form action="#">
@@ -200,15 +206,17 @@
             </div>
             <!-- /.container -->
         </div>
-        <!-- /#form.module -->
+        <!-- /#form.section -->
 
 
-        <div class="module" id="js">
-            <h2 class="module__headline">Javascript</h2>
-            <!-- /.module__headline -->
-            <div class="module__text">Setting some useful default functions and a expandable, modulare js-boilerplate</div>
-            <!-- /.module__text -->
+        <div class="section" id="js">
             <div class="container">
+
+                <h2 class="section__headline">Javascript</h2>
+                <!-- /.section__headline -->
+                <div class="section__text">Setting some useful default functions and a expandable, modulare js-boilerplate</div>
+                <!-- /.section__text -->
+
                 <div class="row">
                     <div class="col-md-33">
                         <div class="card">
@@ -288,11 +296,11 @@
             </div>
             <!-- /.container -->
         </div>
-        <!-- /#js.module -->
+        <!-- /#js.section -->
 
-        <div class="module" id="grid">
-            <h2 class="module__headline">Grid</h2>
-            <div class="module__text">These are helper classes, which can be used. Its recommended to use the <code>@mixin generate-col($percentage)</code> though.</div>
+        <div class="section section--alternate" id="grid">
+            <h2 class="section__headline">Grid</h2>
+            <div class="section__text">These are helper classes, which can be used. Its recommended to use the <code>@mixin generate-col($percentage)</code> though.</div>
 
             <div class="container">
                 <div class="row">
@@ -319,14 +327,15 @@
             </div>
             <!-- /.container -->
         </div>
-        <!-- /#grid.module -->
+        <!-- /#grid.section -->
 
 
-        <div class="module" id="helper">
-            <h2 class="module__headline">Helper</h2>
-            <div class="module__text"></div>
-
+        <div class="section" id="helper">
             <div class="container">
+
+                <h2 class="section__headline">Helper</h2>
+                <div class="section__text"></div>
+
                 <div class="row">
                     <div class="col">
                         <h3>Text</h3>
@@ -356,57 +365,59 @@
             </div>
             <!-- /.container -->
         </div>
-        <!-- /.module -->
-
+        <!-- /.section -->
 
     </main>
 
     <div class="prefooter" id="prefooter">
         <div class="container">
-            <div class="col-md-33">
-                <div class="prefooter__block prefooter__block--open">
-                    <div class="prefooter__headline">About us</div>
+            <div class="row">
+                <div class="col-md-33">
+                    <div class="prefooter__block prefooter__block--open">
+                        <div class="prefooter__headline">About us</div>
 
-                    <ul class="prefooter__links">
-                        <li><a href="#prefooter">Impressum</a></li>
-                        <li><a href="#prefooter">AGB</a></li>
-                        <li><a href="#prefooter">Datenschutz</a></li>
-                    </ul>
-                    <!-- /.prefooter__links -->
+                        <ul class="prefooter__links">
+                            <li><a href="#prefooter">Impressum</a></li>
+                            <li><a href="#prefooter">AGB</a></li>
+                            <li><a href="#prefooter">Datenschutz</a></li>
+                        </ul>
+                        <!-- /.prefooter__links -->
+                    </div>
+                    <!-- /.prefooter__block -->
                 </div>
-                <!-- /.prefooter__block -->
-            </div>
-            <!-- /.col -->
+                <!-- /.col -->
 
-            <div class="col-md-33">
-                <div class="prefooter__block">
-                    <div class="prefooter__headline">About us</div>
+                <div class="col-md-33">
+                    <div class="prefooter__block">
+                        <div class="prefooter__headline">About us</div>
 
-                    <ul class="prefooter__links">
-                        <li><a href="#prefooter">Impressum</a></li>
-                        <li><a href="#prefooter">AGB</a></li>
-                        <li><a href="#prefooter">Datenschutz</a></li>
-                    </ul>
-                    <!-- /.prefooter__links -->
+                        <ul class="prefooter__links">
+                            <li><a href="#prefooter">Impressum</a></li>
+                            <li><a href="#prefooter">AGB</a></li>
+                            <li><a href="#prefooter">Datenschutz</a></li>
+                        </ul>
+                        <!-- /.prefooter__links -->
+                    </div>
+                    <!-- /.prefooter__block -->
                 </div>
-                <!-- /.prefooter__block -->
-            </div>
-            <!-- /.col -->
+                <!-- /.col -->
 
-            <div class="col-md-33">
-                <div class="prefooter__block">
-                    <div class="prefooter__headline">About us</div>
+                <div class="col-md-33">
+                    <div class="prefooter__block">
+                        <div class="prefooter__headline">About us</div>
 
-                    <ul class="prefooter__links">
-                        <li><a href="#prefooter">Impressum</a></li>
-                        <li><a href="#prefooter">AGB</a></li>
-                        <li><a href="#prefooter">Datenschutz</a></li>
-                    </ul>
-                    <!-- /.prefooter__links -->
+                        <ul class="prefooter__links">
+                            <li><a href="#prefooter">Impressum</a></li>
+                            <li><a href="#prefooter">AGB</a></li>
+                            <li><a href="#prefooter">Datenschutz</a></li>
+                        </ul>
+                        <!-- /.prefooter__links -->
+                    </div>
+                    <!-- /.prefooter__block -->
                 </div>
-                <!-- /.prefooter__block -->
+                <!-- /.col -->
             </div>
-            <!-- /.col -->
+            <!-- /.row -->
 
         </div>
         <!-- /.container -->
@@ -414,14 +425,17 @@
 
     <footer class="footer" id="footer">
         <div class="container">
-            <div class="footer__copyright">Copyright &copy; 2017</div>
+            <div class="row">
+                <div class="footer__copyright">Copyright &copy; 2017</div>
 
-            <ul class="footer__links">
-                <li><a href="index.html">Impressum</a></li>
-                <li><a href="index.html">AGB</a></li>
-                <li><a href="index.html">Datenschutz</a></li>
-            </ul>
-            <!-- /.footer__links -->
+                <ul class="footer__links">
+                    <li><a href="index.html">Impressum</a></li>
+                    <li><a href="index.html">AGB</a></li>
+                    <li><a href="index.html">Datenschutz</a></li>
+                </ul>
+                <!-- /.footer__links -->
+            </div>
+            <!-- /.row -->
         </div>
         <!-- /.container -->
     </footer>

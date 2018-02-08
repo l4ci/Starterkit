@@ -56,7 +56,7 @@ Functions
 }
 
 
-@mixin module-spacing($modifier:1) {
+@mixin section-spacing($modifier:1) {
     $spacing: $modifier * $spacing;
     padding: $spacing 0;
     @include bp(sm) { padding: $spacing * 1.5 0;}

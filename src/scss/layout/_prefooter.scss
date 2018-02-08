@@ -1,5 +1,5 @@
 .prefooter {
-    @include module-spacing(2);
+    @include section-spacing(2);
     display: block;
     background: c(darkgrey);
     color: c(lightgrey);
