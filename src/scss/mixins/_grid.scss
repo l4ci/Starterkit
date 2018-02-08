@@ -63,10 +63,10 @@
 
 @mixin generate-col($value) {
     $string_value: to-string($value);
-    @if (ends-with($string_value, '3')){
-        $value: $value +'.33334';
-    } @else if (ends-with($string_value, '6')){
-        $value: $value +'.66667';
+    @if (ends-with($string_value, "3")){
+        $value: $value + 0.33334;
+    } @else if (ends-with($string_value, "6")){
+        $value: $value + 0.66667;
     }
     width: 0% + $value;
     flex-basis: 0% + $value;
