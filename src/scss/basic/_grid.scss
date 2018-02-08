@@ -67,6 +67,9 @@ body:before {
             .col-#{$name}-#{$va} {
                 @include generate-col($va);
             }
+            .col--offset-#{$name}-#{$va} {
+                margin-left: 0% + $va;
+            }
         }
     }
 }
