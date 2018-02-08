@@ -1,3 +1,7 @@
+.section.section--hero {
+    @include section-spacing(3);
+}
+
 .hero {
     display: flex;
     color: c(white);

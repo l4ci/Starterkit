@@ -22,6 +22,7 @@ Author: Volker Otto <hello@volkerotto.net> (http://volkerotto.net)
 @import 'elements/badge';
 @import 'elements/form';
 @import 'elements/typo';
+@import 'elements/rte';
 @import 'elements/card';
 @import 'elements/slick';
 @import 'elements/info-box';
@@ -32,8 +33,7 @@ Author: Volker Otto <hello@volkerotto.net> (http://volkerotto.net)
 @import 'layout/footer';
 @import 'layout/nav';
 @import 'layout/main';
-@import 'layout/rte';
 
-@import 'modules/module';
-@import 'modules/hero';
-@import 'modules/slider';
+@import 'sections/hero';
+@import 'sections/slider';
+@import 'sections/section';

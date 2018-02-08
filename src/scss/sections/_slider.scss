@@ -1,6 +1,11 @@
+.section.section--slider {
+    @include section-spacing(1);
+    background: linear-gradient(to bottom, c(white), c(lightgrey));
+}
+
 .slider {
+
     .slick-slider {
-        overflow: hidden;
         padding: $spacing * 2 0;
     }
     .slick-track {}

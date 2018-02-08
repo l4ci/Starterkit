@@ -1,0 +1,44 @@
+.section {
+    @include section-spacing(3);
+    position: relative;
+
+    &.section--alternate {
+        background: c(lightgrey);
+    }
+}
+
+.section__headline {
+    margin: 0 0 $spacing * 4;
+    font-weight: bold;
+    font-family: f(sans);
+    color: c(black);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+
+    ~ .section__subline {
+        margin-top: $spacing * -3.5;
+    }
+
+    ~ .section__text {
+        margin-top: $spacing * -3.5;
+    }
+}
+
+.section__subline {
+    margin: 0 0 $spacing * 4;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .875rem;
+    opacity: .8;
+
+    ~ .section__text {
+        margin-top: $spacing * -1.5;
+    }
+}
+
+.section__text {
+    margin: 0 auto $spacing * 2;
+    text-align: center;
+    max-width: $grid-max-width / 2;
+}
