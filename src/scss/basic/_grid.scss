@@ -40,13 +40,18 @@ body:before {
     @include flex-col;
 }
 
+.row {
+    @include flex-row;
+    @include flex-options;
+
+    &.row--nogutter {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 .container {
     @include container;
-
-    .row {
-        @include flex-row;
-        @include flex-options;
-    }
 
     &.container--flex {
         @include flex-container;
