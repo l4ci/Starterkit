@@ -8,37 +8,55 @@
 }
 
 .section__headline {
-    margin: 0 0 $spacing * 4;
     font-weight: bold;
     font-family: f(sans);
     color: c(black);
     text-transform: uppercase;
     text-align: center;
     font-size: 2rem;
+    margin: 0 0 $spacing * 3;
 
-    ~ .section__subline {
-        margin-top: $spacing * -3.5;
+    @include bp(md) {
+        margin: 0 0 $spacing * 5;
     }
 
+    ~ .section__subline,
     ~ .section__text {
-        margin-top: $spacing * -3.5;
+        margin-top: $spacing * -2.5;
+        @include bp(md) {
+            margin-top: $spacing * -4.5;
+        }
     }
 }
 
 .section__subline {
-    margin: 0 0 $spacing * 4;
+    display: block;
     text-align: center;
     text-transform: uppercase;
     font-size: .875rem;
     opacity: .8;
+    margin: 0 auto;
+    margin-bottom: $spacing * 3;
+
+    @include bp(md) {
+        margin-bottom: $spacing * 5;
+    }
 
     ~ .section__text {
-        margin-top: $spacing * -1.5;
+        margin-top: $spacing * -2.5;
+        @include bp(md) {
+            margin-top: $spacing * -4.5;
+        }
     }
 }
 
 .section__text {
-    margin: 0 auto $spacing * 2;
     text-align: center;
     max-width: $grid-max-width / 2;
+    margin: 0 auto;
+    margin-bottom: $spacing * 3;
+
+    @include bp(md) {
+        margin-bottom: $spacing * 5;
+    }
 }
