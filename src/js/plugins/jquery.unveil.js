@@ -28,14 +28,14 @@
             if (source){
               this.setAttribute("src", source);
             }
-            if (retina){
+            if (retina && retina_source){
               this.setAttribute("srcset", retina_source+" 2x");
             }
           } else {
               if (source){
                 this.style.backgroundImage  = 'url('+source+')';
               }
-              if (retina){
+              if (retina && retina_source){
                 this.style.backgroundImage  = 'url('+retina_source+')';
               }
           }
@@ -60,7 +60,7 @@
       images = images.not(loaded);
     }
 
-    $w.on("scroll.unveil resize.unveil lookup.unveil", unveil);
+    $w.on("scroll.unveil resize.unveil lookup.unveil touchmove.unveil", unveil);
 
     unveil();
 
