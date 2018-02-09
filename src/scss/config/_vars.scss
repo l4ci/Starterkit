@@ -13,9 +13,9 @@ Grid-settings, spacings, colors, font-families and more.
  * Use with mixin: font-family(sans) or f(sans);
  */
 $fonts: (
-    sans: #{'Source Sans Pro', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif},
-    serif: #{'Source Serif Pro', Georgia, 'Times New Roman', sans-serif},
-    mono: monospace,
+    sans: #{-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
+    serif: #{'Lora', Georgia, 'Times New Roman', sans-serif},
+    mono: #{"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace},
     icon: 'FontAwesome',
 );
 

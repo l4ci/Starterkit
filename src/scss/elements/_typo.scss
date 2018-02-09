@@ -4,6 +4,8 @@ Typography
 ---------------------------------------
 */
 
+.big,
+.small,
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -14,14 +16,10 @@ h6, .h6 {
     margin: 0 0 $spacing;
     font-family: f(sans);
     font-weight: bold;
+    line-height: 1.2;
 
     > a {
         color: inherit;
-    }
-
-    small {
-        opacity: .4;
-        font-size: .8em;
     }
 }
 
@@ -29,8 +27,6 @@ p, .p {
     display: block;
     margin: 0 0 $spacing;
     font-family: f(serif);
-    font-size: 1rem;
-    line-height: 1.6;
 
     + h1,+ .h1,
     + h2,+ .h2,
@@ -42,88 +38,48 @@ p, .p {
     }
 }
 
-.lead {
-    font-size: 1.1rem;
+// Type-scale 1.414 - Augmented Fourth
+// Link: <http://type-scale.com/?size=16&scale=1.414&text=A%20Visual%20Type%20Scale&webfont=Libre+Baskerville&font-family=%27Libre%20Baskerville%27,%20serif&font-weight=400>
 
-    @include bp(md) {
-        font-size: 1.2rem;
-    }
-
-    @include bp(lg) {
-        font-size: 1.3rem;
-    }
+.big {
+    font-size: 4rem;
 }
 
 h1, .h1 {
-    font-size: 1.6rem;
-
-    @include bp(sm) {
-        font-size: 1.8rem;
-    }
-
-    @include bp(md) {
-        font-size: 2.2rem;
-    }
+    font-size: 3rem;
 }
 
 h2, .h2 {
-    font-size: 1.4rem;
-
-    @include bp(sm) {
-        font-size: 1.7rem;
-    }
-
-    @include bp(md) {
-        font-size: 2rem;
-    }
+    font-size: 2rem;
 }
 
 h3, .h3 {
-    font-size: 1.2rem;
-
-    @include bp(sm) {
-        font-size: 1.5rem;
-    }
-
-    @include bp(md) {
-        font-size: 1.8rem;
-    }
+    font-size: 1rem;
 }
 
 h4, .h4 {
-    font-size: 1.1rem;
-
-    @include bp(sm) {
-        font-size: 1.3rem;
-    }
-
-    @include bp(md) {
-        font-size: 1.7rem;
-    }
+    font-size: 1rem;
 }
 
 h5, .h5 {
     font-size: 1rem;
-
-    @include bp(sm) {
-        font-size: 1.2rem;
-    }
-
-    @include bp(md) {
-        font-size: 1.5rem;
-    }
 }
 
 h6, .h6 {
     font-size: 1rem;
+}
 
-    @include bp(sm) {
-        font-size: 1.1rem;
-    }
+p , .p {
+    font-size: 1rem;
+    line-height: 1.45;
+}
 
-    @include bp(md) {
-        font-size: 1.4rem;
-    }
+.lead {
+    font-size: 1.25rem;
+}
+
+small, .small {
+    font-size: .7rem;
 }
 
 hr {
