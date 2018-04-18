@@ -86,7 +86,7 @@ gulp.task('server', function(done) {
     ).listen(8080, done);
 });
 
-gulp.task('watch', ['server'] ,function () {
+gulp.task('watch', ['default', 'server'] ,function () {
     browserSync.init({
         server: {
             baseDir: dist

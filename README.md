@@ -9,5 +9,8 @@ Quick-start frontend developer boilerplate. Modular folder structure, useful sas
 5. Read index page, that just opened.
 6. Start coding within the `/src` folder. Every change should auto-compile into `/dist` and be displayed right away.
 
+*Note*
+On Win64 bit systems it is possible you have to rebuild `node-sass` by running `yarn add --force node-sass`.
+
 ## Project
 Take a look on what's coming next and other suggestions on our Gitub board: <https://github.com/l4ci/Starterkit/projects/1>

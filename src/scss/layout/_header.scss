@@ -61,7 +61,7 @@
     margin: auto 0;
     order: 2;
 
-    @include bp(md) {
+    @include bp(md) {
         order: 1;
         margin-left: $spacing;
     }
