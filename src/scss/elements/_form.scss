@@ -71,12 +71,11 @@ Forms and Input Elements
     transition: all .2s ease;
 
     &::after {
+        @include icon('\f107');
         position: absolute;
         top: 50%;
         right: $spacing * .8;
         transform: translateY(-50%);
-        font-family: f(icon);
-        content: '\f107';
         line-height: 1;
         pointer-events: none;
         color: c(grey);

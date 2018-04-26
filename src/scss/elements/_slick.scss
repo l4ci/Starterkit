@@ -117,7 +117,6 @@
     }
 
     &:before {
-        font-family: f(icon);
         font-size: 2rem;
         line-height: 2rem;
         color: c(black);
@@ -134,10 +133,10 @@
     }
 
     &:before {
-        content: '\f104';
+        @include icon('\f104');
 
         [dir="rtl"] & {
-            content: '\f105';
+            @include icon('\f105');
         }
     }
 }
@@ -151,10 +150,10 @@
     }
 
     &:before {
-        content: '\f105';
+        @include icon('\f105');
 
         [dir="rtl"] & {
-            content: '\f104';
+            @include icon('\f104');
         }
     }
 }
@@ -205,13 +204,12 @@
             }
 
             &:before {
+                @include icon('\f111');
                 position: absolute;
                 top: 0;
                 left: 0;
-                content: '\f111';
                 width: 20px;
                 height: 20px;
-                font-family: f(icon);
                 font-size: 1rem;
                 line-height: 20px;
                 text-align: center;

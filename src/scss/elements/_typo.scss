@@ -115,9 +115,8 @@ blockquote {
     transition: all t(short);
 
     &::after {
+        @include icon('\f105');
         display: inline-block;
-        font-family: f(icon);
-        content: '\f105';
         margin-left: .7em;
         transform: translateX(-.2em);
         transition: all t(short);

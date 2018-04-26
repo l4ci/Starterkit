@@ -39,8 +39,7 @@ body.noscroll {
     line-height: 1;
 
     &:before{
-        font-family: f(icon);
-        content: '\f057';
+        @include icon('\f057');
     }
 }
 
@@ -57,8 +56,6 @@ body.noscroll {
     transition: all t(quick);
     color: c(white);
 
-    &::after { font-family: f(icon); }
-
     &:hover {
         cursor: pointer;
         color: c(white);
@@ -69,7 +66,7 @@ body.noscroll {
     left: $spacing * -3;
     right: auto;
 
-    &::after { content: '\f060'; }
+    &::after { @include icon('\f060'); }
 
     &:hover {
         transform: translate($spacing * -.5, -50%);
@@ -80,7 +77,7 @@ body.noscroll {
     left: auto;
     right: $spacing *-3;
 
-    &::after{ content: '\f061'; }
+    &::after{ @include icon('\f061'); }
 
     &:hover {
         transform: translate($spacing * .5, -50%);

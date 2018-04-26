@@ -12,13 +12,12 @@
     }
 
     &::after {
-        font-family: f(icon);
-        content: '\f0c9';
+        @include icon('\f0c9');
     }
 
     &.nav--open {
         &::after {
-            content: '\f00d';
+            @include icon('\f00d');
             opacity: .8;
         }
     }
@@ -70,8 +69,7 @@
             position: relative;
 
             > a:after {
-                font-family: "FontAwesome";
-                content: '\f107';
+                @include icon('\f107');
                 padding-left: .5em;
                 position: absolute;
                 right: 1rem;
@@ -88,7 +86,7 @@
             }
 
             > a:after {
-                content: '\f106';
+                @include icon('\f106');
             }
             .nav__dropdown {
                 display: block;

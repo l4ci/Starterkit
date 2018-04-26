@@ -27,15 +27,14 @@
             user-select: none;
         }
         .prefooter__headline::after {
-            font-family: f(icon);
+            @include icon('\f107');
             position: absolute;
             right: $spacing;
-            content: '\f107';
         }
 
         &.prefooter__block--open {
             .prefooter__headline::after {
-                content: '\f106';
+                @include icon('\f106');
             }
             .prefooter__links {
                 display: block;
