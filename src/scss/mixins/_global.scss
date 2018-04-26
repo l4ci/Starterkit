@@ -1,3 +1,18 @@
+/**
+ * Helper mixin for fontawesome icons
+ * @param  {string} $glyph      the glyph
+ * @param  {[type]} $weight:900 different font weight
+ */
+@mixin icon($glyph, $weight:900){
+    font-family: f(icon);
+    font-weight: $weight;
+    content: "#{$glyph}";
+}
+
+/**
+ * Generate a responsive section spacing
+ * @param  {int} $modifier:1 how big the space should be
+ */
 @mixin section-spacing($modifier:1) {
     $spacing: $modifier * $spacing;
     padding: $spacing 0;
