@@ -40,6 +40,12 @@ Basic Buttons
         box-shadow: none;
         transform: translateY(3px);
     }
+
+    &[disabled] {
+        opacity: .8;
+        background: c(grey) !important;
+        cursor: not-allowed;
+    }
 }
 
 .btn {
