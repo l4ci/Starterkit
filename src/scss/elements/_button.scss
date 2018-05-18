@@ -89,3 +89,16 @@ Basic Buttons
         padding: $spacing * 1.5 $spacing * 4;
     }
 }
+
+.btn--outline {
+    background: none;
+    border: 1px solid white;
+
+    &:focus,
+    &:hover,
+    &:active {
+        color: $primary;
+        border-color: c(white);
+        background: c(white);
+    }
+}
