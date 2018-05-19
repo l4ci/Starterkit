@@ -1,0 +1,160 @@
+.product-card {
+    position: relative;
+    display: block;
+    transition: all t(quick);
+    text-decoration: none;
+    color: c(black);
+    margin: $spacing 0;
+    border: 1px solid c(lightgrey);
+    background: c(white);
+
+    &.product-card--sale {
+        .product-card__realprice {
+            color: c(red);
+        }
+    }
+
+    &.product-card--soldout {
+        opacity: .5;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+        box-shadow: 0 0 50px 0px rgba(c(black), .2);
+
+        .product-card__img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.product-card__imgwrapper {
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+    background: c(lightgrey);
+    height: 10rem;
+
+    @include bp(md) {
+        height: 15rem;
+    }
+
+    @include bp(lg) {
+        height: 18rem;
+    }
+}
+
+.product-card__img {
+    position: relative;
+    display: block;
+    margin: auto;
+    flex: 0 1 auto;
+    height: auto;
+    max-width: 100%;
+    transition: all t(short);
+    z-index: z(product-card-img);
+    transform: translate3d(0, 0, 0);
+}
+
+.product-card__contentwrapper {
+    display: flex;
+    margin: 0;
+    padding: $spacing;
+    flex-wrap: wrap;
+
+    @include bp(md) {
+        flex-wrap: nowrap;
+    }
+}
+
+.product-card__content {
+    flex: 1 1 auto;
+    width: 50%;
+}
+
+.product-card__title {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 1rem;
+    margin: 0 0 $spacing * .5 0;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.product-card__subtitle {
+    display: block;
+    font-size: .875rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.product-card__pricewrapper {
+    flex: 1 1 auto;
+    width: 100%;
+    text-align: right;
+    margin: $spacing * .5 0 0 0;
+
+    @include bp(md) {
+        width: auto;
+        margin: auto;
+        text-align: right;
+    }
+}
+
+.product-card__saleprice {
+    display: block;
+    text-decoration: line-through;
+    font-size: .75rem;
+    color: c(grey);
+
+    @include bp(md) {
+        font-size: .875rem;
+    }
+}
+
+.product-card__realprice {
+    display: block;
+    font-size: .875rem;
+    font-weight: bold;
+
+    @include bp(md) {
+        font-size: 1rem;
+    }
+}
+
+.product-card__labelwrapper {
+    position: absolute;
+    top: $spacing;
+    left: $spacing * -.5;
+    right: auto;
+}
+
+.product-card__label {
+    position: relative;
+    display: block;
+    background: c(grey);
+    font-size: .75rem;
+    padding: .5em;
+    margin: 0 $spacing*.5 $spacing*.5 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: c(white);
+    z-index: z(product-card-label);
+
+    &.product-card__label--new {
+        background: c(green);
+    }
+    &.product-card__label--sale {
+        background: c(red);
+    }
+    &.product-card__label--soldout {
+        background: c(black);
+    }
+}
