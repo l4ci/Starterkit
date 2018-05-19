@@ -14,7 +14,7 @@ Grid-settings, spacings, colors, font-families and more.
  */
 $fonts: (
     sans: #{-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'},
-    serif: #{'Lora', Georgia, 'Times New Roman', sans-serif},
+    serif: #{Georgia, 'Times New Roman', sans-serif},
     mono: #{'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace},
     icon: #{Font Awesome\ 5 Pro},
 );
@@ -29,8 +29,8 @@ $colors : (
     black: #111,
     white: #fff,
 
-    lightgrey: #f8f8f8,
-    grey: #bdbdbd,
+    lightgrey: #FAFAFA,
+    grey: #EAEAEA,
     darkgrey: #424242,
 
     red: #e91e63,
