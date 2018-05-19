@@ -29,10 +29,14 @@ if (typeof jQuery == 'undefined') {
     });
 
     // Waypoints included for scroll events
-    var waypoints = $('.main').waypoint({
+    var sectionwaypoints = $('.section--animate').waypoint({
         handler: function(direction) {
-            console.log('Reached .main');
-        }
+            var wId = this.element.id;
+            if (wId) {
+                $('#'+wId).addClass('section--animated');
+            }
+        },
+        offset: '75%'
     });
 
     /**
