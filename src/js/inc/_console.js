@@ -7,14 +7,15 @@
  */
 var consoleHolder = console;
 function debug(bool){
-    if(!bool){
+    if ( !bool ){
         consoleHolder = console;
         console = {};
         console.log = function(){};
-    }else
+    } else {
         console = consoleHolder;
+    }
 }
-debug(false);
+// debug(false);
 
 /**
  * Avoid `console` errors in browsers that lack a console.
