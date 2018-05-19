@@ -3,7 +3,7 @@
     background: c(white);
     color: c(black);
     transition: background t(short);
-    border-bottom: 1px solid c(lightgrey);
+    border-bottom: 1px solid c(grey);
 
     @include bp(md) {
         position: relative;
@@ -30,7 +30,7 @@
 
     &.header--scrolled {
         background: c(white);
-        border-bottom: 1px solid c(lightgrey);
+        border-bottom: 1px solid c(grey);
 
         > .container {
             padding-top: 0;
@@ -44,8 +44,34 @@
     margin: auto 0;
     padding: 0;
     margin-right: auto;
+    font-size: .875rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: c(darkgrey);
 
-    a { display: block; }
+    i {
+        font-size: 1.2rem;
+        color: $primary;
+        transition: all t(short);
+    }
+
+    span {
+        text-transform: uppercase;
+        color: $primary;
+        transition: all t(short);
+    }
+
+    &:hover {
+        i,span {
+            color: $secondary;
+        }
+    }
+
+    a {
+        display: block;
+        color: inherit;
+        font-weight: bold;
+    }
 
     img {
         display: block;

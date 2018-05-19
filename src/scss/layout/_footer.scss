@@ -3,8 +3,9 @@
     font-size: .875rem;
     line-height: 1.7;
     padding: $spacing * 2 0;
-    background: c(lightgrey);
-    color: c(darkgrey);
+    background: c(black);
+    color: c(grey);
+    border-top: 1px solid c(darkgrey);
 
     a {
         color: inherit;
@@ -12,7 +13,7 @@
         &:hover,
         &:active,
         &:focus {
-            color: c(black);
+            color: c(white);
         }
     }
 }
@@ -21,6 +22,7 @@
     @include col;
     text-align: center;
     order: 2;
+    font-size: .875rem;
 
     @include bp(sm) {
         @include generate-col(50);
@@ -35,6 +37,7 @@
     list-style: none;
     text-align: center;
     order: 1;
+    font-size: .875rem;
 
     @include bp(sm) {
         @include generate-col(50);
