@@ -4,25 +4,67 @@ var dataOverlay = (function(){
         body = $('body'),
         isOpen = false;
 
-    var closeAllOverlays = function(){
-        console.log('OVERLAYS: Closing all.');
-        element.removeClass('overlay--active').find('.overlay__inner').attr('aria-hidden', true);
-        isOpen = false;
-        body.removeClass('noscroll');
+    var prepareBlackout = function(){
+        if ( $('.overlay-blackout').length <= 0){
+            console.log('Blackout appended');
+            body.append('<div class="overlay-blackout"></div>');
+        }
     };
 
-    var openOverlay = function(target){
+    var activateBlackout = function(){
+        console.log('Blackout activated');
+        $('.overlay-blackout').fadeIn(function(){
+            $(this).addClass('overlay-blackout--active').removeAttr('style');
+        });
+    };
 
-        closeAllOverlays();
+    var deactivateBlackout = function(){
+        console.log('Blackout deaktivated');
+        $('.overlay-blackout').fadeOut(function(){
+            $(this).removeClass('overlay-blackout--active').removeAttr('style');
+        });
+    };
+
+    var closeAllOverlays = function(qs){
+        qs = (typeof qs !== 'undefined') ?  qs : false;
+
+        console.log('OVERLAYS: Closing all.');
+        $('.overlay--active').animate({opacity: 0}, 600, function(){
+            element.removeClass('overlay--active').removeAttr('style');
+        });
+        element.find('.overlay__inner').attr('aria-hidden', true);
+        isOpen = false;
+        body.removeClass('noscroll');
+
+        if (qs === false) {
+            deactivateBlackout();
+        }
+    };
+
+    var openOverlay = function(target, qs){
+        qs = (typeof qs !== 'undefined') ?  qs : false;
+
+        prepareBlackout();
+        closeAllOverlays(qs);
 
         body.addClass('noscroll');
 
         if (target.length){
             console.log('OVERLAY: Opening:'+target);
-            $('#'+target).addClass('overlay--active').find('.overlay__inner').attr('aria-hidden', false);
+            var jtarget = $('#'+target);
+
+            activateBlackout();
+
+            jtarget.addClass('overlay--prepare').animate({opacity: 1}, 600, function(){
+                $(this).addClass('overlay--active')
+                    .removeClass('overlay--prepare')
+                    .removeAttr('style');
+            });
+            jtarget.find('.overlay__inner').attr('aria-hidden', false);
             isOpen = true;
-        }else{
+        } else {
             console.log('OVERLAY: '+target+' not found!');
+            deactivateBlackout();
         }
     };
 
@@ -48,7 +90,7 @@ var dataOverlay = (function(){
             }
 
             if ( target.length ) {
-                openOverlay(target.attr('id'));
+                openOverlay(target.attr('id'), true);
             } else {
                 console.log('OVERLAY: '+ dir +' target not found');
             }

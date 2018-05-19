@@ -2,7 +2,7 @@ body.noscroll {
     overflow: hidden;
 }
 
-.overlay {
+.overlay-blackout {
     display: none;
     position: fixed;
     top: 0;
@@ -10,12 +10,33 @@ body.noscroll {
     right: 0;
     bottom: 0;
     background: rgba(c(black), .7);
-    z-index: z(overlay);
+    z-index: z(overlay-blackout);
+
+    &.overlay-blackout--active {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
     overflow-y: scroll;
+    justify-content: center;
+    opacity: 0;
+    z-index: z(overlay);
+
+    &.overlay--prepare {
+        display: flex;
+    }
 
     &.overlay--active {
-       display: flex;
-       justify-content: center;
+        display: flex;
+        opacity: 1;
     }
 }
 
@@ -27,6 +48,8 @@ body.noscroll {
     padding: $spacing;
     max-width: 600px;
     background: c(white);
+    z-index: z(overlay);
+    border-radius: $border-radius;
 }
 
 .overlay__close {

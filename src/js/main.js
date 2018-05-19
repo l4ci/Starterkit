@@ -20,7 +20,6 @@ if (typeof jQuery == 'undefined') {
         debug(true);
     }
 
-
     // Unveil included for lazy loading
     $(".lazyload").unveil(200);
 
