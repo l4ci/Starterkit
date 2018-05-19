@@ -25,7 +25,7 @@ h6, .h6 {
 p, .p {
     display: block;
     margin: 0 0 $spacing;
-    font-family: f(serif);
+    font-family: f(sans);
 
     + h1,+ .h1,
     + h2,+ .h2,
@@ -37,44 +37,77 @@ p, .p {
     }
 }
 
-// Type-scale 1.414 - Augmented Fourth
-// Link: <http://type-scale.com/?size=16&scale=1.414&text=A%20Visual%20Type%20Scale&webfont=Libre+Baskerville&font-family=%27Libre%20Baskerville%27,%20serif&font-weight=400>
-
-.big {
-    font-size: 4rem;
+@mixin big {
+    font-size: 1.6rem;
+    @include bp(xs) { font-size: 1.7rem; }
+    @include bp(sm) { font-size: 1.8rem; }
+    @include bp(md) { font-size: 1.9rem; }
+    @include bp(lg) { font-size: 2rem; }
 }
 
-h1, .h1 {
-    font-size: 3rem;
+@mixin h1 {
+    font-size: 1.5rem;
+    @include bp(xs) { font-size: 1.6rem; }
+    @include bp(sm) { font-size: 1.7rem; }
+    @include bp(md) { font-size: 1.8rem; }
 }
 
-h2, .h2 {
-    font-size: 2rem;
+@mixin h2 {
+    font-size: 1.4rem;
+    @include bp(xs) { font-size: 1.5rem; }
+    @include bp(sm) { font-size: 1.6rem; }
+    @include bp(md) { font-size: 1.7rem; }
 }
 
-h3, .h3 {
+@mixin h3 {
+    font-size: 1.3rem;
+    @include bp(xs) { font-size: 1.4rem; }
+    @include bp(sm) { font-size: 1.5rem; }
+    @include bp(md) { font-size: 1.6rem; }
+}
+
+@mixin h4 {
+    font-size: 1.2rem;
+    @include bp(xs) { font-size: 1.3rem; }
+    @include bp(sm) { font-size: 1.4rem; }
+    @include bp(md) { font-size: 1.5rem; }
+}
+
+@mixin h5 {
+    font-size: 1.1rem;
+    @include bp(xs) { font-size: 1.2rem; }
+    @include bp(sm) { font-size: 1.3rem; }
+    @include bp(md) { font-size: 1.4rem; }
+}
+
+@mixin h6 {
     font-size: 1rem;
+    @include bp(xs) { font-size: 1.1rem; }
+    @include bp(sm) { font-size: 1.2rem; }
+    @include bp(md) { font-size: 1.3rem; }
 }
 
-h4, .h4 {
-    font-size: 1rem;
-}
-
-h5, .h5 {
-    font-size: 1rem;
-}
-
-h6, .h6 {
-    font-size: 1rem;
-}
-
-p , .p {
+@mixin p {
     font-size: 1rem;
     line-height: 1.45;
 }
 
-.lead {
+@mixin lead {
     font-size: 1.25rem;
+}
+
+.big    { @include big; }
+h1, .h1 { @include h1; }
+h2, .h2 { @include h2; }
+h3, .h3 { @include h3; }
+h4, .h4 { @include h4; }
+h5, .h5 { @include h5; }
+h6, .h6 { @include h6; }
+p, .p   { @include p; }
+
+.lead {
+    @include lead;
+    opacity: .7;
 }
 
 small, .small {

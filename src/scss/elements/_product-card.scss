@@ -4,8 +4,8 @@
     transition: all t(quick);
     text-decoration: none;
     color: c(black);
-    margin: $spacing 0;
-    border: 1px solid c(lightgrey);
+    margin: 0 0 $spacing;
+    border: 1px solid c(grey);
     background: c(white);
 
     &.product-card--sale {
@@ -33,7 +33,7 @@
     display: flex;
     overflow: hidden;
     text-align: center;
-    background: c(lightgrey);
+    //background: c(lightgrey);
     height: 10rem;
 
     @include bp(md) {
@@ -48,9 +48,10 @@
 .product-card__img {
     position: relative;
     display: block;
-    margin: auto;
-    flex: 0 1 auto;
+    margin: 0 auto;
+    flex: 1 1 auto;
     height: auto;
+    object-fit: cover;
     max-width: 100%;
     transition: all t(short);
     z-index: z(product-card-img);
