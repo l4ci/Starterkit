@@ -3,13 +3,23 @@
  */
 .rte {
 
+    // Default Link
     a {
         color: $primary;
+        font-weight: bold;
         text-decoration: none;
 
         &:focus,
         &:hover {
-            border-bottom: 1px solid;
+            border-bottom: 2px solid;
+        }
+    }
+
+    // External links
+    a[href*="//"] {
+        &::after {
+            @include icon('\f08e');
+            margin-left: $spacing / 2;
         }
     }
 }
