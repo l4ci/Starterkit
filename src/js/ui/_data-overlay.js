@@ -6,20 +6,20 @@ var dataOverlay = (function(){
 
     var prepareBlackout = function(){
         if ( $('.overlay-blackout').length <= 0){
-            console.log('Blackout appended');
+            console.log('OVERLAY: Blackout appended');
             body.append('<div class="overlay-blackout"></div>');
         }
     };
 
     var activateBlackout = function(){
-        console.log('Blackout activated');
+        console.log('OVERLAY: Blackout activated');
         $('.overlay-blackout').fadeIn(function(){
             $(this).addClass('overlay-blackout--active').removeAttr('style');
         });
     };
 
     var deactivateBlackout = function(){
-        console.log('Blackout deaktivated');
+        console.log('OVERLAY: Blackout deaktivated');
         $('.overlay-blackout').fadeOut(function(){
             $(this).removeClass('overlay-blackout--active').removeAttr('style');
         });
@@ -28,7 +28,7 @@ var dataOverlay = (function(){
     var closeAllOverlays = function(qs){
         qs = (typeof qs !== 'undefined') ?  qs : false;
 
-        console.log('OVERLAYS: Closing all.');
+        console.log('OVERLAY: Closing all.');
         $('.overlay--active').animate({opacity: 0}, 600, function(){
             element.removeClass('overlay--active').removeAttr('style');
         });
@@ -69,14 +69,10 @@ var dataOverlay = (function(){
     };
 
     var nextPrevClicked = function(that, dir){
-        var current = that.closest('.overlay');
-        if ( !current.hasClass('overlay--active') ){
-            console.log('OVERLAY: Clicked overlay is not active');
-            return;
-        }
+        var current = that.closest('.overlay.overlay--active');
 
         var group = current.data('group'),
-            loop = current.data('loop') ? true : false;
+            loop  = current.data('loop') ? true : false;
 
         if ( group ) {
             var dtarget = '[data-group="'+ group +'"]';
@@ -163,9 +159,22 @@ var dataOverlay = (function(){
         });
 
         $(document).keyup(function(e) {
-             if (e.keyCode == 27) {
-                if (isOpen) closeAllOverlays();
+            switch (e.which) {
+                case 27:
+                    if (isOpen) closeAllOverlays();
+                break;
+
+                case 37:
+                    if (isOpen) nextPrevClicked($('.overlay--active'), 'prev');
+                break;
+
+                case 39:
+                    if (isOpen) nextPrevClicked($('.overlay--active'), 'next');
+                break;
+
+                default: return;
             }
+            e.preventDefault();
         });
     };
 
