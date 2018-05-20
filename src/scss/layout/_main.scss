@@ -1,3 +1,14 @@
+/*
+---------------------------------------
+Main
+---------------------------------------
+*/
+
+.main {
+    position: relative;
+    display: block;
+}
+
 .skip-link {
     @include btn;
 }
@@ -27,9 +38,4 @@
         color: c(white);
         cursor: pointer;
     }
-}
-
-.main {
-    position: relative;
-    display: block;
 }

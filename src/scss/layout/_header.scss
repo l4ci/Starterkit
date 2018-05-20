@@ -1,3 +1,9 @@
+/*
+---------------------------------------
+Header
+---------------------------------------
+*/
+
 .header {
     position: relative;
     background: c(white);
@@ -51,19 +57,19 @@
 
     i {
         font-size: 1.2rem;
-        color: $primary;
+        color: $secondary;
         transition: all t(short);
     }
 
     span {
         text-transform: uppercase;
-        color: $primary;
+        color: $secondary;
         transition: all t(short);
     }
 
     &:hover {
         i,span {
-            color: $secondary;
+            color: $primary;
         }
     }
 

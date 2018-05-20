@@ -37,65 +37,6 @@ p, .p {
     }
 }
 
-@mixin big {
-    font-size: 1.6rem;
-    @include bp(xs) { font-size: 1.7rem; }
-    @include bp(sm) { font-size: 1.8rem; }
-    @include bp(md) { font-size: 1.9rem; }
-    @include bp(lg) { font-size: 2rem; }
-}
-
-@mixin h1 {
-    font-size: 1.5rem;
-    @include bp(xs) { font-size: 1.6rem; }
-    @include bp(sm) { font-size: 1.7rem; }
-    @include bp(md) { font-size: 1.8rem; }
-}
-
-@mixin h2 {
-    font-size: 1.4rem;
-    @include bp(xs) { font-size: 1.5rem; }
-    @include bp(sm) { font-size: 1.6rem; }
-    @include bp(md) { font-size: 1.7rem; }
-}
-
-@mixin h3 {
-    font-size: 1.3rem;
-    @include bp(xs) { font-size: 1.4rem; }
-    @include bp(sm) { font-size: 1.5rem; }
-    @include bp(md) { font-size: 1.6rem; }
-}
-
-@mixin h4 {
-    font-size: 1.2rem;
-    @include bp(xs) { font-size: 1.3rem; }
-    @include bp(sm) { font-size: 1.4rem; }
-    @include bp(md) { font-size: 1.5rem; }
-}
-
-@mixin h5 {
-    font-size: 1.1rem;
-    @include bp(xs) { font-size: 1.2rem; }
-    @include bp(sm) { font-size: 1.3rem; }
-    @include bp(md) { font-size: 1.4rem; }
-}
-
-@mixin h6 {
-    font-size: 1rem;
-    @include bp(xs) { font-size: 1.1rem; }
-    @include bp(sm) { font-size: 1.2rem; }
-    @include bp(md) { font-size: 1.3rem; }
-}
-
-@mixin p {
-    font-size: 1rem;
-    line-height: 1.45;
-}
-
-@mixin lead {
-    font-size: 1.25rem;
-}
-
 .big    { @include big; }
 h1, .h1 { @include h1; }
 h2, .h2 { @include h2; }
@@ -111,7 +52,7 @@ p, .p   { @include p; }
 }
 
 small, .small {
-    font-size: .80%;
+    font-size: 80%;
 }
 
 hr {

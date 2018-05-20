@@ -1,3 +1,8 @@
+/*
+---------------------------------------
+Navigation
+---------------------------------------
+*/
 .toggle-nav {
     order: 2;
     display: block;
@@ -96,7 +101,7 @@
 
     a {
         display: block;
-        color: rgba(c(black), .9);
+        color: rgba(c(black), .7);
         padding: 1em;
         font-size: .875rem;
         font-weight: bold;
@@ -104,6 +109,7 @@
         &:focus,
         &:hover {
             outline: none;
+            color: c(black);
         }
 
         &:active,

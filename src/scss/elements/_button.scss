@@ -52,6 +52,9 @@ Basic Buttons
     @include btn;
 }
 
+/*
+ * Color
+ */
 .btn--primary {
     background: $primary;
     color: c(white);
@@ -78,6 +81,9 @@ Basic Buttons
     }
 }
 
+/*
+ * Size
+ */
 .btn--small {
     padding: $spacing * .8 $spacing * 1.2;
 }
@@ -89,6 +95,9 @@ Basic Buttons
     }
 }
 
+/*
+ * Variants
+ */
 .btn--outline {
     background: none;
     border: 1px solid white;
