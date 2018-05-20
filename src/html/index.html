@@ -830,19 +830,25 @@
     <!-- /.main-wrapper -->
 
     <div class="sidepanel sidepanel--right">
-        Sidepannel
+        <div class="sidepanel__inner">
+            <div class="h2">Sidepanel</div>
+            <p>This can be <a href="javascript:void(0);" data-close-panel="true">closed</a> by link, ESC key or clicking the main content.</p>
 
-        <a href="javascript:void(0);" data-close-panel="true">Close</a>
+            <p>When opened the main content is not click- or scrollable but the inside of this sidepanel is - if needed.</p>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident iure atque expedita earum nisi vitae odio mollitia dolorem, et itaque deserunt quisquam cupiditate modi omnis iste. Quo, odio ipsam possimus quibusdam neque atque voluptatem quae quas sit ab sed, cumque cupiditate animi molestiae cum est earum provident adipisci facere! Eius sit pariatur eos sunt veniam magnam repellat magni repellendus optio voluptates! Rem consectetur nulla incidunt iure eos est enim aliquam perspiciatis suscipit praesentium, sint illum, voluptatem ab expedita sequi voluptatibus doloremque ducimus! Harum, quam modi minus soluta omnis recusandae, dolorem nemo, illum repellat doloremque inventore nobis tempora ullam nesciunt corrupti.</p>
+        </div>
+        <!-- /.sidepanel__inner -->
     </div>
     <!-- /.sidepanel -->
 
     <!-- jsdelivr.com: Group all js files together -->
-    <script src="https://cdn.jsdelivr.net/combine/npm/webfontloader@1.6.28,npm/jquery@3.3.1"></script>
+    <script src="https://cdn.jsdelivr.net/combine/npm/webfontloader@1.6.28,npm/jquery@3.3.1" async></script>
 
 
     <script>window.jQuery || document.write('<script src="/js/libs/jquery.min.js">\x3C/script>')</script>
 
-    <script src="/js/main.min.js"></script>
+    <script src="/js/main.min.js" defer></script>
 
     <!-- Run saved functions that require jQuery -->
     <script>for(var i = 0; i < afterJQ.length; i++) afterJQ[i]();</script>

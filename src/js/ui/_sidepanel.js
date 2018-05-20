@@ -1,15 +1,13 @@
 var panelOpen = false;
 
 var closeSidepanels = function() {
-    if (panelOpen) {
-        console.log('PANEL: Closing all panels');
+    console.log('PANEL: Closing all panels');
 
-        deactivateBlackout('panel');
+    deactivateBlackout('panel');
 
-        body.removeClass('noscroll')
-            .removeClass('sidepanel-right--active')
-            .removeClass('sidepanel-left--active');
-    }
+    body.removeClass('noscroll')
+        .removeClass('sidepanel-right--active')
+        .removeClass('sidepanel-left--active');
 };
 
 var openSidepanel = function(side) {
@@ -28,9 +26,11 @@ var openSidepanel = function(side) {
 };
 
 $('.main-wrapper').on('click', function (e) {
-    closeSidepanels();
-    e.preventDefault();
-    e.stopPropagation();
+    if (panelOpen) {
+        closeSidepanels();
+        e.preventDefault();
+        e.stopPropagation();
+    }
 });
 
 $('[data-open-panel]').on('click', function(e){
