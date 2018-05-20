@@ -4,11 +4,28 @@ Forms and Input Elements
 ---------------------------------------
 */
 
+.field {
+    position: relative;
+    display: block;
+    margin: 0 0 $spacing * 3;
+}
+
+// validate.js
+.field__message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: block;
+    font-size: .875rem;
+    color: c(red);
+    padding: $spacing * .5 0;
+}
+
 .label {
     display: block;
     margin-top: 0;
-    margin-bottom: $spacing;
-    font-weight: bold;
+    margin-bottom: $spacing * .5;
 
     input[type="checkbox"],
     input[type="radio"] {
@@ -20,23 +37,23 @@ Forms and Input Elements
         margin-right: $spacing;
     }
 
-    &.label--error {
-        color: c(red);
+    &.label--success {
+        color: c(green);
     }
 }
 
 
 .input {
     display: inline-block;
-    margin-top: 0;
-    margin-bottom: $spacing;
-    padding: .8em 1em .7em;
+    margin: 0;
+    padding: $spacing *.75;
     outline: none;
     vertical-align: top;
     color: c(black);
     background: c(white);
     border: 1px solid c(grey);
     transition: all .2s ease;
+    font-size: 1rem;
 
     &:hover {
         border-color: c(grey);
@@ -44,11 +61,15 @@ Forms and Input Elements
 
     &:active,
     &:focus {
-        border-color: c(darkgrey);
+        border-color: darken(c(grey), 10%);
     }
 
     &.input--full {
         width: 100%;
+    }
+
+    &.input--success {
+        border-color: c(green);
     }
 
     &.input--error {
@@ -81,19 +102,14 @@ Forms and Input Elements
         color: c(grey);
     }
 
-    &:hover {
-        border-color: c(darkgrey);
+    &:focus,
+    &:hover,
+    &:active {
+        border-color: darken(c(grey), 10%);
 
         &::after {
-            color: c(black);
+            color: darken(c(grey), 10%);
         }
-    }
-
-    &.select--active,
-    &:active,
-    &.select--focus,
-    &:focus {
-        border-color: $primary;
     }
 
     select {
@@ -101,7 +117,7 @@ Forms and Input Elements
         position: relative;
         box-shadow: none;
         appearance: none;
-        padding: .7em $spacing .6em;
+        padding: $spacing *.75;
         padding-right: $spacing * 2;
         width: 100%;
         border: 0;

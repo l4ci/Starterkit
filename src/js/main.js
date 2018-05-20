@@ -42,6 +42,7 @@ if (typeof jQuery == 'undefined') {
     /**
      * Include all UI functions
      */
+    //=include ui/_formvalidation.js
     //=include ui/_back-to-top.js
     //=include ui/_blackout.js
     //=include ui/_data-overlay.js

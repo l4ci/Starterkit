@@ -198,72 +198,103 @@
 
 
             <div class="section section--alternate" id="form">
-                <div class="container">
+                <div class="container container--narrow">
 
                     <h2 class="section__headline">Forms &amp; Input fields</h2>
                     <p class="section__text">Checkbox, Radio, input fields of all kind... everything</p>
 
-                    <div class="row">
-                        <div class="col-md-50 col--offset-md-25">
-                            <form action="#">
-
-                                <label class="label label--inline">
-                                    <input type="checkbox"> Checkbox
-                                </label>
-                                <label class="label label--inline">
-                                    <input type="checkbox"> Checkbox
-                                </label>
-
-                                <label class="label">
-                                    <input type="radio" name="radio" value="1"> Radio
-                                </label>
-
-                                <label class="label">
-                                    <input type="radio" name="radio" value="2"> Radio
-                                </label>
+                    <form action="#form" data-validate>
+                        <div class="row">
+                            <div class="col-xs-100">
+                                <div class="select">
+                                    <label class="select__label" for="s">Anrede:</label>
+                                    <select name="s" id="s" required>
+                                        <option>Wählen</option>
+                                        <option value="1">Frau</option>
+                                        <option value="2">Herr</option>
+                                    </select>
+                                </div>
+                                <!-- /.select -->
 
                                 <div class="select">
                                     <select name="s2" id="s2">
-                                        <option value="1">Value 1</option>
-                                        <option value="2">Value 2</option>
+                                        <option>-</option>
+                                        <option value="1">Prof.</option>
+                                        <option value="2">Dr.</option>
                                     </select>
                                 </div>
                                 <!-- /.select -->
-
-                                <div class="select">
-                                    <label class="select__label" for="s">Label:</label>
-                                    <select name="s" id="s">
-                                        <option value="1">Value 1</option>
-                                        <option value="2">Value 2</option>
-                                    </select>
-                                </div>
-                                <!-- /.select -->
-
-                                <label for="input1" class="label">Label:</label>
-                                <input type="text" id="input1" class="input" placeholder="Text input">
-
-                                <label for="input3" class="label">Label:</label>
-                                <input type="text" id="input3" class="input" placeholder="Text input">
-
-                                <label for="input4" class="label label--error">Label:</label>
-                                <input type="text" id="input4" class="input input--error" placeholder="Text input">
-
-                                <label for="input2" class="label">Label:</label>
-                                <input type="text" id="input2" class="input input--full" placeholder="Text input">
-
-                                <label for="4" class="label">Label:</label>
-                                <textarea id="4" class="input" placeholder="Textarea"></textarea>
-
-                            </form>
+                            </div>
+                            <!-- /.col-xs-100 -->
                         </div>
-                        <!-- /.col-md-50 -->
-                    </div>
-                    <!-- /.row -->
+                        <!-- /.row -->
+                        <div class="row">
+                            <div class="col-xs-100 col-sm-50">
+                                <div class="field">
+                                    <label for="input1" class="label">Name:</label>
+                                    <input type="text" required id="input1" class="input input--full" placeholder="Max Mustermann">
+                                </div>
 
+                                <div class="field">
+                                    <label for="input3" class="label">Überprüfung OK:</label>
+                                    <input type="text" required id="input3" class="input input--full" placeholder="Text input">
+                                </div>
+                            </div>
+                            <!-- /.col-md-50 -->
+                            <div class="col-xs-100 col-sm-50">
+                                <div class="field">
+                                    <label for="input3" class="label">Feld mit Fehler:</label>
+                                    <input type="text" id="input3" class="input input--full" placeholder="Text input">
+                                </div>
+
+                                <div class="field">
+                                    <label for="input2" class="label">Email:</label>
+                                    <input type="email" required id="input2" class="input input--full" placeholder="max@mustermann.de">
+                                </div>
+                            </div>
+                            <!-- /.col-xs-100 col-sm-50 -->
+                            <div class="col-xs-100">
+                                <div class="field">
+                                    <label for="4" class="label">Nachricht:</label>
+                                    <textarea required id="4" rows="5" class="input input--full" placeholder="Textarea"></textarea>
+                                </div>
+
+                                <label class="label">
+                                    <input type="checkbox" required> Ich akzeptiere die AGB.
+                                </label>
+                                <label class="label">
+                                    <input type="checkbox" required> Ich akzeptiere die DSVGO, hust.
+                                </label>
+
+                                <div class="field">
+                                    <label class="label label--inline">
+                                        <input type="radio" name="radio" value="1"> Something
+                                    </label>
+
+                                    <label class="label label--inline">
+                                        <input type="radio" name="radio" value="2"> Else
+                                    </label>
+
+                                    <label class="label label--inline">
+                                        <input type="radio" name="radio" value="2"> To check
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-xs-100">
+                                <div class="field">
+                                    <button class="btn btn--primary">Absenden</button>
+                                    <input type="reset" value="Reset" class="btn">
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </form>
                 </div>
                 <!-- /.container -->
             </div>
-            <!-- /#form.section -->
+            <!-- /.section -->
 
 
             <div class="section" id="features">
@@ -537,10 +568,11 @@
 
             <div class="section section--border" id="products">
 
-                <div class="section__headline">Product Cards</div>
-                <div class="section__text">Simple card view of products. Including labels for new, sale soldout, price and already started schema data.</div>
-
                 <div class="container">
+
+                    <div class="section__headline">Product Cards</div>
+                    <div class="section__text">Simple card view of products. Including labels for new, sale soldout, price and already started schema data.</div>
+
                     <div class="row">
                         <div class="col-xs-50 col-md-33 col-lg-25">
                             <a href="#" class="product-card" itemscope itemtype="http://schema.org/Product">
@@ -869,9 +901,9 @@
                             <div class="prefooter__headline">About us</div>
 
                             <ul class="prefooter__links">
-                                <li><a href="#prefooter">Impressum</a></li>
-                                <li><a href="#prefooter">AGB</a></li>
-                                <li><a href="#prefooter">Datenschutz</a></li>
+                                <li><a href="#prefooter">Link 1</a></li>
+                                <li><a href="#prefooter">Another Link</a></li>
+                                <li><a href="#prefooter">Three links - crazy</a></li>
                             </ul>
                             <!-- /.prefooter__links -->
                         </div>
@@ -881,12 +913,12 @@
 
                     <div class="col-md-33">
                         <div class="prefooter__block">
-                            <div class="prefooter__headline">About us</div>
+                            <div class="prefooter__headline">Other links</div>
 
                             <ul class="prefooter__links">
-                                <li><a href="#prefooter">Impressum</a></li>
-                                <li><a href="#prefooter">AGB</a></li>
-                                <li><a href="#prefooter">Datenschutz</a></li>
+                                <li><a href="#prefooter">Links to fill</a></li>
+                                <li><a href="#prefooter">Up this space</a></li>
+                                <li><a href="#prefooter">More more links</a></li>
                             </ul>
                             <!-- /.prefooter__links -->
                         </div>
@@ -896,12 +928,12 @@
 
                     <div class="col-md-33">
                         <div class="prefooter__block">
-                            <div class="prefooter__headline">About us</div>
+                            <div class="prefooter__headline">Even more links</div>
 
                             <ul class="prefooter__links">
-                                <li><a href="#prefooter">Impressum</a></li>
-                                <li><a href="#prefooter">AGB</a></li>
-                                <li><a href="#prefooter">Datenschutz</a></li>
+                                <li><a href="#prefooter">Lorem, ipsum.</a></li>
+                                <li><a href="#prefooter">Lorem, ipsum dolor.</a></li>
+                                <li><a href="#prefooter">Lorem, ipsum.</a></li>
                             </ul>
                             <!-- /.prefooter__links -->
                         </div>
