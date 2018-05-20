@@ -7,7 +7,7 @@
  */
 var navDropdown = (function(){
 
-    var hoverElement = '.nav__item.nav--hasdrop',
+    var hoverElement = '.nav__item.nav__item--hasdrop',
         enabledType;
 
    var enableClickNavigation = function(){
@@ -21,18 +21,18 @@ var navDropdown = (function(){
             e.preventDefault();
 
             // Close all other submenus
-            $('.nav').find( hoverElement + '.nav--open').not(current).removeClass('nav--open');
+            $('.nav').find(hoverElement + '.nav__item--open').not(current).removeClass('nav__item--open');
 
-            if (current.hasClass('nav--open')){
-                current.removeClass('nav--open')
+            if (current.hasClass('nav__item--open')){
+                current.removeClass('nav__item--open')
                     .find('.nav__list')
                     .attr('aria-hidden', 'true');
             }else{
-                current.addClass('nav--open')
+                current.addClass('nav__item--open')
                     .find('.nav__list')
                     .attr('aria-hidden', 'false');
             }
-        }).on('click', '.nav__dropdown', function(e) {
+        }).on('click', '.nav__dropdown, .nav__mega', function(e) {
             e.stopPropagation();
         });
     };
@@ -48,14 +48,14 @@ var navDropdown = (function(){
             e.preventDefault();
 
             // Close all other submenus
-            $('.nav').find( hoverElement + '.nav--open').not(current).removeClass('nav--open');
+            $('.nav').find( hoverElement + '.nav__item--open').not(current).removeClass('nav__item--open');
 
-            current.addClass('nav--open')
+            current.addClass('nav__item--open')
                 .find('.nav__list')
                 .attr('aria-hidden', 'false');
 
         }, function(e){
-            $('.nav').find(hoverElement + '.nav--open').removeClass('nav--open');
+            $('.nav').find(hoverElement + '.nav__item--open').removeClass('nav__item--open');
         });
     };
 

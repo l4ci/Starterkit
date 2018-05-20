@@ -50,12 +50,63 @@
 
                     <nav class="nav">
                         <ul class="nav__list">
-                            <li class="nav__item"><a href="#typo" data-scrollto="#typo">Typo</a></li>
-                            <li class="nav__item"><a href="#typo" data-scrollto="#form">Form</a></li>
-                            <li class="nav__item"><a href="#js" data-scrollto="#features">Features</a></li>
+                            <li class="nav__item nav__item--hasdrop">
+                                <a href="#">Styling</a>
+                                <ul class="nav__list nav__dropdown">
+                                    <li><a href="#typo" data-scrollto="#typo">Typo</a></li>
+                                    <li><a href="#typo" data-scrollto="#form">Form</a></li>
+                                </ul>
+                                <!-- /.nav__dropdown -->
+                            </li>
+                            <li class="nav__item nav__item--hasdrop">
+                                <a href="#features">Features</a>
+                                <ul class="nav__list nav__dropdown">
+                                    <li><a href="#features" data-scrollto="#features">Scroll to</a></li>
+                                    <li><a href="#features" data-scrollto="#features">Blackout</a></li>
+                                    <li><a href="#features" data-scrollto="#features">Back to top</a></li>
+                                    <li><a href="#features" data-scrollto="#features">Lazyloading</a></li>
+                                    <li><a href="#features" data-scrollto="#features">Overlay</a></li>
+                                    <li><a href="#features" data-scrollto="#features">Sidepanel</a></li>
+                                    <li><a href="#features" data-scrollto="#features">Toggle/Accordion</a></li>
+                                    <li><a href="#features" data-scrollto="#features">More</a></li>
+                                    </ul>
+                                </li>
+                                <!-- /.nav__dropdown -->
+                            </li>
                             <li class="nav__item"><a href="#grid" data-scrollto="#grid">Grid</a></li>
                             <li class="nav__item"><a href="#helper" data-scrollto="#helper">Helper</a></li>
                             <li class="nav__item"><a href="javascript:void(0)" data-open-panel="right"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                            <li class="nav__item nav__item--hasdrop nav__item--last">
+                                <a href="#">Megamenu</a>
+                                <div class="nav__list nav__mega mega">
+                                    <div class="row">
+                                        <div class="col-md-50">
+                                            <img src="https://www.fillmurray.com/500/550" alt="" class="mega__img">
+                                        </div>
+                                        <div class="col-md-50">
+                                            <div class="mega__content">
+                                                <div class="mega__headline">Megalist</div>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, soluta.</p>
+                                                <ul class="mega__list">
+                                                    <li>
+                                                        <a href="#">Link1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Link2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Link3</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.nav__megacontent -->
+                                        </div>
+                                        <!-- /.col -->
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                                <!-- /.nav__mega -->
+                            </li>
                         </ul>
                     </nav>
 

@@ -6,7 +6,7 @@ Navigation
 .toggle-nav {
     order: 2;
     display: block;
-    margin-right: $spacing * -1;
+    margin-right: 0;
     margin-left: 0;
     color: c(black);
     padding: 1rem $spacing * 1.5;
@@ -34,6 +34,8 @@ Navigation
     margin-right: 0;
     width: 100%;
     order: 3;
+    transition: border t(short);
+    border-top: 1px solid c(transparent);
 
     @include bp(md) {
         display: block;
@@ -47,55 +49,6 @@ Navigation
 
         @include bp(md) {
             border-top: 0;
-        }
-    }
-
-    // former ul
-    .nav__list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    // former li
-    .nav__item {
-        display: block;
-
-        @include bp(md) {
-            display: inline-block;
-        }
-
-        // former > ul
-        > .nav__list {
-            display: none;
-        }
-
-        &.nav--hasdrop {
-            position: relative;
-
-            > a:after {
-                @include icon('\f107');
-                padding-left: .5em;
-                position: absolute;
-                right: 1rem;
-
-                @include bp(md) {
-                    position: static;
-                }
-            }
-        }
-
-        &.nav--open {
-            a {
-
-            }
-
-            > a:after {
-                @include icon('\f106');
-            }
-            .nav__dropdown {
-                display: block;
-            }
         }
     }
 
@@ -117,36 +70,131 @@ Navigation
             color: $secondary;
         }
     }
+}
 
-    .nav__dropdown {
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__item {
+    display: block;
+
+    @include bp(md) {
+        display: inline-block;
+    }
+
+    > .nav__list {
         display: none;
+    }
 
-        @include bp(md) {
+    &.nav__item--hasdrop {
+        position: relative;
+
+        > a:after {
+            @include icon('\f107');
+            padding-left: .5em;
             position: absolute;
-            top: 100%;
-            left: 0;
-            min-width: 230px;
-            z-index: z(dropdown);
-        }
+            right: 1rem;
 
-        &.nav__sub-menu--last {
             @include bp(md) {
-                right: 0;
-                left: auto;
+                position: static;
             }
         }
+    }
 
-        .nav__item {
+    &.nav__item--open {
+
+        > a:after {
+            @include icon('\f106');
+        }
+        .nav__dropdown,
+        .nav__mega {
             display: block;
         }
+    }
+}
 
-        a {
-            color: rgba(c(black) ,.7);
+.nav__dropdown {
+    display: none;
+    background: c(white);
 
-            &:hover,
-            &:focus {
-                color: c(black);
-            }
+    @include bp(md) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 230px;
+        z-index: z(dropdown);
+    }
+
+    .nav__item {
+        display: block;
+    }
+
+    .nav__item--last & {
+        @include bp(md) {
+            right: 0;
+            left: auto;
+        }
+    }
+
+    a {
+        color: rgba(c(black) ,.7);
+        border-bottom: 1px solid c(grey);
+
+        &:hover,
+        &:focus {
+            color: c(black);
+        }
+    }
+}
+
+.nav__mega {
+    display: none;
+    background: c(white);
+
+    @include bp(md) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 30rem;
+        z-index: z(dropdown);
+    }
+
+    .nav__item--last & {
+        @include bp(md) {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+
+.mega__img {
+    display: block;
+}
+
+.mega__content {
+    padding: $spacing 0;
+}
+
+.mega__headline {
+    @include p;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.mega__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li a {
+        padding: $spacing *.5;
+
+        &::before {
+            @include icon('\f0da');
+            margin-right: $spacing *.5;
         }
     }
 }
