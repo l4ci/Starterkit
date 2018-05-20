@@ -70,5 +70,20 @@ $timings: (
     long: 2s ease
 );
 
-$spacing: 1rem !default;
 $border-radius: 5px;
+
+$spacing: 1rem;
+
+/**
+ * Grid
+ */
+$grid-breakpoints: (
+  'xs': 320px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+);
+
+$grid-max-width: 1200px;
+$grid-values: (5, 10, 15, 16, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100);
