@@ -8,6 +8,8 @@ var closeSidepanels = function() {
     body.removeClass('noscroll')
         .removeClass('sidepanel-right--active')
         .removeClass('sidepanel-left--active');
+
+    panelOpen = false;
 };
 
 var openSidepanel = function(side) {

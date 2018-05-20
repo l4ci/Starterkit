@@ -52,7 +52,7 @@
                         <ul class="nav__list">
                             <li class="nav__item"><a href="#typo" data-scrollto="#typo">Typo</a></li>
                             <li class="nav__item"><a href="#typo" data-scrollto="#form">Form</a></li>
-                            <li class="nav__item"><a href="#js" data-scrollto="#js">Javascript</a></li>
+                            <li class="nav__item"><a href="#js" data-scrollto="#features">Features</a></li>
                             <li class="nav__item"><a href="#grid" data-scrollto="#grid">Grid</a></li>
                             <li class="nav__item"><a href="#helper" data-scrollto="#helper">Helper</a></li>
                             <li class="nav__item"><a href="javascript:void(0)" data-open-panel="right"><i class="fas fa-shopping-cart"></i> Cart</a></li>
@@ -144,6 +144,344 @@
                 <!-- /.container -->
             </div>
             <!-- /#typo.section -->
+
+
+            <div class="section section--alternate" id="form">
+                <div class="container">
+
+                    <h2 class="section__headline">Forms &amp; Input fields</h2>
+                    <p class="section__text">Checkbox, Radio, input fields of all kind... everything</p>
+
+                    <div class="row">
+                        <div class="col-md-50 col--offset-md-25">
+                            <form action="#">
+
+                                <label class="label label--inline">
+                                    <input type="checkbox"> Checkbox
+                                </label>
+                                <label class="label label--inline">
+                                    <input type="checkbox"> Checkbox
+                                </label>
+
+                                <label class="label">
+                                    <input type="radio" name="radio" value="1"> Radio
+                                </label>
+
+                                <label class="label">
+                                    <input type="radio" name="radio" value="2"> Radio
+                                </label>
+
+                                <div class="select">
+                                    <select name="s2" id="s2">
+                                        <option value="1">Value 1</option>
+                                        <option value="2">Value 2</option>
+                                    </select>
+                                </div>
+                                <!-- /.select -->
+
+                                <div class="select">
+                                    <label class="select__label" for="s">Label:</label>
+                                    <select name="s" id="s">
+                                        <option value="1">Value 1</option>
+                                        <option value="2">Value 2</option>
+                                    </select>
+                                </div>
+                                <!-- /.select -->
+
+                                <label for="input1" class="label">Label:</label>
+                                <input type="text" id="input1" class="input" placeholder="Text input">
+
+                                <label for="input3" class="label">Label:</label>
+                                <input type="text" id="input3" class="input" placeholder="Text input">
+
+                                <label for="input4" class="label label--error">Label:</label>
+                                <input type="text" id="input4" class="input input--error" placeholder="Text input">
+
+                                <label for="input2" class="label">Label:</label>
+                                <input type="text" id="input2" class="input input--full" placeholder="Text input">
+
+                                <label for="4" class="label">Label:</label>
+                                <textarea id="4" class="input" placeholder="Textarea"></textarea>
+
+                            </form>
+                        </div>
+                        <!-- /.col-md-50 -->
+                    </div>
+                    <!-- /.row -->
+
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /#form.section -->
+
+
+            <div class="section" id="features">
+                <div class="container">
+
+                    <h2 class="section__headline">Features</h2>
+                    <!-- /.section__headline -->
+                    <div class="section__text">
+                        Setting up some often needed features and little tweaks.
+                    </div>
+                    <!-- /.section__text -->
+
+                    <div class="row">
+                        <div class="col-md-33">
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>data-scrollto <span class="badge badge--success">Modul</span></h3>
+                                </div>
+                                <!-- /.card__header -->
+                                <div class="card__body">
+                                    <p>
+                                        Adding <code>data-scrollto="#id"</code> to any element, animates to the element on click. Also calculates a sticky header, if present.
+                                    </p>
+                                </div>
+                                <!-- /.card__body -->
+                            </div>
+                            <!-- /.card -->
+
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>Blackout
+                                        <span class="badge badge--success">Modul</span>
+                                    </h3>
+                                </div>
+                                <!-- /.card__header -->
+                                <div class="card__body">
+                                    <p>
+                                         General function for blacking-out the main-content for overlay or sidepanel actions.
+                                        <code>activateBlackout(param)</code> will create a blackout which
+                                        <code>param</code> as additional class. That way you can create different blackout click events. e.g. Close sidepanel or close overlay on click.
+                                    </p>
+                                </div>
+                                <!-- /.card__body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+
+                        <div class="col-md-33">
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>data-overlay <span class="badge badge--success">Modul</span></h3>
+                                </div>
+                                <!-- /.card__header -->
+                                <div class="card__body">
+                                    <p>Adding <code>data-overlay="id"</code> to any element, will set the <code>.overlay#id</code> to active and close all other overlays. Also disables body scroll.</p>
+
+                                    <p>Grouping overlays with <code>data-group</code> will append arrows to go to the next/prev overlay.</p>
+
+                                    <p>Looping in overlay groups is possible with <code>data-loop="true"</code>.</p>
+
+                                    <p>Adding <code>data-close="true"</code> will add an close icon.</p>
+
+                                    <div class="card__links">
+                                        <a href="#overlaytest" data-overlay="overlaytest" class="more">Open Overlay</a>
+                                        <a href="#overlaytest3" data-overlay="overlaytest3" class="more">Open Overlay without loop</a>
+                                    </div>
+                                </div>
+                                <!-- /.card__body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+
+                        <div class="col-md-33">
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>data-toggle <span class="badge badge--alert">Modul</span><span class="badge badge--alert">WIP</span></h3>
+                                </div>
+                                <!-- /.card__header -->
+                                <div class="card__body">
+                                    <p>
+                                         Adding
+                                        <code>data-toggle="#id"</code> to any element, will set the
+                                        <code>#id</code> to active.
+                                    </p>
+
+                                    <h4>Accordion</h4>
+                                    <p>Grouping toggles with <code>data-group</code> will create an accordion style function, that closes all other group members, when another one opens up.</p>
+                                </div>
+                                <!-- /.card__body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+
+                        <div class="col-md-33">
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>Back to top
+                                        <span class="badge badge--success">Modul</span>
+                                    </h3>
+                                </div>
+                                <!-- /.card__header -->
+                                <div class="card__body">
+                                    <p>
+                                        Create a back to top arrow, when scrolled down a little. Pretty basic.
+                                    </p>
+                                </div>
+                                <!-- /.card__body -->
+                            </div>
+                            <!-- /.card -->
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>Lazy Loading
+                                        <span class="badge badge--success">Modul</span>
+                                    </h3>
+                                </div>
+                                <!-- /.card__header -->
+                                <div class="card__body">
+                                    <p>Add the class <code>lazyload</code> to an <code>img</code> and set the real source within <code>data-src</code> or <code>data-src-retina</code>. If its not an <code>img</code> - the background image will be set instead.</p>
+                                    <img src="" data-src="https://www.fillmurray.com/1200/1200" class="lazyload" alt="Lazy load this image please" width="200"
+                                        height="200">
+                                </div>
+                                <!-- /.card__body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-33">
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>Sidepanel <span class="badge badge--success">Modul</span></h3>
+                                </div>
+                                <!-- /.card__header -->
+                                <div class="card__body">
+                                    <p>
+                                        Sidepanels on the <code>right</code> is implemented. It can be easily adapted to work on the other side as well.
+                                    </p>
+                                    <p>They can be opened by link with <code>data-open-panel="right"</code></p>
+
+                                    <div class="card__links">
+                                        <a href="javascript:void(0);" data-open-panel="right" class="more">Right Panel</a>
+                                    </div>
+                                    <!-- /.card__links -->
+                                </div>
+                                <!-- /.card__body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-33">
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>Others
+                                        <span class="badge badge--alert">Modul</span>
+                                        <span class="badge badge--alert">WIP</span>
+                                    </h3>
+                                </div>
+                                <!-- /.card__header -->
+                                <div class="card__body">
+                                    <p>These are currently beeing worked on, or not documented yet.</p>
+                                    <p>
+                                        <code>mobile-navtoggle</code>
+                                        <br>
+                                        <code>nav-dropdown</code>
+                                        <br>
+                                    </p>
+                                </div>
+                                <!-- /.card__body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /#features.section -->
+
+            <div class="section section--alternate" id="grid">
+                <h2 class="section__headline">Grid</h2>
+                <p class="section__subline">ehm flexbox anyone?!</p>
+                <div class="section__text">These are helper classes, which can be used. Its recommended to use the <code>@mixin generate-col($percentage)</code> though. You can also use <code>.col--offset-{bp}-{%}</code> for offsetting columns.</div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-50"><code>col-md-50</code></div>
+                        <div class="col-md-50"><code>col-md-50</code></div>
+                    </div>
+                    <br><!-- br for styling purposes only -->
+                    <div class="row">
+                        <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
+                        <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
+                        <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
+                        <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-20</code></div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /#grid.section -->
+
+
+            <div class="section" id="helper">
+                <div class="container">
+
+                    <h2 class="section__headline">Helper</h2>
+                    <div class="section__text">These helper classes are for backend developers or content editors, who dont want to mess around with SASS. Only use the following helper classes if you are one of those and stay away from them (and use BEM module classes) if you are the frontend developer.</div>
+
+                    <div class="row">
+                        <div class="col-md-50">
+                            <h3>Text</h3>
+                            <p>Change the alignment and some general styles of the text.</p>
+                            <p>
+                                <code>--text-left</code>
+                                <code>--text-center</code>
+                                <code>--text-right</code>
+                                <code>--text-upper</code>
+                                <code>--text-lower</code>
+                                <code>--text-bold</code>
+                                <code>--text-italic</code>
+                            </p>
+
+                            <h3>Float</h3>
+                            <p>Please dont.</p>
+                            <p>
+                                <code>--float-left</code>
+                                <code>--float-right</code>
+                            </p>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-50">
+                            <h3>Hidden</h3>
+                            <p>Simple hide something based on the breakpoints.</p>
+                            <p>
+                                <code>--hidden-{bp}-up</code>
+                                <code>--hidden-{bp}-down</code>
+                            </p>
+
+                            <h3>Aspect-ratio</h3>
+                            <p>
+                                <code>--aspect-ratio</code>
+                                <code>--aspect-ratio-16-9</code>
+                            </p>
+
+                            <h3>Screen-reader</h3>
+                            <p>
+                                <code>sr-only</code> and
+                                <code>sr-only--focusable</code>
+                            </p>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /#helper.section -->
 
 
             <div class="section section--border" id="products">
@@ -469,343 +807,6 @@
             </div>
             <!-- /#products.section -->
 
-
-            <div class="section section--alternate" id="form">
-                <div class="container">
-
-                    <h2 class="section__headline">Forms &amp; Input fields</h2>
-                    <p class="section__text">Checkbox, Radio, input fields of all kind... everything</p>
-
-                    <div class="row">
-                        <div class="col-md-50 col--offset-md-25">
-                            <form action="#">
-
-                                <label class="label label--inline">
-                                    <input type="checkbox"> Checkbox
-                                </label>
-                                <label class="label label--inline">
-                                    <input type="checkbox"> Checkbox
-                                </label>
-
-                                <label class="label">
-                                    <input type="radio" name="radio" value="1"> Radio
-                                </label>
-
-                                <label class="label">
-                                    <input type="radio" name="radio" value="2"> Radio
-                                </label>
-
-                                <div class="select">
-                                    <select name="s2" id="s2">
-                                        <option value="1">Value 1</option>
-                                        <option value="2">Value 2</option>
-                                    </select>
-                                </div>
-                                <!-- /.select -->
-
-                                <div class="select">
-                                    <label class="select__label" for="s">Label:</label>
-                                    <select name="s" id="s">
-                                        <option value="1">Value 1</option>
-                                        <option value="2">Value 2</option>
-                                    </select>
-                                </div>
-                                <!-- /.select -->
-
-                                <label for="input1" class="label">Label:</label>
-                                <input type="text" id="input1" class="input" placeholder="Text input">
-
-                                <label for="input3" class="label">Label:</label>
-                                <input type="text" id="input3" class="input" placeholder="Text input">
-
-                                <label for="input4" class="label label--error">Label:</label>
-                                <input type="text" id="input4" class="input input--error" placeholder="Text input">
-
-                                <label for="input2" class="label">Label:</label>
-                                <input type="text" id="input2" class="input input--full" placeholder="Text input">
-
-                                <label for="4" class="label">Label:</label>
-                                <textarea id="4" class="input" placeholder="Textarea"></textarea>
-
-                            </form>
-                        </div>
-                        <!-- /.col-md-50 -->
-                    </div>
-                    <!-- /.row -->
-
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /#form.section -->
-
-
-            <div class="section" id="js">
-                <div class="container">
-
-                    <h2 class="section__headline">Javascript</h2>
-                    <!-- /.section__headline -->
-                    <div class="section__text">Setting some useful default functions and a expandable, modulare js-boilerplate</div>
-                    <!-- /.section__text -->
-
-                    <div class="row">
-                        <div class="col-md-33">
-                            <div class="card">
-                                <div class="card__header">
-                                    <h3>data-scrollto <span class="badge badge--success">Modul</span></h3>
-                                </div>
-                                <!-- /.card__header -->
-                                <div class="card__body">
-                                    <p>
-                                        Adding <code>data-scrollto="#id"</code> to any element, animates to the element on click. Also calculates a sticky header, if present.
-                                    </p>
-                                </div>
-                                <!-- /.card__body -->
-                            </div>
-                            <!-- /.card -->
-
-                            <div class="card">
-                                <div class="card__header">
-                                    <h3>Blackout
-                                        <span class="badge badge--success">Modul</span>
-                                    </h3>
-                                </div>
-                                <!-- /.card__header -->
-                                <div class="card__body">
-                                    <p>
-                                         General function for blacking-out the main-content for overlay or sidepanel actions.
-                                        <code>activateBlackout(param)</code> will create a blackout which
-                                        <code>param</code> as additional class. That way you can create different blackout click events. e.g. Close sidepanel or close overlay on click.
-                                    </p>
-                                </div>
-                                <!-- /.card__body -->
-                            </div>
-                            <!-- /.card -->
-                        </div>
-                        <!-- /.col -->
-
-                        <div class="col-md-33">
-                            <div class="card">
-                                <div class="card__header">
-                                    <h3>data-overlay <span class="badge badge--success">Modul</span></h3>
-                                </div>
-                                <!-- /.card__header -->
-                                <div class="card__body">
-                                    <p>Adding <code>data-overlay="id"</code> to any element, will set the <code>.overlay#id</code> to active and close all other overlays. Also disables body scroll.</p>
-
-                                    <p>Grouping overlays with <code>data-group</code> will append arrows to go to the next/prev overlay.</p>
-
-                                    <p>Looping in overlay groups is possible with <code>data-loop="true"</code>.</p>
-
-                                    <p>Adding <code>data-close="true"</code> will add an close icon.</p>
-
-                                    <div class="card__links">
-                                        <a href="#overlaytest" data-overlay="overlaytest" class="more">Open Overlay</a>
-                                        <a href="#overlaytest3" data-overlay="overlaytest3" class="more">Open Overlay without loop</a>
-                                    </div>
-                                </div>
-                                <!-- /.card__body -->
-                            </div>
-                            <!-- /.card -->
-                        </div>
-                        <!-- /.col -->
-
-                        <div class="col-md-33">
-                            <div class="card">
-                                <div class="card__header">
-                                    <h3>data-toggle <span class="badge badge--alert">Modul</span><span class="badge badge--alert">WIP</span></h3>
-                                </div>
-                                <!-- /.card__header -->
-                                <div class="card__body">
-                                    <p>
-                                         Adding
-                                        <code>data-toggle="#id"</code> to any element, will set the
-                                        <code>#id</code> to active.
-                                    </p>
-
-                                    <h4>Accordion</h4>
-                                    <p>Grouping toggles with <code>data-group</code> will create an accordion style function, that closes all other group members, when another one opens up.</p>
-                                </div>
-                                <!-- /.card__body -->
-                            </div>
-                            <!-- /.card -->
-                        </div>
-                        <!-- /.col -->
-
-                        <div class="col-md-33">
-                            <div class="card">
-                                <div class="card__header">
-                                    <h3>Back to top
-                                        <span class="badge badge--success">Modul</span>
-                                    </h3>
-                                </div>
-                                <!-- /.card__header -->
-                                <div class="card__body">
-                                    <p>
-                                        Create a back to top arrow, when scrolled down a little. Pretty basic.
-                                    </p>
-                                </div>
-                                <!-- /.card__body -->
-                            </div>
-                            <!-- /.card -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-33">
-                            <div class="card">
-                                <div class="card__header">
-                                    <h3>Sidepanel <span class="badge badge--success">Modul</span></h3>
-                                </div>
-                                <!-- /.card__header -->
-                                <div class="card__body">
-                                    <p>
-                                        Sidepanels on the <code>right</code> is implemented. It can be easily adapted to work on the other side as well.
-                                    </p>
-                                    <p>They can be opened by link with <code>data-open-panel="right"</code></p>
-
-                                    <div class="card__links">
-                                        <a href="javascript:void(0);" data-open-panel="right" class="more">Right Panel</a>
-                                    </div>
-                                    <!-- /.card__links -->
-                                </div>
-                                <!-- /.card__body -->
-                            </div>
-                            <!-- /.card -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-33">
-                            <div class="card">
-                                <div class="card__header">
-                                    <h3>Others
-                                        <span class="badge badge--alert">Modul</span>
-                                        <span class="badge badge--alert">WIP</span>
-                                    </h3>
-                                </div>
-                                <!-- /.card__header -->
-                                <div class="card__body">
-                                    <p>These are currently beeing worked on, or not documented yet.</p>
-                                    <p>
-                                        <code>mobile-navtoggle</code>
-                                        <br>
-                                        <code>nav-dropdown</code>
-                                        <br>
-                                    </p>
-                                </div>
-                                <!-- /.card__body -->
-                            </div>
-                            <!-- /.card -->
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /#js.section -->
-
-            <div class="section section--alternate" id="grid">
-                <h2 class="section__headline">Grid</h2>
-                <p class="section__subline">ehm flexbox anyone?!</p>
-                <div class="section__text">These are helper classes, which can be used. Its recommended to use the <code>@mixin generate-col($percentage)</code> though. You can also use <code>.col--offset-{bp}-{%}</code> for offsetting columns.</div>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-50"><code>col-md-50</code></div>
-                        <div class="col-md-50"><code>col-md-50</code></div>
-                    </div>
-                    <br><!-- br for styling purposes only -->
-                    <div class="row">
-                        <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
-                        <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
-                        <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
-                        <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
-                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
-                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
-                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
-                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
-                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-20</code></div>
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /#grid.section -->
-
-
-            <div class="section" id="helper">
-                <div class="container">
-
-                    <h2 class="section__headline">Helper</h2>
-                    <div class="section__text">These helper classes are for backend developers or content editors, who dont want to mess around with SASS. Only use the following helper classes if you are one of those and stay away from them (and use BEM module classes) if you are the frontend developer.</div>
-
-                    <div class="row">
-                        <div class="col-md-50">
-                            <h3>Text</h3>
-                            <p>Change the alignment and some general styles of the text.</p>
-                            <p>
-                                <code>--text-left</code>
-                                <code>--text-center</code>
-                                <code>--text-right</code>
-                                <code>--text-upper</code>
-                                <code>--text-lower</code>
-                                <code>--text-bold</code>
-                                <code>--text-italic</code>
-                            </p>
-
-                            <h3>Float</h3>
-                            <p>Please dont.</p>
-                            <p>
-                                <code>--float-left</code>
-                                <code>--float-right</code>
-                            </p>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-50">
-                            <h3>Hidden</h3>
-                            <p>Simple hide something based on the breakpoints.</p>
-                            <p>
-                                <code>--hidden-{bp}-up</code>
-                                <code>--hidden-{bp}-down</code>
-                            </p>
-
-                            <h3>Aspect-ratio</h3>
-                            <p>
-                                <code>--aspect-ratio</code>
-                                <code>--aspect-ratio-16-9</code>
-                            </p>
-
-                            <h3>Screen-reader</h3>
-                            <p>
-                                <code>sr-only</code> and
-                                <code>sr-only--focusable</code>
-                            </p>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /.section -->
-
-            <div class="section section--alternate" id="features">
-                <div class="container">
-                    <div class="section__headline">Features</div>
-
-                    <div class="row">
-                        <div class="col-md-50">
-                            <h3>Lazy Loading</h3>
-                            <p>Add the class <code>lazyload</code> to an <code>img</code> and set the source within <code>data-src</code> even <code>data-src-retina</code> can be set. If its not an <code>img</code> - the background image will be set instead.</p>
-                            <img src="" data-src="https://www.fillmurray.com/1200/1200" class="lazyload" alt="Lazy load this image please" width="200" height="200">
-                        </div>
-                        <div class="col-md-50"></div>
-                    </div>
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /#features.section -->
 
         </main>
 
