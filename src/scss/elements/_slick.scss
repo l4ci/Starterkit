@@ -90,7 +90,7 @@
     font-size: 0;
     cursor: pointer;
     background: c(transparent);
-    color: c(transparent);
+    color: rgba(c(black), .3);
     top: 50%;
     transform: translate(0, -50%);
     padding: $spacing;
@@ -98,12 +98,13 @@
     outline: none;
     z-index: z(default);
     border-radius: 0;
+    transition: all t(quick);
 
     &:hover,
     &:focus {
         outline: none;
         background: c(transparent);
-        color: c(transparent);
+        color: rgba(c(black), .5);
 
         &:before { opacity: 1; }
     }
@@ -119,7 +120,7 @@
     &:before {
         font-size: 2rem;
         line-height: 2rem;
-        color: c(black);
+        color: inherit;
         opacity: 1;
     }
 }
@@ -213,7 +214,7 @@
                 font-size: 11px;
                 line-height: 1;
                 text-align: center;
-                color: c(darkgrey);
+                color: rgba(c(black), .2);
                 opacity: .8;
             }
         }
