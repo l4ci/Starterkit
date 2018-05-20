@@ -6,7 +6,6 @@ Hero
 
 .section.section--hero {
     @include section-spacing(3);
-
     clip-path: polygon(0 0%, 100% 0, 100% 90%, 0% 100%);
     background: linear-gradient( 135deg, $primary 0%, darken($primary, 20%) 100%);
 }
@@ -18,7 +17,6 @@ Hero
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    min-height: 50vh;
     align-content: center;
     align-items: center;
     text-align: center;
