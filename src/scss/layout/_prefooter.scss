@@ -5,10 +5,10 @@ Prefooter
 */
 
 .prefooter {
-    @include section-spacing(2);
+    @include section-spacing(1);
     display: block;
     background: c(black);
-    color: c(lightgrey);
+    color: c(grey);
 
     a {
         color: inherit;
@@ -31,11 +31,11 @@ Prefooter
 
         .prefooter__headline {
             user-select: none;
-        }
-        .prefooter__headline::after {
-            @include icon('\f107');
-            position: absolute;
-            right: $spacing;
+            &::after {
+                @include icon('\f107');
+                position: absolute;
+                right: $spacing;
+            }
         }
 
         &.prefooter__block--open {
@@ -51,14 +51,24 @@ Prefooter
 }
 
 .prefooter__headline {
+    @include p;
     position: relative;
     display: block;
     text-transform: uppercase;
     font-weight: bold;
     padding: $spacing 0;
+    color: inherit;
 
     @include bp(md) {
         padding-top: 0;
+
+        &::after {
+            content: ' ';
+            display: block;
+            width: 60%;
+            margin: $spacing 0;
+            border-bottom: 2px solid c(darkgrey);
+        }
     }
 }
 
