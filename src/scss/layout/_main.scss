@@ -9,6 +9,11 @@ Main
     display: block;
 }
 
+.main-wrapper {
+    position: relative;
+    transition: transform t(short);
+}
+
 .skip-link {
     @include btn;
 }

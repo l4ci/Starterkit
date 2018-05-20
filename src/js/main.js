@@ -43,12 +43,14 @@ if (typeof jQuery == 'undefined') {
      * Include all UI functions
      */
     //=include ui/_back-to-top.js
+    //=include ui/_blackout.js
     //=include ui/_data-overlay.js
     //=include ui/_data-scrollto.js
     //=include ui/_data-toggle.js
     //=include ui/_mobile-navtoggle.js
     //=include ui/_nav-dropdown.js
     //=include ui/_prefooter-toggle.js
+    //=include ui/_sidepanel.js
 
 
     /**
@@ -59,7 +61,7 @@ if (typeof jQuery == 'undefined') {
     function windowResize(){
         // Set body padding for sticky header
         if ( $('.header').hasClass('header--sticky') ) {
-            body.css({'padding-top': $('.header').outerHeight()+'px'});
+            $('.main-wrapper').css({'padding-top': $('.header').outerHeight()+'px'});
         }
     }
 

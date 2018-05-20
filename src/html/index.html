@@ -36,793 +36,805 @@
         });
     </script>
 
+    <div class="main-wrapper">
 
-    <header class="header header--sticky">
-        <div class="container">
-            <div class="row row--nogutter">
+        <header class="header header--sticky">
+            <div class="container">
+                <div class="row row--nogutter">
 
-                <div class="header__logo">
-                    <a href="/"><i class="fas fa-rocket"></i> Starter<span>kit</span></a>
-                </div><!-- /.header__logo -->
+                    <div class="header__logo">
+                        <a href="/"><i class="fas fa-rocket"></i> Starter<span>kit</span></a>
+                    </div><!-- /.header__logo -->
 
-                <div class="toggle-nav"></div>
+                    <div class="toggle-nav"></div>
 
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#typo" data-scrollto="#typo">Typo</a></li>
-                        <li class="nav__item"><a href="#typo" data-scrollto="#form">Form</a></li>
-                        <li class="nav__item"><a href="#js" data-scrollto="#js">Javascript</a></li>
-                        <li class="nav__item"><a href="#grid" data-scrollto="#grid">Grid</a></li>
-                        <li class="nav__item"><a href="#helper" data-scrollto="#helper">Helper</a></li>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#typo" data-scrollto="#typo">Typo</a></li>
+                            <li class="nav__item"><a href="#typo" data-scrollto="#form">Form</a></li>
+                            <li class="nav__item"><a href="#js" data-scrollto="#js">Javascript</a></li>
+                            <li class="nav__item"><a href="#grid" data-scrollto="#grid">Grid</a></li>
+                            <li class="nav__item"><a href="#helper" data-scrollto="#helper">Helper</a></li>
+                            <li class="nav__item"><a href="javascript:void(0)" data-open-panel="right"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                        </ul>
+                    </nav>
+
+                    <a href="https://github.com/l4ci/Starterkit" target="_blank" class="btn btn--small btn--secondary | header__c2a">Download</a>
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container -->
+        </header>
+
+        <main class="main" id="content">
+
+            <div class="section section--hero hero">
+                <div class="hero__inner">
+                    <h1 class="hero__title">Starterkit</h1>
+                    <div class="hero__text"><p>A fully responsive, performance-orientated, work-in-progress frontend boilerplate, I built mainly for myself.</p></div>
+                    <a href="#typo" data-scrollto="#typo" class="btn btn--outline | hero__btn">Explore</a>
+                </div>
+            </div>
+            <!-- /.section.hero -->
+
+            <div class="section section--slider slider">
+                <div class="container">
+                    <div class="slick"  data-slick='{"arrows": true, "autoplay": true, "autoplaySpeed": 2000, "dots": true, "pauseOnFocus": true, "pauseOnHover": true, "adaptiveHeight": true }'>
+                        <div>Get started quickly with some useful defaults: Project directory, Gulp Workflows with browserSync...</div>
+                        <div>Modulare Sass: Hero, Typografie, Layout Options, Slider, a Flexbox Grid System and much more</div>
+                        <div>HTML Defaults: No-Js and Browsehappy hints, asynchron, anonymized GoogleAnalytics with OptOut</div>
+                        <div>Modulare JS, bundled with many functions and features</div>
+                    </div>
+                    <!-- /.slick -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.section slider -->
+
+            <div class="section section--animate" id="typo">
+                <div class="container">
+
+                    <h2 class="section__headline">Typografie &amp; Elements</h2>
+
+                    <div class="row">
+                        <div class="col-md-50">
+                            <div class="big"><code>.big</code> Big Headline</div>
+                            <div class="h1"><code>.h1</code> Headline</div>
+                            <div class="h2"><code>.h2</code> Headline</div>
+                            <div class="h3"><code>.h3</code> Headline</div>
+                            <div class="h4"><code>.h4</code> Headline</div>
+                            <div class="h5"><code>.h5</code> Headline</div>
+                            <div class="h6"><code>.h6</code> Headline</div>
+                            <p class="lead"><code>.lead</code> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odit accusantium aliquam repellendus quos provident, temporibus quidem vero inventore maiores.</p>
+                            <div class="rte">
+                                <p><code>p</code> Lorem <a href="#">ipsum dolor sit</a> amet, consectetur adipisicing elit. Aliquam eos magni dignissimos error, quisquam rerum iusto quo voluptatem sint eius, cupiditate maiores laborum velit aut tenetur. Maiores nostrum, culpa nesciunt libero corrupti expedita, odit cumque facilis illum fugit sit quis sapiente esse ex eveniet soluta ullam ea eius. Saepe, ut!</p>
+
+                                <p>Also external links look like this <a href="http://github.com/l4ci/Starterkit">Starterkit on Github</a></p>
+                            </div>
+                            <!-- /.rte -->
+                        </div>
+                        <!-- /.col-md-50 -->
+                        <div class="col-md-50">
+                            <h2>Buttons</h2>
+                            <p>If <code>a</code>, <code>button</code> or <code>input[type=submit]</code> - adding <code>.btn</code> makes it a button.</p>
+                            <div>
+                                <a href="#" class="btn">Button</a>
+                                <button class="btn btn--primary"><i class="fas fa-info-circle"></i> Primary</button>
+                                <input type="submit" href="#" class="btn btn--secondary" value="Secondary">
+                            </div>
+
+                            <div>
+                                <a href="#" class="btn btn--primary btn--small">Small Button</a>
+
+                                <a href="#" class="btn btn--primary btn--big">Big Button</a>
+                            </div>
+
+                            <h2>Badges</h2>
+                            <span class="badge">Badge</span>
+                            <span class="badge badge--primary">Primary</span>
+                            <span class="badge badge--secondary">Secondary</span>
+                            <span class="badge badge--alert">Alert</span><span class="badge badge--success">Success</span>
+                        </div>
+                        <!-- /.col-md-50 -->
+                    </div>
+                    <!-- /.row -->
+
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /#typo.section -->
+
+
+            <div class="section section--border" id="products">
+
+                <div class="section__headline">Product Cards</div>
+                <div class="section__text">Simple card view of products. Including labels for new, sale soldout, price and already started schema data.</div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-50 col-sm-33 col-md-25">
+                            <a class="product-card" href="#" itemscope itemtype="http://schema.org/Product">
+
+                                <div class="product-card__imgwrapper">
+
+                                    <div class="product-card__labelwrapper">
+                                        <div class="product-card__label product-card__label--new">NEW</div>
+                                    </div>
+                                    <!-- /.product-card__labelwrapper -->
+
+                                    <img src="https://www.fillmurray.com/500/500" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
+                                </div>
+                                <!-- /.product-card__imgwrapper -->
+
+                                <div class="product-card__contentwrapper">
+                                    <div class="product-card__content">
+                                        <div class="product-card__title" itemprop="name">Producttitle</div>
+                                        <!-- /.product-card__title -->
+                                        <div class="product-card__subtitle">by Label XYZ</div>
+                                        <!-- /.product-card__subtitle -->
+                                    </div>
+                                    <!-- /.product-card__content -->
+                                    <div class="product-card__pricewrapper">
+                                        <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
+                                        <!-- /.product-card__realprice -->
+                                    </div>
+                                    <!-- /.product-card__pricewrapper -->
+                                </div>
+                                <!-- /.product-card__contentwrapper -->
+                            </a>
+                            <!-- /.product-card -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-50 col-sm-33 col-md-25">
+                            <a href="#" class="product-card product-card--sale">
+
+                                <div class="product-card__imgwrapper">
+
+                                    <div class="product-card__labelwrapper">
+                                        <div class="product-card__label product-card__label--new">NEW</div>
+                                        <div class="product-card__label product-card__label--sale">SALE</div>
+                                    </div>
+                                    <!-- /.product-card__labelwrapper -->
+
+                                    <img src="https://www.fillmurray.com/300/300" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
+                                </div>
+                                <!-- /.product-card__imgwrapper -->
+
+                                <div class="product-card__contentwrapper">
+                                    <div class="product-card__content">
+                                        <div class="product-card__title" itemprop="name">Producttitle</div>
+                                        <!-- /.product-card__title -->
+                                        <div class="product-card__subtitle">by Label XYZ</div>
+                                        <!-- /.product-card__subtitle -->
+                                    </div>
+                                    <!-- /.product-card__content -->
+                                    <div class="product-card__pricewrapper">
+                                        <div class="product-card__saleprice">19,99 &euro;</div>
+                                        <!-- /.product-card__saleprice -->
+                                        <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
+                                        <!-- /.product-card__realprice -->
+                                    </div>
+                                    <!-- /.product-card__pricewrapper -->
+                                </div>
+                                <!-- /.product-card__contentwrapper -->
+                            </a>
+                            <!-- /.product-card -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-50 col-sm-33 col-md-25">
+                            <a href="#" class="product-card product-card--soldout">
+
+                                <div class="product-card__imgwrapper">
+                                    <div class="product-card__labelwrapper">
+                                        <div class="product-card__label product-card__label--soldout">Soldout</div>
+                                    </div>
+                                    <!-- /.product-card__labelwrapper -->
+                                    <img src="https://www.fillmurray.com/520/520" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
+                                </div>
+                                <!-- /.product-card__imgwrapper -->
+
+                                <div class="product-card__contentwrapper">
+                                    <div class="product-card__content">
+                                        <div class="product-card__title" itemprop="name">Producttitle</div>
+                                        <!-- /.product-card__title -->
+                                        <div class="product-card__subtitle">by Label XYZ</div>
+                                        <!-- /.product-card__subtitle -->
+                                    </div>
+                                    <!-- /.product-card__content -->
+                                    <div class="product-card__pricewrapper">
+                                        <div class="product-card__realprice" itemprop="price">105,95 &euro;</div>
+                                        <!-- /.product-card__realprice -->
+                                    </div>
+                                    <!-- /.product-card__pricewrapper -->
+                                </div>
+                                <!-- /.product-card__contentwrapper -->
+                            </a>
+                            <!-- /.product-card -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-50 col-sm-33 col-md-25">
+                            <a class="product-card" href="#" itemscope itemtype="http://schema.org/Product">
+
+                                <div class="product-card__imgwrapper">
+
+                                    <div class="product-card__labelwrapper">
+                                        <div class="product-card__label product-card__label--new">NEW</div>
+                                    </div>
+                                    <!-- /.product-card__labelwrapper -->
+
+                                    <img src="https://www.fillmurray.com/250/250" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
+                                </div>
+                                <!-- /.product-card__imgwrapper -->
+
+                                <div class="product-card__contentwrapper">
+                                    <div class="product-card__content">
+                                        <div class="product-card__title" itemprop="name">Producttitle</div>
+                                        <!-- /.product-card__title -->
+                                        <div class="product-card__subtitle">by Label XYZ</div>
+                                        <!-- /.product-card__subtitle -->
+                                    </div>
+                                    <!-- /.product-card__content -->
+                                    <div class="product-card__pricewrapper">
+                                        <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
+                                        <!-- /.product-card__realprice -->
+                                    </div>
+                                    <!-- /.product-card__pricewrapper -->
+                                </div>
+                                <!-- /.product-card__contentwrapper -->
+                            </a>
+                            <!-- /.product-card -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-50 col-sm-33 col-md-25">
+                            <a href="#" class="product-card product-card--sale">
+
+                                <div class="product-card__imgwrapper">
+                                    <img src="https://www.fillmurray.com/600/600" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
+                                </div>
+                                <!-- /.product-card__imgwrapper -->
+
+                                <div class="product-card__contentwrapper">
+                                    <div class="product-card__content">
+                                        <div class="product-card__title" itemprop="name">Producttitle</div>
+                                        <!-- /.product-card__title -->
+                                        <div class="product-card__subtitle">by Label XYZ</div>
+                                        <!-- /.product-card__subtitle -->
+                                    </div>
+                                    <!-- /.product-card__content -->
+                                    <div class="product-card__pricewrapper">
+                                        <div class="product-card__saleprice">19,99 &euro;</div>
+                                        <!-- /.product-card__saleprice -->
+                                        <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
+                                        <!-- /.product-card__realprice -->
+                                    </div>
+                                    <!-- /.product-card__pricewrapper -->
+                                </div>
+                                <!-- /.product-card__contentwrapper -->
+                            </a>
+                            <!-- /.product-card -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-50 col-sm-33 col-md-25">
+                            <a href="#" class="product-card">
+
+                                <div class="product-card__imgwrapper">
+                                    <img src="https://www.fillmurray.com/380/380" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
+                                </div>
+                                <!-- /.product-card__imgwrapper -->
+
+                                <div class="product-card__contentwrapper">
+                                    <div class="product-card__content">
+                                        <div class="product-card__title" itemprop="name">Producttitle</div>
+                                        <!-- /.product-card__title -->
+                                        <div class="product-card__subtitle">by Label XYZ</div>
+                                        <!-- /.product-card__subtitle -->
+                                    </div>
+                                    <!-- /.product-card__content -->
+                                    <div class="product-card__pricewrapper">
+                                        <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
+                                        <!-- /.product-card__realprice -->
+                                    </div>
+                                    <!-- /.product-card__pricewrapper -->
+                                </div>
+                                <!-- /.product-card__contentwrapper -->
+                            </a>
+                            <!-- /.product-card -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-50 col-sm-33 col-md-25">
+                            <a class="product-card" href="#" itemscope itemtype="http://schema.org/Product">
+
+                                <div class="product-card__imgwrapper">
+
+                                    <div class="product-card__labelwrapper">
+                                        <div class="product-card__label product-card__label--new">NEW</div>
+                                    </div>
+                                    <!-- /.product-card__labelwrapper -->
+
+                                    <img src="https://www.fillmurray.com/180/180" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
+                                </div>
+                                <!-- /.product-card__imgwrapper -->
+
+                                <div class="product-card__contentwrapper">
+                                    <div class="product-card__content">
+                                        <div class="product-card__title" itemprop="name">Producttitle</div>
+                                        <!-- /.product-card__title -->
+                                        <div class="product-card__subtitle">by Label XYZ</div>
+                                        <!-- /.product-card__subtitle -->
+                                    </div>
+                                    <!-- /.product-card__content -->
+                                    <div class="product-card__pricewrapper">
+                                        <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
+                                        <!-- /.product-card__realprice -->
+                                    </div>
+                                    <!-- /.product-card__pricewrapper -->
+                                </div>
+                                <!-- /.product-card__contentwrapper -->
+                            </a>
+                            <!-- /.product-card -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-50 col-sm-33 col-md-25">
+                            <a href="#" class="product-card">
+
+                                <div class="product-card__imgwrapper">
+                                    <img src="https://www.fillmurray.com/425/425" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
+                                </div>
+                                <!-- /.product-card__imgwrapper -->
+
+                                <div class="product-card__contentwrapper">
+                                    <div class="product-card__content">
+                                        <div class="product-card__title" itemprop="name">Producttitle</div>
+                                        <!-- /.product-card__title -->
+                                        <div class="product-card__subtitle">by Label XYZ</div>
+                                        <!-- /.product-card__subtitle -->
+                                    </div>
+                                    <!-- /.product-card__content -->
+                                    <div class="product-card__pricewrapper">
+                                        <div class="product-card__realprice" itemprop="price">5,95 &euro;</div>
+                                        <!-- /.product-card__realprice -->
+                                    </div>
+                                    <!-- /.product-card__pricewrapper -->
+                                </div>
+                                <!-- /.product-card__contentwrapper -->
+                            </a>
+                            <!-- /.product-card -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-50 col-sm-33 col-md-25">
+                            <a class="product-card" href="#" itemscope itemtype="http://schema.org/Product">
+
+                                <div class="product-card__imgwrapper">
+
+                                    <div class="product-card__labelwrapper">
+                                        <div class="product-card__label product-card__label--new">NEW</div>
+                                    </div>
+                                    <!-- /.product-card__labelwrapper -->
+
+                                    <img src="https://www.fillmurray.com/180/180" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
+                                </div>
+                                <!-- /.product-card__imgwrapper -->
+
+                                <div class="product-card__contentwrapper">
+                                    <div class="product-card__content">
+                                        <div class="product-card__title" itemprop="name">Producttitle</div>
+                                        <!-- /.product-card__title -->
+                                        <div class="product-card__subtitle">by Label XYZ</div>
+                                        <!-- /.product-card__subtitle -->
+                                    </div>
+                                    <!-- /.product-card__content -->
+                                    <div class="product-card__pricewrapper">
+                                        <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
+                                        <!-- /.product-card__realprice -->
+                                    </div>
+                                    <!-- /.product-card__pricewrapper -->
+                                </div>
+                                <!-- /.product-card__contentwrapper -->
+                            </a>
+                            <!-- /.product-card -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-50 col-sm-33 col-md-25">
+                            <a href="#" class="product-card">
+
+                                <div class="product-card__imgwrapper">
+                                    <img src="https://www.fillmurray.com/425/425" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
+                                </div>
+                                <!-- /.product-card__imgwrapper -->
+
+                                <div class="product-card__contentwrapper">
+                                    <div class="product-card__content">
+                                        <div class="product-card__title" itemprop="name">Producttitle</div>
+                                        <!-- /.product-card__title -->
+                                        <div class="product-card__subtitle">by Label XYZ</div>
+                                        <!-- /.product-card__subtitle -->
+                                    </div>
+                                    <!-- /.product-card__content -->
+                                    <div class="product-card__pricewrapper">
+                                        <div class="product-card__realprice" itemprop="price">5,95 &euro;</div>
+                                        <!-- /.product-card__realprice -->
+                                    </div>
+                                    <!-- /.product-card__pricewrapper -->
+                                </div>
+                                <!-- /.product-card__contentwrapper -->
+                            </a>
+                            <!-- /.product-card -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /#products.section -->
+
+
+            <div class="section section--alternate" id="form">
+                <div class="container">
+
+                    <h2 class="section__headline">Forms &amp; Input fields</h2>
+                    <p class="section__text">Checkbox, Radio, input fields of all kind... everything</p>
+
+                    <div class="row">
+                        <div class="col-md-50 col--offset-md-25">
+                            <form action="#">
+
+                                <label class="label label--inline">
+                                    <input type="checkbox"> Checkbox
+                                </label>
+                                <label class="label label--inline">
+                                    <input type="checkbox"> Checkbox
+                                </label>
+
+                                <label class="label">
+                                    <input type="radio" name="radio" value="1"> Radio
+                                </label>
+
+                                <label class="label">
+                                    <input type="radio" name="radio" value="2"> Radio
+                                </label>
+
+                                <div class="select">
+                                    <select name="s2" id="s2">
+                                        <option value="1">Value 1</option>
+                                        <option value="2">Value 2</option>
+                                    </select>
+                                </div>
+                                <!-- /.select -->
+
+                                <div class="select">
+                                    <label class="select__label" for="s">Label:</label>
+                                    <select name="s" id="s">
+                                        <option value="1">Value 1</option>
+                                        <option value="2">Value 2</option>
+                                    </select>
+                                </div>
+                                <!-- /.select -->
+
+                                <label for="input1" class="label">Label:</label>
+                                <input type="text" id="input1" class="input" placeholder="Text input">
+
+                                <label for="input3" class="label">Label:</label>
+                                <input type="text" id="input3" class="input" placeholder="Text input">
+
+                                <label for="input4" class="label label--error">Label:</label>
+                                <input type="text" id="input4" class="input input--error" placeholder="Text input">
+
+                                <label for="input2" class="label">Label:</label>
+                                <input type="text" id="input2" class="input input--full" placeholder="Text input">
+
+                                <label for="4" class="label">Label:</label>
+                                <textarea id="4" class="input" placeholder="Textarea"></textarea>
+
+                            </form>
+                        </div>
+                        <!-- /.col-md-50 -->
+                    </div>
+                    <!-- /.row -->
+
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /#form.section -->
+
+
+            <div class="section" id="js">
+                <div class="container">
+
+                    <h2 class="section__headline">Javascript</h2>
+                    <!-- /.section__headline -->
+                    <div class="section__text">Setting some useful default functions and a expandable, modulare js-boilerplate</div>
+                    <!-- /.section__text -->
+
+                    <div class="row">
+                        <div class="col-md-33">
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>data-scrollto <span class="badge badge--success">Modul</span></h3>
+                                </div>
+                                <!-- /.card__header -->
+                                <div class="card__body">
+                                    Adding <code>data-scrollto="#id"</code> to any element, animates to the element on click. Also calculates a sticky header, if present.
+                                </div>
+                                <!-- /.card__body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+
+                        <div class="col-md-33">
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>data-overlay <span class="badge badge--success">Modul</span><span class="badge badge--alert">WIP</span></h3>
+                                </div>
+                                <!-- /.card__header -->
+                                <div class="card__body">
+                                    <p>Adding <code>data-overlay="id"</code> to any element, will set the <code>.overlay#id</code> to active and close all other overlays. Also disables body scroll.</p>
+
+                                    <p>Grouping overlays with <code>data-group</code> will append arrows to go to the next/prev overlay.</p>
+
+                                    <p>Looping in overlay groups is possible with <code>data-loop="true"</code>.</p>
+
+                                    <p>Adding <code>data-close="true"</code> will add an close icon.</p>
+
+                                    <div class="card__links">
+                                        <a href="#overlaytest" data-overlay="overlaytest" class="more">Open Overlay</a>
+                                        <a href="#overlaytest3" data-overlay="overlaytest3" class="more">Open Overlay without loop</a>
+
+                                    </div>
+                                </div>
+                                <!-- /.card__body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+
+                        <div class="col-md-33">
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>data-toggle <span class="badge badge--alert">Modul</span><span class="badge badge--alert">WIP</span></h3>
+                                </div>
+                                <!-- /.card__header -->
+                                <div class="card__body">
+                                    Adding <code>data-toggle="#id"</code> to any element, will set the <code>#id</code> to active.
+                                </div>
+                                <!-- /.card__body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+
+                        <div class="col-md-33">
+                            <div class="card">
+                                <div class="card__header">
+                                    <h3>Others <span class="badge badge--alert">Modul</span><span class="badge badge--alert">WIP</span></h3>
+                                </div>
+                                <!-- /.card__header -->
+                                <div class="card__body">
+                                    <code>mobile-navtoggle</code><br>
+                                    <code>nav-dropdown</code><br>
+                                    <code>back-to-top</code>
+                                </div>
+                                <!-- /.card__body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /#js.section -->
+
+            <div class="section section--alternate" id="grid">
+                <h2 class="section__headline">Grid</h2>
+                <p class="section__subline test">ehm flexbox anyone?!</p>
+                <div class="section__text">These are helper classes, which can be used. Its recommended to use the <code>@mixin generate-col($percentage)</code> though. You can also use <code>.col--offset-{bp}-{%}</code> for offsetting columns.</div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-50"><code>col-md-50</code></div>
+                        <div class="col-md-50"><code>col-md-50</code></div>
+                    </div>
+                    <br><!-- br for styling purposes only -->
+                    <div class="row">
+                        <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
+                        <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
+                        <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
+                        <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
+                        <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-20</code></div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /#grid.section -->
+
+
+            <div class="section" id="helper">
+                <div class="container">
+
+                    <h2 class="section__headline">Helper</h2>
+                    <div class="section__text"></div>
+
+                    <div class="row">
+                        <div class="col">
+                            <h3>Text</h3>
+                            <code>--text-left</code>
+                            <code>--text-center</code>
+                            <code>--text-right</code>
+                            <code>--text-upper</code>
+                            <code>--text-lower</code>
+                            <code>--text-bold</code>
+                            <code>--text-italic</code>
+
+                            <h3>Float</h3>
+                            <code>--float-left</code>
+                            <code>--float-right</code>
+
+                            <h3>Hidden</h3>
+                            <code>--hidden-{bp}-up</code>
+                            <code>--hidden-{bp}-down</code>
+
+                            <h3>Aspect-ratio</h3>
+                            <code>--aspect-ratio</code> <code>--aspect-ratio-16-9</code>
+
+                            <h3>Screen-reader</h3>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.section -->
+
+            <div class="section section--alternate" id="features">
+                <div class="container">
+                    <div class="section__headline">Features</div>
+
+                    <div class="row">
+                        <div class="col-md-50">
+                            <h3>Lazy Loading</h3>
+                            <p>Add the class <code>lazyload</code> to an <code>img</code> and set the source within <code>data-src</code> even <code>data-src-retina</code> can be set. If its not an <code>img</code> - the background image will be set instead.</p>
+                            <img src="" data-src="https://www.fillmurray.com/1200/1200" class="lazyload" alt="Lazy load this image please" width="200" height="200">
+                        </div>
+                        <div class="col-md-50"></div>
+                    </div>
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /#features.section -->
+
+        </main>
+
+        <div class="prefooter" id="prefooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-33">
+                        <div class="prefooter__block prefooter__block--open">
+                            <div class="prefooter__headline">About us</div>
+
+                            <ul class="prefooter__links">
+                                <li><a href="#prefooter">Impressum</a></li>
+                                <li><a href="#prefooter">AGB</a></li>
+                                <li><a href="#prefooter">Datenschutz</a></li>
+                            </ul>
+                            <!-- /.prefooter__links -->
+                        </div>
+                        <!-- /.prefooter__block -->
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-md-33">
+                        <div class="prefooter__block">
+                            <div class="prefooter__headline">About us</div>
+
+                            <ul class="prefooter__links">
+                                <li><a href="#prefooter">Impressum</a></li>
+                                <li><a href="#prefooter">AGB</a></li>
+                                <li><a href="#prefooter">Datenschutz</a></li>
+                            </ul>
+                            <!-- /.prefooter__links -->
+                        </div>
+                        <!-- /.prefooter__block -->
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-md-33">
+                        <div class="prefooter__block">
+                            <div class="prefooter__headline">About us</div>
+
+                            <ul class="prefooter__links">
+                                <li><a href="#prefooter">Impressum</a></li>
+                                <li><a href="#prefooter">AGB</a></li>
+                                <li><a href="#prefooter">Datenschutz</a></li>
+                            </ul>
+                            <!-- /.prefooter__links -->
+                        </div>
+                        <!-- /.prefooter__block -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container -->
+        </div>
+
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer__copyright">Copyright &copy; 2017</div>
+
+                    <ul class="footer__links">
+                        <li><a href="index.html">Impressum</a></li>
+                        <li><a href="index.html">AGB</a></li>
+                        <li><a href="index.html">Datenschutz</a></li>
                     </ul>
-                </nav>
-
-                <a href="https://github.com/l4ci/Starterkit" target="_blank" class="btn btn--small btn--secondary | header__c2a">Download</a>
-            </div>
-            <!-- /.row -->
-
-        </div>
-        <!-- /.container -->
-    </header>
-
-    <main class="main" id="content">
-
-        <div class="section section--hero hero">
-            <div class="hero__inner">
-                <h1 class="hero__title">Starterkit</h1>
-                <div class="hero__text"><p>A fully responsive, performance-orientated, work-in-progress frontend boilerplate, I built mainly for myself.</p></div>
-                <a href="#typo" data-scrollto="#typo" class="btn btn--outline | hero__btn">Explore</a>
-            </div>
-        </div>
-        <!-- /.section.hero -->
-
-        <div class="section section--slider slider">
-            <div class="container">
-                <div class="slick"  data-slick='{"arrows": true, "autoplay": true, "autoplaySpeed": 2000, "dots": true, "pauseOnFocus": true, "pauseOnHover": true, "adaptiveHeight": true }'>
-                    <div>Get started quickly with some useful defaults: Project directory, Gulp Workflows with browserSync...</div>
-                    <div>Modulare Sass: Hero, Typografie, Layout Options, Slider, a Flexbox Grid System and much more</div>
-                    <div>HTML Defaults: No-Js and Browsehappy hints, asynchron, anonymized GoogleAnalytics with OptOut</div>
-                    <div>Modulare JS, bundled with many functions and features</div>
-                </div>
-                <!-- /.slick -->
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.section slider -->
-
-        <div class="section section--animate" id="typo">
-            <div class="container">
-
-                <h2 class="section__headline">Typografie &amp; Elements</h2>
-
-                <div class="row">
-                    <div class="col-md-50">
-                        <div class="big"><code>.big</code> Big Headline</div>
-                        <div class="h1"><code>.h1</code> Headline</div>
-                        <div class="h2"><code>.h2</code> Headline</div>
-                        <div class="h3"><code>.h3</code> Headline</div>
-                        <div class="h4"><code>.h4</code> Headline</div>
-                        <div class="h5"><code>.h5</code> Headline</div>
-                        <div class="h6"><code>.h6</code> Headline</div>
-                        <p class="lead"><code>.lead</code> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odit accusantium aliquam repellendus quos provident, temporibus quidem vero inventore maiores.</p>
-                        <div class="rte">
-                            <p><code>p</code> Lorem <a href="#">ipsum dolor sit</a> amet, consectetur adipisicing elit. Aliquam eos magni dignissimos error, quisquam rerum iusto quo voluptatem sint eius, cupiditate maiores laborum velit aut tenetur. Maiores nostrum, culpa nesciunt libero corrupti expedita, odit cumque facilis illum fugit sit quis sapiente esse ex eveniet soluta ullam ea eius. Saepe, ut!</p>
-
-                            <p>Also external links look like this <a href="http://github.com/l4ci/Starterkit">Starterkit on Github</a></p>
-                        </div>
-                        <!-- /.rte -->
-                    </div>
-                    <!-- /.col-md-50 -->
-                    <div class="col-md-50">
-                        <h2>Buttons</h2>
-                        <p>If <code>a</code>, <code>button</code> or <code>input[type=submit]</code> - adding <code>.btn</code> makes it a button.</p>
-                        <div>
-                            <a href="#" class="btn">Button</a>
-                            <button class="btn btn--primary"><i class="fas fa-info-circle"></i> Primary</button>
-                            <input type="submit" href="#" class="btn btn--secondary" value="Secondary">
-                        </div>
-
-                        <div>
-                            <a href="#" class="btn btn--primary btn--small">Small Button</a>
-
-                            <a href="#" class="btn btn--primary btn--big">Big Button</a>
-                        </div>
-
-                        <h2>Badges</h2>
-                        <span class="badge">Badge</span>
-                        <span class="badge badge--primary">Primary</span>
-                        <span class="badge badge--secondary">Secondary</span>
-                        <span class="badge badge--alert">Alert</span><span class="badge badge--success">Success</span>
-                    </div>
-                    <!-- /.col-md-50 -->
-                </div>
-                <!-- /.row -->
-
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /#typo.section -->
-
-
-        <div class="section section--border" id="products">
-
-            <div class="section__headline">Product Cards</div>
-            <div class="section__text">Simple card view of products. Including labels for new, sale soldout, price and already started schema data.</div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-50 col-sm-33 col-md-25">
-                        <a class="product-card" href="#" itemscope itemtype="http://schema.org/Product">
-
-                            <div class="product-card__imgwrapper">
-
-                                <div class="product-card__labelwrapper">
-                                    <div class="product-card__label product-card__label--new">NEW</div>
-                                </div>
-                                <!-- /.product-card__labelwrapper -->
-
-                                <img src="https://www.fillmurray.com/500/500" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
-                            </div>
-                            <!-- /.product-card__imgwrapper -->
-
-                            <div class="product-card__contentwrapper">
-                                <div class="product-card__content">
-                                    <div class="product-card__title" itemprop="name">Producttitle</div>
-                                    <!-- /.product-card__title -->
-                                    <div class="product-card__subtitle">by Label XYZ</div>
-                                    <!-- /.product-card__subtitle -->
-                                </div>
-                                <!-- /.product-card__content -->
-                                <div class="product-card__pricewrapper">
-                                    <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
-                                    <!-- /.product-card__realprice -->
-                                </div>
-                                <!-- /.product-card__pricewrapper -->
-                            </div>
-                            <!-- /.product-card__contentwrapper -->
-                        </a>
-                        <!-- /.product-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-xs-50 col-sm-33 col-md-25">
-                        <a href="#" class="product-card product-card--sale">
-
-                            <div class="product-card__imgwrapper">
-
-                                <div class="product-card__labelwrapper">
-                                    <div class="product-card__label product-card__label--new">NEW</div>
-                                    <div class="product-card__label product-card__label--sale">SALE</div>
-                                </div>
-                                <!-- /.product-card__labelwrapper -->
-
-                                <img src="https://www.fillmurray.com/300/300" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
-                            </div>
-                            <!-- /.product-card__imgwrapper -->
-
-                            <div class="product-card__contentwrapper">
-                                <div class="product-card__content">
-                                    <div class="product-card__title" itemprop="name">Producttitle</div>
-                                    <!-- /.product-card__title -->
-                                    <div class="product-card__subtitle">by Label XYZ</div>
-                                    <!-- /.product-card__subtitle -->
-                                </div>
-                                <!-- /.product-card__content -->
-                                <div class="product-card__pricewrapper">
-                                    <div class="product-card__saleprice">19,99 &euro;</div>
-                                    <!-- /.product-card__saleprice -->
-                                    <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
-                                    <!-- /.product-card__realprice -->
-                                </div>
-                                <!-- /.product-card__pricewrapper -->
-                            </div>
-                            <!-- /.product-card__contentwrapper -->
-                        </a>
-                        <!-- /.product-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-xs-50 col-sm-33 col-md-25">
-                        <a href="#" class="product-card product-card--soldout">
-
-                            <div class="product-card__imgwrapper">
-                                <div class="product-card__labelwrapper">
-                                    <div class="product-card__label product-card__label--soldout">Soldout</div>
-                                </div>
-                                <!-- /.product-card__labelwrapper -->
-                                <img src="https://www.fillmurray.com/520/520" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
-                            </div>
-                            <!-- /.product-card__imgwrapper -->
-
-                            <div class="product-card__contentwrapper">
-                                <div class="product-card__content">
-                                    <div class="product-card__title" itemprop="name">Producttitle</div>
-                                    <!-- /.product-card__title -->
-                                    <div class="product-card__subtitle">by Label XYZ</div>
-                                    <!-- /.product-card__subtitle -->
-                                </div>
-                                <!-- /.product-card__content -->
-                                <div class="product-card__pricewrapper">
-                                    <div class="product-card__realprice" itemprop="price">105,95 &euro;</div>
-                                    <!-- /.product-card__realprice -->
-                                </div>
-                                <!-- /.product-card__pricewrapper -->
-                            </div>
-                            <!-- /.product-card__contentwrapper -->
-                        </a>
-                        <!-- /.product-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-xs-50 col-sm-33 col-md-25">
-                        <a class="product-card" href="#" itemscope itemtype="http://schema.org/Product">
-
-                            <div class="product-card__imgwrapper">
-
-                                <div class="product-card__labelwrapper">
-                                    <div class="product-card__label product-card__label--new">NEW</div>
-                                </div>
-                                <!-- /.product-card__labelwrapper -->
-
-                                <img src="https://www.fillmurray.com/250/250" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
-                            </div>
-                            <!-- /.product-card__imgwrapper -->
-
-                            <div class="product-card__contentwrapper">
-                                <div class="product-card__content">
-                                    <div class="product-card__title" itemprop="name">Producttitle</div>
-                                    <!-- /.product-card__title -->
-                                    <div class="product-card__subtitle">by Label XYZ</div>
-                                    <!-- /.product-card__subtitle -->
-                                </div>
-                                <!-- /.product-card__content -->
-                                <div class="product-card__pricewrapper">
-                                    <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
-                                    <!-- /.product-card__realprice -->
-                                </div>
-                                <!-- /.product-card__pricewrapper -->
-                            </div>
-                            <!-- /.product-card__contentwrapper -->
-                        </a>
-                        <!-- /.product-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-xs-50 col-sm-33 col-md-25">
-                        <a href="#" class="product-card product-card--sale">
-
-                            <div class="product-card__imgwrapper">
-                                <img src="https://www.fillmurray.com/600/600" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
-                            </div>
-                            <!-- /.product-card__imgwrapper -->
-
-                            <div class="product-card__contentwrapper">
-                                <div class="product-card__content">
-                                    <div class="product-card__title" itemprop="name">Producttitle</div>
-                                    <!-- /.product-card__title -->
-                                    <div class="product-card__subtitle">by Label XYZ</div>
-                                    <!-- /.product-card__subtitle -->
-                                </div>
-                                <!-- /.product-card__content -->
-                                <div class="product-card__pricewrapper">
-                                    <div class="product-card__saleprice">19,99 &euro;</div>
-                                    <!-- /.product-card__saleprice -->
-                                    <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
-                                    <!-- /.product-card__realprice -->
-                                </div>
-                                <!-- /.product-card__pricewrapper -->
-                            </div>
-                            <!-- /.product-card__contentwrapper -->
-                        </a>
-                        <!-- /.product-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-xs-50 col-sm-33 col-md-25">
-                        <a href="#" class="product-card">
-
-                            <div class="product-card__imgwrapper">
-                                <img src="https://www.fillmurray.com/380/380" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
-                            </div>
-                            <!-- /.product-card__imgwrapper -->
-
-                            <div class="product-card__contentwrapper">
-                                <div class="product-card__content">
-                                    <div class="product-card__title" itemprop="name">Producttitle</div>
-                                    <!-- /.product-card__title -->
-                                    <div class="product-card__subtitle">by Label XYZ</div>
-                                    <!-- /.product-card__subtitle -->
-                                </div>
-                                <!-- /.product-card__content -->
-                                <div class="product-card__pricewrapper">
-                                    <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
-                                    <!-- /.product-card__realprice -->
-                                </div>
-                                <!-- /.product-card__pricewrapper -->
-                            </div>
-                            <!-- /.product-card__contentwrapper -->
-                        </a>
-                        <!-- /.product-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-xs-50 col-sm-33 col-md-25">
-                        <a class="product-card" href="#" itemscope itemtype="http://schema.org/Product">
-
-                            <div class="product-card__imgwrapper">
-
-                                <div class="product-card__labelwrapper">
-                                    <div class="product-card__label product-card__label--new">NEW</div>
-                                </div>
-                                <!-- /.product-card__labelwrapper -->
-
-                                <img src="https://www.fillmurray.com/180/180" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
-                            </div>
-                            <!-- /.product-card__imgwrapper -->
-
-                            <div class="product-card__contentwrapper">
-                                <div class="product-card__content">
-                                    <div class="product-card__title" itemprop="name">Producttitle</div>
-                                    <!-- /.product-card__title -->
-                                    <div class="product-card__subtitle">by Label XYZ</div>
-                                    <!-- /.product-card__subtitle -->
-                                </div>
-                                <!-- /.product-card__content -->
-                                <div class="product-card__pricewrapper">
-                                    <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
-                                    <!-- /.product-card__realprice -->
-                                </div>
-                                <!-- /.product-card__pricewrapper -->
-                            </div>
-                            <!-- /.product-card__contentwrapper -->
-                        </a>
-                        <!-- /.product-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-xs-50 col-sm-33 col-md-25">
-                        <a href="#" class="product-card">
-
-                            <div class="product-card__imgwrapper">
-                                <img src="https://www.fillmurray.com/425/425" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
-                            </div>
-                            <!-- /.product-card__imgwrapper -->
-
-                            <div class="product-card__contentwrapper">
-                                <div class="product-card__content">
-                                    <div class="product-card__title" itemprop="name">Producttitle</div>
-                                    <!-- /.product-card__title -->
-                                    <div class="product-card__subtitle">by Label XYZ</div>
-                                    <!-- /.product-card__subtitle -->
-                                </div>
-                                <!-- /.product-card__content -->
-                                <div class="product-card__pricewrapper">
-                                    <div class="product-card__realprice" itemprop="price">5,95 &euro;</div>
-                                    <!-- /.product-card__realprice -->
-                                </div>
-                                <!-- /.product-card__pricewrapper -->
-                            </div>
-                            <!-- /.product-card__contentwrapper -->
-                        </a>
-                        <!-- /.product-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-xs-50 col-sm-33 col-md-25">
-                        <a class="product-card" href="#" itemscope itemtype="http://schema.org/Product">
-
-                            <div class="product-card__imgwrapper">
-
-                                <div class="product-card__labelwrapper">
-                                    <div class="product-card__label product-card__label--new">NEW</div>
-                                </div>
-                                <!-- /.product-card__labelwrapper -->
-
-                                <img src="https://www.fillmurray.com/180/180" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
-                            </div>
-                            <!-- /.product-card__imgwrapper -->
-
-                            <div class="product-card__contentwrapper">
-                                <div class="product-card__content">
-                                    <div class="product-card__title" itemprop="name">Producttitle</div>
-                                    <!-- /.product-card__title -->
-                                    <div class="product-card__subtitle">by Label XYZ</div>
-                                    <!-- /.product-card__subtitle -->
-                                </div>
-                                <!-- /.product-card__content -->
-                                <div class="product-card__pricewrapper">
-                                    <div class="product-card__realprice" itemprop="price">15,95 &euro;</div>
-                                    <!-- /.product-card__realprice -->
-                                </div>
-                                <!-- /.product-card__pricewrapper -->
-                            </div>
-                            <!-- /.product-card__contentwrapper -->
-                        </a>
-                        <!-- /.product-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-xs-50 col-sm-33 col-md-25">
-                        <a href="#" class="product-card">
-
-                            <div class="product-card__imgwrapper">
-                                <img src="https://www.fillmurray.com/425/425" alt="PRODUCT IMG" class="lazyload product-card__img" itemprop="image">
-                            </div>
-                            <!-- /.product-card__imgwrapper -->
-
-                            <div class="product-card__contentwrapper">
-                                <div class="product-card__content">
-                                    <div class="product-card__title" itemprop="name">Producttitle</div>
-                                    <!-- /.product-card__title -->
-                                    <div class="product-card__subtitle">by Label XYZ</div>
-                                    <!-- /.product-card__subtitle -->
-                                </div>
-                                <!-- /.product-card__content -->
-                                <div class="product-card__pricewrapper">
-                                    <div class="product-card__realprice" itemprop="price">5,95 &euro;</div>
-                                    <!-- /.product-card__realprice -->
-                                </div>
-                                <!-- /.product-card__pricewrapper -->
-                            </div>
-                            <!-- /.product-card__contentwrapper -->
-                        </a>
-                        <!-- /.product-card -->
-                    </div>
-                    <!-- /.col -->
+                    <!-- /.footer__links -->
                 </div>
                 <!-- /.row -->
             </div>
             <!-- /.container -->
-        </div>
-        <!-- /#products.section -->
+        </footer>
 
-
-         <div class="section section--alternate" id="form">
-            <div class="container">
-
-                <h2 class="section__headline">Forms &amp; Input fields</h2>
-                <p class="section__text">Checkbox, Radio, input fields of all kind... everything</p>
-
-                <div class="row">
-                    <div class="col-md-50 col--offset-md-25">
-                        <form action="#">
-
-                            <label class="label label--inline">
-                                <input type="checkbox"> Checkbox
-                            </label>
-                            <label class="label label--inline">
-                                <input type="checkbox"> Checkbox
-                            </label>
-
-                            <label class="label">
-                                <input type="radio" name="radio" value="1"> Radio
-                            </label>
-
-                            <label class="label">
-                                <input type="radio" name="radio" value="2"> Radio
-                            </label>
-
-                            <div class="select">
-                                <select name="s2" id="s2">
-                                    <option value="1">Value 1</option>
-                                    <option value="2">Value 2</option>
-                                </select>
-                            </div>
-                            <!-- /.select -->
-
-                            <div class="select">
-                                <label class="select__label" for="s">Label:</label>
-                                <select name="s" id="s">
-                                    <option value="1">Value 1</option>
-                                    <option value="2">Value 2</option>
-                                </select>
-                            </div>
-                            <!-- /.select -->
-
-                            <label for="input1" class="label">Label:</label>
-                            <input type="text" id="input1" class="input" placeholder="Text input">
-
-                            <label for="input3" class="label">Label:</label>
-                            <input type="text" id="input3" class="input" placeholder="Text input">
-
-                            <label for="input4" class="label label--error">Label:</label>
-                            <input type="text" id="input4" class="input input--error" placeholder="Text input">
-
-                            <label for="input2" class="label">Label:</label>
-                            <input type="text" id="input2" class="input input--full" placeholder="Text input">
-
-                            <label for="4" class="label">Label:</label>
-                            <textarea id="4" class="input" placeholder="Textarea"></textarea>
-
-                        </form>
-                    </div>
-                    <!-- /.col-md-50 -->
-                </div>
-                <!-- /.row -->
-
+        <div class="overlay" data-group="overlaygroup" data-loop="true" data-close="true" id="overlaytest">
+            <div class="overlay__inner" role="dialog" aria-hidden="true">
+                <h3>Overlay</h3>
+                <p>This overlay is in <code>data-group="overlaygroup1"</code> and is set to <code>data-loop="true"</code> and <code>data-close="true"</code>.</p>
             </div>
-            <!-- /.container -->
+            <!-- /.overlay__inner -->
         </div>
-        <!-- /#form.section -->
+        <!-- /.overlay -->
 
-
-        <div class="section" id="js">
-            <div class="container">
-
-                <h2 class="section__headline">Javascript</h2>
-                <!-- /.section__headline -->
-                <div class="section__text">Setting some useful default functions and a expandable, modulare js-boilerplate</div>
-                <!-- /.section__text -->
-
-                <div class="row">
-                    <div class="col-md-33">
-                        <div class="card">
-                            <div class="card__header">
-                                <h3>data-scrollto <span class="badge badge--success">Modul</span></h3>
-                            </div>
-                            <!-- /.card__header -->
-                            <div class="card__body">
-                                Adding <code>data-scrollto="#id"</code> to any element, animates to the element on click. Also calculates a sticky header, if present.
-                            </div>
-                            <!-- /.card__body -->
-                        </div>
-                        <!-- /.card -->
-                    </div>
-                    <!-- /.col -->
-
-                    <div class="col-md-33">
-                        <div class="card">
-                            <div class="card__header">
-                                <h3>data-overlay <span class="badge badge--success">Modul</span><span class="badge badge--alert">WIP</span></h3>
-                            </div>
-                            <!-- /.card__header -->
-                            <div class="card__body">
-                                <p>Adding <code>data-overlay="id"</code> to any element, will set the <code>.overlay#id</code> to active and close all other overlays. Also disables body scroll.</p>
-
-                                <p>Grouping overlays with <code>data-group</code> will append arrows to go to the next/prev overlay.</p>
-
-                                <p>Looping in overlay groups is possible with <code>data-loop="true"</code>.</p>
-
-                                <p>Adding <code>data-close="true"</code> will add an close icon.</p>
-
-                                <div class="card__links">
-                                    <a href="#overlaytest" data-overlay="overlaytest" class="more">Open Overlay</a>
-                                    <a href="#overlaytest3" data-overlay="overlaytest3" class="more">Open Overlay without loop</a>
-
-                                </div>
-                            </div>
-                            <!-- /.card__body -->
-                        </div>
-                        <!-- /.card -->
-                    </div>
-                    <!-- /.col -->
-
-                    <div class="col-md-33">
-                        <div class="card">
-                            <div class="card__header">
-                                <h3>data-toggle <span class="badge badge--alert">Modul</span><span class="badge badge--alert">WIP</span></h3>
-                            </div>
-                            <!-- /.card__header -->
-                            <div class="card__body">
-                                Adding <code>data-toggle="#id"</code> to any element, will set the <code>#id</code> to active.
-                            </div>
-                            <!-- /.card__body -->
-                        </div>
-                        <!-- /.card -->
-                    </div>
-                    <!-- /.col -->
-
-                    <div class="col-md-33">
-                        <div class="card">
-                            <div class="card__header">
-                                <h3>Others <span class="badge badge--alert">Modul</span><span class="badge badge--alert">WIP</span></h3>
-                            </div>
-                            <!-- /.card__header -->
-                            <div class="card__body">
-                                <code>mobile-navtoggle</code><br>
-                                <code>nav-dropdown</code><br>
-                                <code>back-to-top</code>
-                            </div>
-                            <!-- /.card__body -->
-                        </div>
-                        <!-- /.card -->
-                    </div>
-                    <!-- /.col -->
-                </div>
-                <!-- /.row -->
+        <div class="overlay" data-group="overlaygroup" data-loop="true" data-close="true" id="overlaytest2">
+            <div class="overlay__inner" role="dialog" aria-hidden="true">
+                <h3>Second Overlay</h3>
+                <p>This overlay is in <code>data-group="overlaygroup1"</code> and is set to <code>data-loop="true"</code> and <code>data-close="true"</code>.</p>
             </div>
-            <!-- /.container -->
+            <!-- /.overlay__inner -->
         </div>
-        <!-- /#js.section -->
+        <!-- /.overlay -->
 
-        <div class="section section--alternate" id="grid">
-            <h2 class="section__headline">Grid</h2>
-            <p class="section__subline test">ehm flexbox anyone?!</p>
-            <div class="section__text">These are helper classes, which can be used. Its recommended to use the <code>@mixin generate-col($percentage)</code> though. You can also use <code>.col--offset-{bp}-{%}</code> for offsetting columns.</div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-50"><code>col-md-50</code></div>
-                    <div class="col-md-50"><code>col-md-50</code></div>
-                </div>
-                <br><!-- br for styling purposes only -->
-                <div class="row">
-                    <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
-                    <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
-                    <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
-                    <div class="col-sm-50 col-md-25"><code>col-sm-50 col-md-25</code></div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
-                    <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
-                    <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
-                    <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
-                    <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-16</code></div>
-                    <div class="col-md-33 col-lg-16"><code>col-md-33 col-lg-20</code></div>
-                </div>
-                <!-- /.row -->
+        <div class="overlay" data-group="overlaygroup2" id="overlaytest3">
+            <div class="overlay__inner" role="dialog" aria-hidden="true">
+                <h3>Overlay</h3>
+                <p>This overlay is in <code>data-group="overlaygroup2"</code> and has no loop and no close button.</p>
             </div>
-            <!-- /.container -->
+            <!-- /.overlay__inner -->
         </div>
-        <!-- /#grid.section -->
+        <!-- /.overlay -->
 
-
-        <div class="section" id="helper">
-            <div class="container">
-
-                <h2 class="section__headline">Helper</h2>
-                <div class="section__text"></div>
-
-                <div class="row">
-                    <div class="col">
-                        <h3>Text</h3>
-                        <code>--text-left</code>
-                        <code>--text-center</code>
-                        <code>--text-right</code>
-                        <code>--text-upper</code>
-                        <code>--text-lower</code>
-                        <code>--text-bold</code>
-                        <code>--text-italic</code>
-
-                        <h3>Float</h3>
-                        <code>--float-left</code>
-                        <code>--float-right</code>
-
-                        <h3>Hidden</h3>
-                        <code>--hidden-{bp}-up</code>
-                        <code>--hidden-{bp}-down</code>
-
-                        <h3>Aspect-ratio</h3>
-                        <code>--aspect-ratio</code> <code>--aspect-ratio-16-9</code>
-
-                        <h3>Screen-reader</h3>
-                    </div>
-                </div>
-                <!-- /.row -->
+        <div class="overlay" data-group="overlaygroup2" id="overlaytest4">
+            <div class="overlay__inner" role="dialog" aria-hidden="true">
+                <h3>Second Overlay</h3>
+                <p>This overlay is in <code>data-group="overlaygroup2"</code> and has no loop and no close button.</p>
             </div>
-            <!-- /.container -->
+            <!-- /.overlay__inner -->
         </div>
-        <!-- /.section -->
+        <!-- /.overlay -->
 
-        <div class="section section--alternate" id="features">
-            <div class="container">
-                <div class="section__headline">Features</div>
+        <a class="back-to-top" href="javascript:void(0);" title="Back to top"></a>
 
-                <div class="row">
-                    <div class="col-md-50">
-                        <h3>Lazy Loading</h3>
-                        <p>Add the class <code>lazyload</code> to an <code>img</code> and set the source within <code>data-src</code> even <code>data-src-retina</code> can be set. If its not an <code>img</code> - the background image will be set instead.</p>
-                        <img src="" data-src="https://www.fillmurray.com/1200/1200" class="lazyload" alt="Lazy load this image please" width="200" height="200">
-                    </div>
-                    <div class="col-md-50"></div>
-                </div>
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /#features.section -->
-
-    </main>
-
-    <div class="prefooter" id="prefooter">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-33">
-                    <div class="prefooter__block prefooter__block--open">
-                        <div class="prefooter__headline">About us</div>
-
-                        <ul class="prefooter__links">
-                            <li><a href="#prefooter">Impressum</a></li>
-                            <li><a href="#prefooter">AGB</a></li>
-                            <li><a href="#prefooter">Datenschutz</a></li>
-                        </ul>
-                        <!-- /.prefooter__links -->
-                    </div>
-                    <!-- /.prefooter__block -->
-                </div>
-                <!-- /.col -->
-
-                <div class="col-md-33">
-                    <div class="prefooter__block">
-                        <div class="prefooter__headline">About us</div>
-
-                        <ul class="prefooter__links">
-                            <li><a href="#prefooter">Impressum</a></li>
-                            <li><a href="#prefooter">AGB</a></li>
-                            <li><a href="#prefooter">Datenschutz</a></li>
-                        </ul>
-                        <!-- /.prefooter__links -->
-                    </div>
-                    <!-- /.prefooter__block -->
-                </div>
-                <!-- /.col -->
-
-                <div class="col-md-33">
-                    <div class="prefooter__block">
-                        <div class="prefooter__headline">About us</div>
-
-                        <ul class="prefooter__links">
-                            <li><a href="#prefooter">Impressum</a></li>
-                            <li><a href="#prefooter">AGB</a></li>
-                            <li><a href="#prefooter">Datenschutz</a></li>
-                        </ul>
-                        <!-- /.prefooter__links -->
-                    </div>
-                    <!-- /.prefooter__block -->
-                </div>
-                <!-- /.col -->
-            </div>
-            <!-- /.row -->
-
-        </div>
-        <!-- /.container -->
     </div>
+    <!-- /.main-wrapper -->
 
-    <footer class="footer" id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer__copyright">Copyright &copy; 2017</div>
+    <div class="sidepanel sidepanel--right">
+        Sidepannel
 
-                <ul class="footer__links">
-                    <li><a href="index.html">Impressum</a></li>
-                    <li><a href="index.html">AGB</a></li>
-                    <li><a href="index.html">Datenschutz</a></li>
-                </ul>
-                <!-- /.footer__links -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </footer>
-
-    <div class="overlay" data-group="overlaygroup" data-loop="true" data-close="true" id="overlaytest">
-        <div class="overlay__inner" role="dialog" aria-hidden="true">
-            <h3>Overlay</h3>
-            <p>This overlay is in <code>data-group="overlaygroup1"</code> and is set to <code>data-loop="true"</code> and <code>data-close="true"</code>.</p>
-        </div>
-        <!-- /.overlay__inner -->
+        <a href="javascript:void(0);" data-close-panel="true">Close</a>
     </div>
-    <!-- /.overlay -->
-
-    <div class="overlay" data-group="overlaygroup" data-loop="true" data-close="true" id="overlaytest2">
-        <div class="overlay__inner" role="dialog" aria-hidden="true">
-            <h3>Second Overlay</h3>
-            <p>This overlay is in <code>data-group="overlaygroup1"</code> and is set to <code>data-loop="true"</code> and <code>data-close="true"</code>.</p>
-        </div>
-        <!-- /.overlay__inner -->
-    </div>
-    <!-- /.overlay -->
-
-    <div class="overlay" data-group="overlaygroup2" id="overlaytest3">
-        <div class="overlay__inner" role="dialog" aria-hidden="true">
-            <h3>Overlay</h3>
-            <p>This overlay is in <code>data-group="overlaygroup2"</code> and has no loop and no close button.</p>
-        </div>
-        <!-- /.overlay__inner -->
-    </div>
-    <!-- /.overlay -->
-
-    <div class="overlay" data-group="overlaygroup2" id="overlaytest4">
-        <div class="overlay__inner" role="dialog" aria-hidden="true">
-            <h3>Second Overlay</h3>
-            <p>This overlay is in <code>data-group="overlaygroup2"</code> and has no loop and no close button.</p>
-        </div>
-        <!-- /.overlay__inner -->
-    </div>
-    <!-- /.overlay -->
-
-    <a class="back-to-top" href="javascript:void(0);" title="Back to top"></a>
+    <!-- /.sidepanel -->
 
     <!-- jsdelivr.com: Group all js files together -->
     <script src="https://cdn.jsdelivr.net/combine/npm/webfontloader@1.6.28,npm/jquery@3.3.1"></script>

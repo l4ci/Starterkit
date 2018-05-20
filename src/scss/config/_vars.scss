@@ -55,8 +55,9 @@ $z-layers: (
     header: 10,
     dropdown: 20,
     back-to-top: 30,
-    overlay-blackout: 99,
+    blackout: 99,
     overlay: 100,
+    sidepanel: 101
 );
 
 /**

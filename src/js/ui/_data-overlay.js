@@ -4,27 +4,6 @@ var dataOverlay = (function(){
         body = $('body'),
         isOpen = false;
 
-    var prepareBlackout = function(){
-        if ( $('.overlay-blackout').length <= 0){
-            console.log('OVERLAY: Blackout appended');
-            body.append('<div class="overlay-blackout"></div>');
-        }
-    };
-
-    var activateBlackout = function(){
-        console.log('OVERLAY: Blackout activated');
-        $('.overlay-blackout').fadeIn(function(){
-            $(this).addClass('overlay-blackout--active').removeAttr('style');
-        });
-    };
-
-    var deactivateBlackout = function(){
-        console.log('OVERLAY: Blackout deaktivated');
-        $('.overlay-blackout').fadeOut(function(){
-            $(this).removeClass('overlay-blackout--active').removeAttr('style');
-        });
-    };
-
     var closeAllOverlays = function(qs){
         qs = (typeof qs !== 'undefined') ?  qs : false;
 
@@ -37,7 +16,7 @@ var dataOverlay = (function(){
         body.removeClass('noscroll');
 
         if (qs === false) {
-            deactivateBlackout();
+            deactivateBlackout('overlay');
         }
     };
 
@@ -53,7 +32,7 @@ var dataOverlay = (function(){
             console.log('OVERLAY: Opening:'+target);
             var jtarget = $('#'+target);
 
-            activateBlackout();
+            activateBlackout('overlay');
 
             jtarget.addClass('overlay--prepare').animate({opacity: 1}, 600, function(){
                 $(this).addClass('overlay--active')
@@ -64,7 +43,7 @@ var dataOverlay = (function(){
             isOpen = true;
         } else {
             console.log('OVERLAY: '+target+' not found!');
-            deactivateBlackout();
+            deactivateBlackout('overlay');
         }
     };
 
@@ -161,20 +140,26 @@ var dataOverlay = (function(){
         $(document).keyup(function(e) {
             switch (e.which) {
                 case 27:
-                    if (isOpen) closeAllOverlays();
+                    if (isOpen) {
+                        closeAllOverlays();
+                        e.preventDefault();
+                    }
                 break;
 
                 case 37:
-                    if (isOpen) nextPrevClicked($('.overlay--active'), 'prev');
+                    if (isOpen) {
+                        nextPrevClicked($('.overlay--active'), 'prev');
+                        e.preventDefault();
+                    }
                 break;
 
                 case 39:
-                    if (isOpen) nextPrevClicked($('.overlay--active'), 'next');
+                    if (isOpen) {
+                        nextPrevClicked($('.overlay--active'), 'next');
+                        e.preventDefault();
+                    }
                 break;
-
-                default: return;
             }
-            e.preventDefault();
         });
     };
 
