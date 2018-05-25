@@ -50,27 +50,33 @@ var dataOverlay = (function(){
     var nextPrevClicked = function(that, dir){
         var current = that.closest('.overlay.overlay--active');
 
+        if ( !current ) {
+            console.log('OVERLAY: Current active overlay not found');
+            return;
+        }
+
         var group = current.data('group'),
             loop  = current.data('loop') ? true : false;
 
-        if ( group ) {
-            var dtarget = '[data-group="'+ group +'"]';
-            var target = (dir == 'prev' ? current.prev(dtarget) : current.next(dtarget) );
-
-            if ( target.length <= 0 ) {
-                console.log('OVERLAY: '+ dir +' target not found');
-                if ( loop ) {
-                    target = (dir == 'prev' ? $(dtarget).last() : $(dtarget).first() );
-                }
-            }
-
-            if ( target.length ) {
-                openOverlay(target.attr('id'), true);
-            } else {
-                console.log('OVERLAY: '+ dir +' target not found');
-            }
-        } else {
+        if (group == undefined) {
             console.log('OVERLAY: Clicked overlay has no group');
+            return;
+        }
+
+        var dtarget = '[data-group="'+ group +'"]';
+        var target = (dir == 'prev' ? current.prevAll(dtarget) : current.nextAll(dtarget) );
+
+        if ( target.length <= 0 ) {
+            console.log('OVERLAY: '+ dir +' target not found');
+            if ( loop ) {
+                target = (dir == 'prev' ? $(dtarget).last() : $(dtarget).first() );
+            }
+        }
+
+        if ( target.length ) {
+            openOverlay(target.attr('id'), true);
+        } else {
+            console.log('OVERLAY: '+ dir +' target not found');
         }
     };
 
@@ -89,7 +95,7 @@ var dataOverlay = (function(){
                 elInner.append('<a class="overlay__close" href="javascript:void(0)"></a>');
             }
 
-            if ( groupname == '' ) return;
+            if (groupname == undefined) return;
 
             var group = $('.overlay[data-group="'+groupname+'"]');
 
