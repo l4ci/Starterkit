@@ -9,6 +9,18 @@ Slider
     background: linear-gradient(to bottom, c(white), c(lightgrey));
 }
 
+.slick > div {
+    visibility: hidden;
+
+    &:first-child {
+        visibility: visible;
+    }
+}
+
+.slick.slick-initialized > div {
+    visibility: visible;
+}
+
 .slider {
 
     .slick-slider {
