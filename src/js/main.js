@@ -28,7 +28,10 @@ if (typeof jQuery == 'undefined') {
         'dots': true,
     });
 
-    // Waypoints included for scroll events
+
+    /**
+     * Activate animation on sections
+     */
     var sectionwaypoints = $('.section--animate').waypoint({
         handler: function(direction) {
             var wId = this.element.id;
@@ -37,6 +40,28 @@ if (typeof jQuery == 'undefined') {
             }
         },
         offset: '75%'
+    });
+
+
+    /**
+     * Activate autoplay on slick sliders, when in view
+     */
+    var slickinview = $('.slick--playinview').waypoint({
+        handler: function (direction) {
+            if (direction == 'down') {
+                $(this.element).slick("slickSetOption", "autoplay", true, true);
+            } else {
+                $(this.element).slick("slickSetOption", "autoplay", false, true);
+            }
+        }, offset: '75%'
+    }).waypoint({
+        handler: function (direction) {
+            if (direction == 'up') {
+                $(this.element).slick("slickSetOption", "autoplay", true, true);
+            } else {
+                $(this.element).slick("slickSetOption", "autoplay", false, true);
+            }
+        }, offset: '-10%'
     });
 
     /**
